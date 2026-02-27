@@ -162,7 +162,7 @@ f) **Prototype / MVP-Driven — Startup special**
     - Validate idea
     - Either kill or rebuild properly
 
-- Real example : Internal admin tool
+- Real example: Internal admin tool
     - Hardcoded values
     - Minimal validation
     - Used by 3 people
