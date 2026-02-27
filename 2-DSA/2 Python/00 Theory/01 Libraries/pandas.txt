@@ -1,0 +1,102 @@
+Pandas : Analyzing tabular data. It is used for working with data sets.
+
+
+1. Common functions : 
+    Reading CSV files : It reads files in a tabular manner : xyx_df = pd.read_csv('file_name.csv.')
+    - pd.read_csv : Read data from a CSV file into a Pandas DataFrame object
+    - .info() : View basic information about rows, columns and data types
+    - .describe() : View statistical information about numeric columns
+    - .columns : Get the list of column names
+    - .shape : Get the number of rows & columns as a tuple
+    -  
+
+2.  - Pandas allows us to analyze big data and make conclusions based on statistical theories. Pandas can clean messy data sets, and make them readable and relevant.
+    - Pandas are also able to delete rows that are not relevant, or contains wrong values, like empty or NULL values. This is called cleaning the data.
+
+3. Series() : A Pandas Series is like a column in a table. It is a one-dimensional array holding data of any type.
+    - a = [1, 7, 2]
+        myvar = pd.Series(a)
+        print(myvar)
+    - Create Labels : With the index argument, you can name your own labels 
+        e.g. myvar = pd.Series(a, index = ["x", "y", "z"])
+    - Key/Value Objects as Series : You can also use a key/value object, like a dictionary, when creating a Series.
+        e.g. calories = {"day1": 420, "day2": 380, "day3": 390}
+    
+    - DataFrames : Data sets in Pandas are usually multi-dimensional tables, called DataFrames. Series is like a column, a DataFrame is the whole table. 
+        A Pandas DataFrame is a 2 dimensional data structure, like a 2 dimensional array, or a table with rows and columns.
+        e.g. data = {
+            "calories": [420, 380, 390],
+            "duration": [50, 40, 45]
+            }
+
+            myvar = pd.DataFrame(data)
+    - Locate Row : Pandas use the loc attribute to return one or more specified row(s)
+        print(df.loc[0])
+        print(df.loc[[0, 1]])   # for multiple rows
+        print(df.loc["day2"])   # to locate named index
+
+4. To read file : read_csv(), read_json()
+    - df = pd.read_csv('data.csv')
+        print(df.to_string()) 
+    - Tip: use to_string() to print the entire DataFrame.
+    - df = pd.read_json('data.json')            #(JSON = Python Dictionary, JSON objects have the same format as Python dictionaries.)
+
+5. - head() : returns the headers and a specified number of rows, starting from the top.
+    - tail() : returns the headers and a specified number of rows, starting from the bottom.
+    - info() :  that gives you more information about the data set.
+
+6. Pandas : Data cleaning
+    - Bad data could be : Empty cells, Data in wrong format, Wrong data, Duplicates
+    - dropna() : to delete rows that contain the null values
+        e.g. new_df = df.dropna()
+        - By default, the dropna() method returns a new DataFrame, and will not change the original.
+        - If you want to change the original DataFrame, use the inplace = True argument : df.dropna(inplace = True)
+    
+    - fillna() : to replace the null values
+        - df.fillna(130, inplace = True)    # Replace NULL values with the number 130
+        - df["Calories"].fillna(130, inplace = True)    #Replace Only For Specified Columns
+        - mean() median() and mode() : Replace Using Mean, Median, or Mode
+        - e.g. df = pd.read_csv('data.csv')
+                x = df["Calories"].mean()
+                df["Calories"].fillna(x, inplace = True) 
+        
+    - to_datetime() : to convert into correct date format
+        - df['Date'] = pd.to_datetime(df['Date'])
+        - Removing Rows : df.dropna(subset=['Date'], inplace = True)    #Remove rows with a NULL value in the "Date" column:
+    
+    - Replacing Values : 
+        - df.loc[7, 'Duration'] = 45    #Set "Duration" = 45 in row 7:
+        - if df.loc[x, "Duration"] > 120:       # Loop through all values in the "Duration" column; If the value is higher than 120, set it to 120
+            df.loc[x, "Duration"] = 120
+    
+    - Removing Rows : 
+        for x in df.index:
+        if df.loc[x, "Duration"] > 120:
+            df.drop(x, inplace = True)
+    
+    - duplicated() : Returns True for every row that is a duplicate, othwerwise False:
+        print(df.duplicated()) 
+        
+        - drop_duplicates() : To remove duplicates
+            df.drop_duplicates(inplace = True)
+
+7. corr() : The corr() method calculates the relationship between each column in your data set.
+    - It's value lies between -1 to 1, The value near to 1 or -1 mean coorelation in good, else Bad
+
+8. plot() : Pandas uses the plot() method to create diagrams.
+    - We can use Pyplot, a submodule of the Matplotlib library to visualize the diagram on the screen.
+    - e.g. 
+        import pandas as pd
+        import matplotlib.pyplot as plt
+        df = pd.read_csv('data.csv')
+        df.plot()
+        plt.show()
+
+    - kind = 'scatter' : 
+        - kind = 'scatter'
+        - A scatter plot needs an x- and a y-axis.; A scatter plot needs an x- and a y-axis.
+        - df.plot(kind = 'scatter', x = 'Duration', y = 'Calories')
+    
+    - kind = 'hist'
+        - A histogram needs only one column
+        - df["Duration"].plot(kind = 'hist')

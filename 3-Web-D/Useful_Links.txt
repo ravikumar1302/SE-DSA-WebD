@@ -1,0 +1,10 @@
+
+1. MDN DOCS (Cointaisn many languages) : https://developer.mozilla.org/en-US/docs/Web/HTML
+2. To learn JavaScript refer : 
+        - https://www.rithmschool.com/courses/javascript
+        - https://javascript.info/
+3. 
+
+
+// For saving Adobe AEM to seprate public repo run : 
+                                        git subtree push --prefix="4 Adobe AEM" adobe-aem main

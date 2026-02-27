@@ -1,0 +1,108 @@
+
+0. Main Cloud providers : Microsoft Azure, Amazon Web Service (AWS), Google Cloud
+1. Think Cloud as Electricity, it is a service, provided by someone else, and we pay for what we use
+2. Cloud Service models : 
+    a) Iaas : Infrastructure as a Service - Only hardware, resources (server and network) is provided, rest is done by user. E.g., AWS Elasstic Compute Cloud (EC2). In IaaS, the users receive computing resources like software or hardware tools virtually over the internet. DigitalOcean, Linode, Rackspace are the example of an IaaS service.
+    b) Paas : Platfrom as a Service - Provides a platform on which software can be developed and deployed. Eg., AWS Elastic Beanstalk. So, we don't pay for infrastructure, we code on the platform provided by them. In PaaS, the users receive hardware or software tools from the users on the internet. AWS Elastic Beanstalk, Windows Azure, Heroku are example of a PaaS service
+    c) Saas : Software as a Service - Cloud providers host and manage the software application on na subscription basis.  Everything is made on server, user login and user, like Gmail, Facebook, AWS etc. So, the end product is provided directly by vendor
+    d) etc
+
+3. Cloud deployment models : 
+    a) Public
+    b) Private
+    c) Hybrid
+    d) Community
+
+4. Benefits of cloud Computing :
+    - Speed
+    - Cost
+    - Scalabillty
+    - Accessibilty
+    - Better Security
+
+5. Lifecycle of Cloud computing solution :
+    a) Define purpose
+    b) Define hardware like EC2, Lambda, Elastic container service
+    c) Define storage like S3, EFS, Glacier
+    d) Define network like VPC, Route 53, Direct Connect
+    e) Define Security like IAM, KMS, Cognito
+    f) Define Management processes and tools like CloudWatch, Auto scaling, CloudFormation
+    g) Testing the process like CodeStar, CodeBuild, CodePipeline
+    h) Analytics : Athena, EMR, CloudSearch
+
+6. Azure CDN (Content Delivery Network) : It is delivery network that fastly transfer viral data. 
+    It delivers content while protecting apps, APIs, and websites from cyberthreats, and works seamlessly with Azure services and modern content delivery network (CDN) technology. 
+    Azure Content Delivery Network is a globally distributed network of servers that can efficiently deliver web content to consumers.
+
+7. AWS vs Azure services comparision : 
+    - Big data and analytics 
+        - Data warehouse
+            AWS service	    Azure service	    Description
+            Redshift	    Synapse Analytics	Cloud-based enterprise data warehouse (EDW) that uses massively parallel processing (MPP) to quickly run complex queries across petabytes of data.
+            Lake Formation	Data Share	        A simple and safe service for sharing big data.
+        
+    - Big data processing
+        AWS service	    Azure service	        Description
+        EMR	            Azure Data Explorer	    Fully managed, low latency, distributed big data analytics platform to run complex queries across petabytes of data.
+        EMR	            Databricks	            Apache Spark-based analytics platform.
+        EMR	            HDInsight	            Managed Hadoop service. Deploy and manage Hadoop clusters in Azure.
+        EMR	            Data Lake Storage	    Massively scalable, secure data lake functionality built on Azure Blob Storage. \\
+    
+    - Analytics and visualization
+        AWS service	            Azure service	                                                                    Description
+        Kinesis Analytics	    Stream Analytics, Azure Data Explorer, Data Lake Analytics, Data Lake Store         Storage and analysis platforms that create insights from large quantities of data, or data that originates from many sources.
+        QuickSight	            Power BI	                                                                        Business intelligence tools that build visualizations, perform ad hoc analysis, and develop business insights from data.
+        CloudSearch	            Cognitive Search	                                                                Delivers full-text search and related search analytics and capabilities.
+        Athena	                Data Lake Analytics, 	                                                            Provides a serverless interactive query service that uses standard SQL for analyzing databases.
+                                Azure Synapse Analytics                                                             Azure Synapse Analytics is a limitless analytics service that brings together data integration, enterprise data warehousing, and big data analytics. It gives you the freedom to query data on your terms, using either serverless or dedicated resources at scale.
+        Elasticsearch Service	Elastic on Azure	                                                                Use the Elastic Stack (Elastic, Logstash, and Kibana) to search, analyze, and visualize in real time.
+
+    - Compute 
+        - Virtual machines and servers : Virtual machines (VMs) and servers allow users to deploy, manage, and maintain OS and other software. Users pay for what they use, with the flexibility to change sizes.
+
+            AWS service	            Azure service	        Description
+            Amazon EC2              Instance Types	        Azure Virtual Machines	AWS and Azure on-demand VMs bill per seconds used. Although AWS instance types and Azure VM sizes have similar categories, the exact RAM, CPU, and storage capabilities differ. For information about Azure VM sizes, see Azure VM sizes.
+            VMware Cloud 	        Azure VMware Solution	AWS and Azure solutions let you move VMware vSphere-based workloads and environments to the cloud. Azure VMware Solution is a VMware-verified Microsoft service that runs on Azure infrastructure. You can manage existing environments with VMware solution tools, while modernizing applications with cloud native services.
+            AWS Parallel Cluster	Azure CycleCloud	    Create, manage, operate, and optimize HPC and large compute clusters of any scale.
+    
+    - Autoscaling : Autoscaling lets you automatically change the number of VM instances. You set defined metrics and thresholds that determine when to add or remove instances.
+
+        AWS service	        Azure service	                                        Description
+        AWS Auto Scaling	Virtual machine scale sets, App Service autoscale	    In Azure, virtual machine scale sets let you deploy and manage identical sets of VMs. The number of sets can autoscale. App Service autoscale lets you autoscale Azure App Service applications.
+
+    - Storage : Several services provide different types of data storage for VM disks.
+
+        AWS service	                                        Azure service	                            Description
+        Disk volumes on Amazon Elastic Block Store (EBS)	Data disks in Azure Blob Storage.	        Data disks in blob storage provide durable data storage for Azure VMs. This storage is similar to AWS EC2 instance disk volumes on EBS.
+        Amazon EC2 instance store	                        Azure temporary storage	                    Azure temporary storage provides VMs with similar low-latency temporary read-write storage to EC2 instance storage, also called ephemeral storage.
+        Amazon EBS Provisioned IOPS Volume	                Azure premium storage	                    Azure supports higher performance disk I/O with premium storage. This storage is similar to AWS Provisioned IOPS storage options.
+        Amazon Elastic File System (EFS)	                Azure Files	                                Azure Files provides VMs with similar functionality to Amazon EFS.
+
+    - Serverless computing : Serverless computing lets you integrate systems and run backend processes without provisioning or managing servers.
+
+        AWS service	    Azure service	                                    Description
+        AWS Lambda	    Azure Functions, WebJobs in Azure App Service	    Azure Functions is the primary equivalent of AWS Lambda in providing serverless, on-demand code. AWS Lambda functionality also overlaps with Azure WebJobs, which let you schedule or continuously run background tasks.
+
+    - Database
+Type	AWS Service	Azure Service	Description
+Relational database	RDS	SQL Database
+
+Database for MySQL
+
+Database for PostgreSQL
+
+Database for MariaDB	Managed relational database services in which resiliency, scale and maintenance are primarily handled by the Azure platform.
+Serverless relational database	Amazon Aurora Serverless	Azure SQL Database serverless
+
+Serverless SQL pool in Azure Synapse Analytics	Database offerings that automatically scales compute based on the workload demand. You're billed per second for the actual compute used (Azure SQL)/data that's processed by your queries (Azure Synapse Analytics Serverless).
+NoSQL	DynamoDB (Key-Value)
+
+SimpleDB
+
+Amazon DocumentDB (Document)
+
+Amazon Neptune (Graph)	Azure Cosmos DB	Azure Cosmos DB is a globally distributed, multi-model database that natively supports multiple data models including key-value pairs, documents, graphs, and columnar.
+Caching	ElastiCache
+
+Amazon MemoryDB for Redis	Cache for Redis	An in-memory–based, distributed caching service that provides a high-performance store that's typically used to offload nontransactional work from a database.
+Database migration	Database Migration Service	Database Migration Service	A service that executes the migration of database schema and data from one database format to a specific database technology in the cloud.

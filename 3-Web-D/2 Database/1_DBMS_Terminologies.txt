@@ -1,0 +1,75 @@
+BASIC SQL THEORY :
+SQL was developed in 1970 by Donald Chamberlin & Raymond Boyce
+
+0. file Extension : file_name.sql
+    In general, the file extensions that we use for SQL Server data files are MDF (Primary Data File), NDF (Secondary Data File - this is optional), and LDF (Transaction Log File). 
+    SQL Server works fine with any file extension but Microsoft recommends we use MDF, NDF and LDF
+
+1.  Different SQL IDE are : MySQL, Oracle Database, PostgreeSQL, Microsoft SQL Server, SQLite, IBM DB2 and all these follow ANSI Standard
+2. SQL is standardized by ANSI (American National Standard Institute) in 1986.
+    SEQUEL : Structured English Query Language (It is initially known as this)
+    SQL : Structured Query Language
+
+3. DBMS : Database Management System
+    DBMS is a computized application system which allows organized storage, management, manipulation, handling and maintenance of information
+
+    Data : bit/ byte : collection of raw data, e.g., image, integers, 21.78, 34 etc.
+
+    Database : is a well-organized data 
+        a) Facilitates access
+        b) Facilitates consumption - Understand information
+        c) Facilitates analysis
+        d) Facilitates manipulation
+
+    Database Management : Provision of tools for handling
+        a) Query
+        b) Update
+        c) Insert
+        d) Delete
+        e) Secure - Control access
+        f) Backup / Recover
+    
+    System : A set of rules to follow : Protocol
+        a) Ensure data validation - Data integrity (Integrity is ensuring that the logical and physical data stored in SQL Server are structurally sound and consistent. Simply put, it means that the data present in SQL Server is written correctly and is where it is expected to be)
+        b) Sharing of data
+        c) Concurrency Control (Concurrency occurs when two or more than two users are trying to access the same data or information. DBMS concurrency is considered a problem because accessing data simultaneously by two different users can lead to inconsistent results or invalid behaviour)
+        d) Sharing of resources
+        e) Ensure data consistency during transaction
+
+4. RDBMS : Relational Database Management System
+    The concept of RDBMS is foounded by Dr. E.F. Codd at IBM in 1970
+
+    RDBMS Properties :
+    a) Normalizeed Tables (Relations) : Data must be stored in form of relations or tables
+    b) Structured Query Language (Non-Procedural)
+    c) NULL values (Absence of values) : The value should not be provided if it's not applicable
+    d) Constraints (Data validation in database) : Proper naming of table columns to put correct data in correct columns
+    e) Relational Algebra (Derivative of set algebra)
+    f) Views (Abstract layer)
+
+    Relation : It is a TABLE which represents column of ONLY one type of entity. There is at least one column designated in the table which helps us to identify each row uniquely and can be called as PRIMARY Key.
+
+    RDBMS : Database system that consists of data stored in relations. Those relations are related to each other by way of PK-FK (Primary Key - Foreign Key) relationship with the constraint that column designated as FK must contain a value only from values already present in related PK.
+
+5. SQL is implementation of Tuple Rellational Calculas.
+    It is a Declarative Language -> Result Oriented
+    It is independent of structure of data ans it's storage
+
+6. Classification of SQL Statements
+    a) DQL (Data Query Language)
+    b) DML (Data Manipulation Language)   : which helps us to perform operations like insert, update, delete
+    c) TCL (Transaction Control Language) : where we are supposed to either save the change, the command is COMMIT or discard the change, the command is ROLLBACK.
+    d) DDL (Data Defination Language)     : we are required to create various objects to hold the data and may be to write the procedures, functions, etc., so all that comes under the DDL
+    e) DCL (Data Control Language)        : which is used for implementing the security by creating roles and privileges, you are supposed to assign to the users, so that they can perform their tasks, only limited to their context.
+    f) Admin
+
+7. The first commercial use of SQL was made by Relational Software Incorporation, now known as a Oracle Corporation in their Oracle Version II, V2 on a VAX machine.
+    SQL is non-procedural and declarative statement kind of language
+    Procedural extension to SQL -> T-SQL (MS SQL Server), PL/SQL (Oracle), SQL/PSM (MySQL), SQL PL(IBM DB2), T-SQL(Sybase)...etc.
+
+8. SQL is now mandatory skill for
+    a) Back-end programmer : where you will exclusively do the programming on the database side, 
+    b) Front-End programmer : Because mere proficiency in Java, Python, PHP, .NET and others may not be enough. You need to have SQL skills to use and manipulate the data from the database.
+    c) Managers in decision making capacity at least must have a working knowledge of SQL. Because they are required to generate the ad-hoc reports before they can do some decision making.
+    d) Data scientists, data analysts and BI professionals SQL skills are absolutely mandatory.
+    e) Database administrators and system admins handling the database servers.

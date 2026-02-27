@@ -1,0 +1,26 @@
+
+BASIC Points : 
+
+1. SQl is not case-sensitive language. But it is prefered to write keyword in UPPER-CASE and objects we are refreng to like table are taken in LOWER-CASE
+    Also, Variable names are also not case-sensetive. Name == name == NAME in SQL
+
+2. Every command in SQL ends with semi-colan(;)
+3.  Execute (All or Selection) -> Ctrl + Shift + Enter.
+    Execute Current Statement -> Ctrl + Enter.
+
+4. Single ('')  and double (" ") both quotes are allowed in SQL for string, but single quote is prefered
+
+5. Using SQL in Your Web Site : To build a web site that shows data from a database, you will need
+    a) An RDBMS database program (i.e. MS Access, SQL Server, MySQL)
+    b) To use a server-side scripting language, like PHP or ASP
+    c) To use SQL to get the data you want
+    d) To use HTML / CSS to style the page
+
+6. INSERT INTO  : It is possible to write the INSERT INTO statement in two ways:
+    a) Specify both the column names and the values to be inserted: INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
+    b) If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table.
+        INSERT INTO table_name VALUES (value1, value2, value3, ...);
+
+7. While using UPDATE, DELETE, The WHERE clause specifies which record(s) should be modified. If you omit the WHERE clause, all records in the table will be modified.
+
+8. 
