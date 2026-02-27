@@ -1,0 +1,494 @@
+
+
+1. <p> tag is for paragragh and <pre> tag is also same, but in the <pre> tag, the spacing is same as you did while typing it in editor
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+2. HYPERLINK : <a> anchor tag
+    
+    2.1. Links to another page : 
+        e.g.: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML> MDN Web Docs </a>
+              <a href = "#"> hello </a> is used to make link that dosn't point anywhere, just take to top of webpage
+
+    2.2. Links to specific section of same page : 
+        - using the id attribute (on any HTML tag). The value of the id attribute should start with a letter or an underscore (not a number or any other character) and, on a single page, NO two id attributes should have the same value.
+        - To link to an tag that uses an id attribute you use the <a> tag again, but the value of the href attribute starts with the # symbol, followed by the value of the id attribute of the element you want to link to
+        - Example :
+            <h1 id="top"> Film-Making Terms </h1>
+            <p> <a href = "#top" > Top </a> </p>
+
+    2.3. Links to specific section of other page : 
+        - To link to a specific part of a different page (your own site or different website) you can use a similar technique.
+        - Other page should have id attributes that identify specific parts of the page.
+        - Therefore, the href attribute will contain the address for the page (either an absolute URL or a relative URL), followed by # symbol, followed by the value of the id attribute that is used on the element you are linking to.
+        -Example, <a href="http:/www.htmlandcssbookcom/#bottom">
+
+    2.4. Target attribute in <a> anchor tag : 
+        a) <a href="https://google.com" target="_main"> Google </a>.  "_main", "_blank" opens link in new tab.
+            Generally avoid opening links in a new window, but if you do, it is considered good practice to inform users that the link will open a new window before they click on it.
+    
+    2.5. Image tag inside anchor tag, makes clickable picture : <a href="https://google.com"> <img src="link"> </a>,   
+    
+    2.6. mailto : To create a link that starts up the user's email program and addresses an email to a specified email address.
+        E.g., <a href="mailto: jon@example.org"> Email Jon </a>
+    
+    - When you link to a different website, value of href attribute will be the full web address for the site, which is known as an absolute URL.
+    - An absolute URL (Uniform Resource Locator) starts with the domain name for that site, and can be followed by the path to a specific page. If no page is specified, the site will display the homepage.
+    - Relative URL : Used when linking to other pages within the same site, no need to specify the domain name in the URL.
+    - If all the pages of the site are in the same folder, then the value of the href attribute is just the name of the file.
+    - If you have different pages of a site in different folders, then you can use a slightly more complex syntax to indicate where the page is in relation to the current page.
+
+    - Folders on a website are sometimes referred to as directories
+    - Every page and every image on a website has a URL. The URL is made up of the domain name followed by the path to that page or image
+    - Relative Links : Go to image relative_links.png in the same folder
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+3. TEXT EDITING :  
+
+    3.1. <strong> vs <b> : Strong is semantic (i.e., it has meaning). While <b> was used in earlier times and is non-semantic.
+        <em> vs <i> : em or emphasize is semantic and italic is old and non-semantic.
+    3.2. Superscript <sup> : suffixes of dates or mathematical concepts like raising a number to a power like 2^n
+         Subscript <sub>   : commonly used with foot notes or chemical formulas such as H20 
+
+    3.3. <br /> : To add a line break inside the middle of a paragraph
+    3.4. <hr /> : To create a break between themes — such as a change of topic in a book or a new scene in a play — you can add a horizontal rule between sections 
+
+    3.5. Quotaions :
+        a) <blockquote> : <blockquote> tag is used for LONGER quotes that take up an entire paragraph. 
+                        - Note how the <p> tag is still used inside <blockquote> tag. 
+                        - Browsers tend to indent the contents of the <blockquote> tag, however you should not use this tag just to indent a piece of text — rather you should achieve this effect using CSS.
+        b) <q> : Used for SHORTER quotes that sit within a paragraph. Browsers are supposed to put quotes around the <q> tag, however Internet Explorer does not — therefore many people avoid using the <q> tag.
+
+            - Attributes : Both tags may use 'cite' attribute to indicate where the quote is from. Its value should be a URL that will have more information about the source of the quotation.
+            - Example : 
+                <blockquote cite="http://en.wikipedia.org/wiki/Winnie-the-Pooh">
+                    <p> Did you ever stop to think, and forget to start again? </p>
+                </blockquote>
+                <p> As A.A. Milne said, 
+                    <q> Some people talk to  animals. Not many listen though. That's the  problem. </q>
+                </p>
+            
+    3.6. Abbreviations & Acronyms <abbr> :
+            - A title attribute on the opening tag is used to specify the full term.
+            - In HTML 4 there was a separate <acronym> tag for acronyms. To spell out the full form of the acronym, the title attribute was used (as with the <abbr> tag below). HTML5 just uses the <abbr> tag for both abbreviations and acronyms
+        
+        Example : 
+        <p>
+            <abbr title="Professor"> Prof </abbr> Stephen Hawking is a theoretical physicist and cosmologist.</p>
+            <p> <acronym title="National Aeronautics and Space  Administration"> NASA </acronym> do some crazy  space stuff.
+        </p>
+        
+        - When mouse is hovered over the word cointaing <abbr> the data entered in title pops up.
+
+    3.7. Citations <cite> & Definitions <dfn> : 
+            - <cite> tag can be used to indicate where the citation is from, when you are referencing a piece of work such as a book, film or research paper.
+                In HTML5, <cite> should not really be used for a person's name — but it was allowed in HTML 4, so most people are likely to continue to use it.
+                Browsers will render the content of a <cite> tag in italics.
+            - The first time you explain some new terminology (perhaps an academic concept or some jargon) in a document, it is known as the defining instance of it.
+                <dfn> tag is used to indicate the defining instance of a new term. Some browsers show the content of the <dfn> tag in italics. Safari and Chrome do not change its appearance
+
+        Example : 
+            <p> <cite> A Brief History of Time </cite> by Stephen  Hawking has sold over ten million copies worldwide. </p>
+            <p> A <dfn> black hole </dfn> is a region of space from which nothing, not even light, can escape. </p>
+
+    3.8. Author Details <address> :
+            - This tag has quite a specific use: to contain contact details for the author of the page
+            - It may also contain a just a phone number or email address only. 
+            - Browsers often display the content of the <address> tag in italics.
+            - You may also be interested in something called the hCard microformat for adding physical address information to your markup.
+            - Online extra : You can find out more about hCards on the website accompanying this book (HTML CSS by John Ducket).
+
+    3.9. Changes to content <ins>, <del>, <s>:
+            - <ins> tag can be used to show content that has been inserted into a document, while <del> tag can show text that has been deleted from it.
+                The content of a <ins> tag is usually underlined, while the content of a <del> tag usually has a line through it (strike-through)
+            - <s> tag indicates something that is no longer accurate or relevant (but that should not be deleted). Visually the content of an <s> tag will usually be displayed with a line through the center. 
+            - Older versions of HTML had a <u> tag for content that was underlined, but this is being phased out
+
+        Example :
+            <p> It was the <del> worst</del> <ins> best </ins> idea she had ever had. </p>
+            <p> Laptop computer: </p>
+            <p> <s> Was $995 </s> </p>
+            <p> Now only $375 </p>
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+4. BEUTIFYING TEXT 
+    4.1. Div <div> : It is a container used to store other tags, so it doesn't have it's specific work, so it's non sematic tag. It is a Block tag and takes full width of web page.
+
+    4.2. <nav> <a> </a> </nav> : Include all the main top links in <nav> tag. It creates a invisible box and group the links.
+            Attributes : 
+
+    4.3. <article> </article> : Used in blog-pages, content related sites.
+    4.5. <header> </header> : To inclde header parts like heading, nav-bar etc
+    4.6. <footer> </footer> : use &copy; to write copyright symbol (c inside circle)
+
+    4.7. <aside> </aside> : is usually used for some secondary information that compliments the information in the main part of the page.
+    4.8. <button> </button> : to create button
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+5. IMAGES <img>:
+    5.1. <image src =""> </image> or <image src="" /> 
+        - (add forward slash to avoid writing image closing tag)
+    
+    5.2. Attributes :
+        - src : URL of the image (may be relative or absolute URL)
+        - alt : to specify tooltip for image OR text description of the image used when you cannot see image
+        - width, height (NOTE : The size of images is increasingly being specified using CSS rather than HTML)
+    
+    5.3 Image inside paragragh : 
+        - Before a paragraph : The paragraph starts on a new line after the image. 
+            <img src="images/bird.gif" alt="Bird" width="100"  height="100" /> <p> Hi there< /p>
+        - Inside the start of a paragraph : The first row of text aligns with the bottom of the image.
+            <p> <img src="images/bird.gif" alt="Bird" width="100" height="100" /> Hi There.</p>
+        - In the middle of a paragraph : The image is placed between the words of the paragraph that it appears in.
+            <p> Hi <img src="images/bird.gif" alt="Bird" width="100" height="100" /> there</p>
+
+    5.4. Aligning Images Horizontally & Vertically (Neat and cleaner than 5.3, but used before HTML5)
+        - using attribute "align", values : "left", "right", top, bottom, middle
+        - It has been removed from HTML5 and new websites should use CSS to control the alignment of images 
+        - Example : <p> <img src="images/bird.gif" alt="Bird" width="100" height="100" align="left" /> Hi there </p>
+    
+    5.5. Three Rules for Creating Images :
+        - Right format : Websites mainly uses jpeg, gif, or png format. Wrong format might not look as sharp and can make the web page slower to load
+        - Right size : Save image at the same width and height as it appear on the website. Smaller image will be distorted and stretched and larger image will take longer to display on the page
+        - Correct resolution : Most computer screens only show web pages at 72 pixels per inch. Resolution refers to the number of dots per inch. So higher resolution images takes long time to download
+    
+        - USE JPEG : Whenever you have many different colors in a picture. A photograph that features snow or an overcast sky might look like it has large areas that are just white or gray, but the picture is usually made up of many different colors that are subtly different
+        - Use GIF or PNG : when saving images with few colors or large areas of the same color. When a picture has an area that is filled with exactly the same color, it is known as flat color. Logos, illustrations, and diagrams etc. are example that often use flat colors.
+        - OR Photographs are best saved as JPEGs; illustrations or logos that use flat colors are better saved as GIFs
+
+        - Reduce the image size if you need small image using photo editor. This will create an image that is quicker to download
+        - Due to the fact that computer displays are capped at a resolution of 72 ppi, a higher resolution image will not result in better image quality — only in larger file sizes, which will increase the time needed to load them and therefore slow down viewing of your web pages.
+        - Vector images differ from bitmap images and are resolution-independent. Vector images are commonly created in programs such as Adobe Illustrator. 
+            The current method of using vector images for display on websites involves saving a bitmap version of the original vector image and using that.
+            Scalable Vector Graphics (SVG) are a relatively new format used to display vector images directly on the web (eliminating the need to create bitmap versions of them), however its use is not yet widespread
+    
+    5.6. HTML5: Figure and Figure Caption
+        - <figure> : contains images and their caption so that the two are associated. It can have more than 1 image inside tag as long as they all share the same caption.
+        - <figcaption> : It allows web page authors to add a caption to an image. Before these tags, there was no way to associate an <img> tag with its caption
+        - Example : <figure> 
+                        <img src="images/abc.jpg" alt="ABC pic">
+                        <figcaption> Sea otters hold hands when they sleep so they don't drift away from each  other. /figcaption>
+                    </figure>
+
+    5.7. - Creating an image that is partially transparent (or "see-through") for the web involves selecting one of two formats : Transparent GIF or PNG
+         - 
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+6. Lists :
+    6.1.  Three types : <ol> for ordered, <ul> for unordered list . <li> for list items
+            - <dl> for Definition lists. The definition list is created with the <dl> tag and usually consists of a series of terms and their definitions.
+                Inside the <dl> tag you will usually see pairs of <dt> and <dd> tags.
+                <dt> : This is used to contain the term being defined (the definition term).
+                <dd> : This is used to contain the definition.
+        - E.g. 
+            <dl>
+                <dt> Sashimi </dt>
+                    <dd> Sliced raw fish that is served with condiments such as shredded daikon radish or ginger root, wasabi and soy sauce </dd>
+                <dt> Scale </dt>
+                    <dd> A device used to accurately measure the weight of ingredients </dd>
+                    <dd> A technique by which the scales are removed from the skin of a fish </dd>
+                <dt> Scamorze </dt>
+                <dt> Scamorzo</dt>
+                    <dd> An Italian cheese usually made from whole cow's milk (although it was traditionally made from buffalo milk) </dd>
+            </dl>
+
+    6.2 Attributes : - type : to define the type of list icon (circle, square, roman, alphabat)
+                     - start : used in ordered list to start list from some other value
+    -  Lists can be nested inside one another
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+7. TABLES <table> : 
+
+    7.1. <table> : Creates a table. The contents of the table are written out row by row.
+         <tr> : Start of each row. (The tr stands for table row.) It is followed by one or more <td> tags (one for each cell in that row). 
+         <td> : represents a single cell of table. (The td stands for table data.)
+
+        Some browsers automatically draw lines around the table and/or the individual cells. Otherwise we have to use attribute or CSS.
+
+    7.2. TABLE Headings <th>: 
+        - Used just like the <td> tag but its purpose is to represent the heading for either a column or a row. (The th stands for table heading.)
+        - Use the scope attribute, <th scope="row"> or <th scope="col">  to indicate whether it is a heading for a column or a row.
+        - Browsers usually display the content of a <th> tag in bold and in the middle of the cell
+
+    7.3. ATTRIBUTES :
+        a) Spanning Columns (colspan="value") : Used to sctretch the entries in a table in more than one COLUMN.
+                             - used with <th> or <td> tag and indicates how many columns that cell should run across.
+
+        b) Spanning Rows (rowspan = "value") : Used to sctretch the entries in a table in more than one ROW.
+                            - used on a <th> or <td> tag to indicate how many rows a cell should span down the table
+                Example : 
+                <table>
+                    <tr>    <th> </th>  <th>9am</th>  <th>10am</th>  <th>11am</th>    <th>12am</th>   </tr>
+                    <tr>    <th>Monday</th>    <td colspan="2">Geography</td>   <td>Math</td>  <td rowspan ="2" >Art</td>   </tr>
+                    <tr>    <th>Tuesday</th>    <td colspan="3">Gym</td>    </tr>
+                </table
+
+        c) OLD attributes (Should not be used now) : 
+            - Width & Spacing : width attribute was used on the opening <table> tag to indicate how wide that table should be and on some opening <th> and <td> tags to specify the width of individual cells. The value are in pixels.
+                    The columns in a table need to form a straight line, so you often only see the width attribute on the first row (and all subsequent rows would use that setting).
+                    The opening <table> tag could also use the cellpadding attribute to add space inside each cell of the table, and the cellspacing attribute to create space between each cell of the table. The values are in pixels.
+            - Border & Background : Was used on both the <table> and <td> tags to indicate the width of the border in pixels. The bgcolor attribute was used to indicate background colors of either the entire table or individual table cells. The value is usually a hex code
+            - NOTE : When building a new website you should use CSS to control the appearance of the table rather than these attributes. 
+
+
+    7.4. LONG TABLES : USe <thead>, <tbody>, <tfoot> : help distinguish between the main content of the table and the first and last rows (which can contain different content).
+        - By default, browsers rarely treat the content of these tags any differently than other tags however designers often use CSS styles to change their appearance
+        - The tags cointain the <tr> tag, to define that this row is header or body or footer
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+8. FORMS <form> :
+    
+    8.1. Form Controls : Several types of form controls that you can use to collect information from visitors to your site.
+        a) ADDING TEXT : 
+            - Text input (single-line) : Used for a single line of text such as email addresses and names.
+            - Password input : Like a single line text box but it masks/hides the characters entered
+            - Text area (multi-line) : For longer areas of text, such as messages and comments.
+        
+        b) Making Choices :
+            - Radio buttons : For use when a user must select one of a number of options.
+            - Checkboxes : When a user can select and unselect one or more options
+            - Drop-down boxes : When a user must pick one of a number of options from a list
+        
+        c) Submitting Forms :
+            - Submit buttons : To submit data from your form to another web page.
+            - Image buttons : Similar to submit buttons but they allow you to use an image.
+
+        d) Uploading Files :
+            - File upload : Allows users to upload files (e.g. images, resume) to a website
+
+    8.2. How Forms Work :
+        - A user fills in a form and submit the information to the server
+        - The name of each form control is sent to the server along with the value the user enters or selects.
+        - Server processes the information using a programming language like PHP, C#, VB.net, or Java. It may also store the information in a database.
+        - Server creates a new page (e.g. thankyou for filling form) to send back to the browser based on the information received
+    
+    8.3. Form Structure Attributes: 
+        a) action : value of the URL for the page on the server that will receive the information in the form when it is submitted. Every <form> tag requires an action attribute.
+        b) method : Forms can be sent using one of two methods: get or post
+            - get : the values from the form are added to the end of the URL specified in the action attribute. The get method is ideal for:
+                ● short forms (such as search boxes)
+                ● when you are just retrieving data from the web server (not sending information that should be added to or deleted from a database)
+            - post :  the values are sent in what are known as HTTP headers. Use the post method if your form:
+                ● allows users to upload a file 
+                ● is very long
+                ● contains sensitive data (e.g. passwords)
+                ● adds information to, or deletes information from, a database
+                
+            - If the method attribute is not used, the form data will be sent using the get method
+
+        Example : 
+            <form action="http://www.example.com/subscribe.php" method="get">
+                <p> This is where the form controls will appear.         </p>
+            </form>
+        
+        c) id : the value is used to identify the form distinctly from other tags on the page (and is often used by scripts — such as those that check you have entered information into fields that require values)
+
+    8.4. <input> : Used to create several different form controls. The value of the type attribute determines what kind of input they will be creating
+
+        a) TEXT INPUT : type="text" : It creates a single line text input.
+            - name : When users enter information into a form, the server needs to know which form control each piece of data was entered into. (For example, in a login form, the server needs to know what has been entered as the username and what has been given as the password.) 
+                    Therefore, each form control requires a name attribute. The value of this attribute identifies the form control and is sent along with the information they enter to the server.
+            - maxlength : To limit the number of characters a user may enter into the text field.
+            - size : The size attribute should NOT be used on new forms, it is controlled by CSS. It was used in older forms to indicate the width of the text input (number of characters that would be visible). Although a user could enter more characters if they desired).
+
+        b) PASSWORD INPUT : type="password : it creates a text box that acts just like a single-line text input, except the characters are blocked out. 
+            - name : The name attribute indicates the name of the password input, which is sent to the server with the password the user enters
+            - size, maxlength 
+        
+            - Although the password is hidden on the screen, this does not mean that the data in a password control is sent securely to the server. You should never use these for sending sensitive data such as credit card numbers. 
+            - For full security, the server needs to be set up to communicate with users' browsers using Secure Sockets Layer (SSL).
+        
+        c) RADIO BUTTON : type="radio" : allow users to pick just one out of number of options.
+            - name : The name attribute is sent to the server with the value of the option the user selects. In a question, the value of the name attribute should be the same for all of the radio buttons used to answer that question. 
+            - value : indicates the value that is sent to the server for the selected option. The value of each of the buttons in a group should be different (so that the server knows which option the user has selected, generally used same as text shown if small).
+            - checked : used to indicate which value (if any) should be selected when the page loads. The value of this attribute is checked (checked="checked"). Only one radio button in a group should use this attribute 
+
+            - Please note: Once a radio button has been selected it cannot be deselected. The user can only select a different option. If you are only allowing the user one option and want them to be able to deselect it (for example if they are indicating they agree to terms and conditions), you should use a checkbox instead.
+
+        d) CHECKBOX : type="checkbox" : allows users to select/ unselect one or more options in answer to a question.
+            - name, value, checked : same as above
+
+        d.1) DROP DOWN LIST BOX <select> : A drop down list box (also known as a select box) allows users to select one option from a drop down list. It contains two or more <option> tags.
+            a) name : This attribute indicates the name of the form control being sent to the server, along with the value the user selected.
+            b) value : same as above
+            c) <option> : used to specify the options that the user can select from. The text between <option> and </option> tags will be shown to the user in the drop down box.
+                - value : to indicate the value that is sent to the server along with the name of the control if this option is selected
+                - selected : used to indicate which value should be selected when the page loads. The value of this attribute should be selected (selected="selected"). If this attribute is not used, the first option will be shown when the page loads. 
+                                If the user does not select an option, then the first item will be sent to the server as the value for this control.
+                
+                - Function of drop down list box is similar to that of the radio buttons (in that only one option can be selected).
+                    1. If users need to see all options at a glance, radio buttons are better suited.
+                    2. If there is a very long list of options (e.g. list of countries), drop down list boxes work better.
+
+            Example : 
+                <form action="http://www.example.com/profile.php">
+                <p> Select 1 option </p>
+                <select name="devices">
+                    <option value="ipod"> iPod </option>
+                    <option value="radio"> Radio </option>
+                    <option value="computer"> Computer </option>
+                </select>
+                </form>
+
+        d.2) MULTIPLE SELECT BOX <select> :  
+            a) name, value, selected : same as above
+            b) size : indicates number of options you want to show at once. 
+                        Unfortunately, the way that browsers have implemented this attribute is not perfect, and it should be tested throroughly if used (in particular in Firefox and Safari on a Mac). 
+            c) multiple : allows users to select multiple options from this list.  The value of this attribute is multiple (multiple="multiple")
+
+            Example : 
+            <form action="http://www.example.com/profile.php">
+            <p> Select one or more options</p>
+            <select name="instruments" size="3" multiple="multiple">
+                <option value="guitar" selected="selected"> Guitar </option>
+                <option value="drums"> Drums </option>
+                <option value="keyboard" selected="selected"> Keyboard </option>
+                <option value="bass">Bass</option>
+            </select>
+            </form>
+
+        e) FILE : type="file" : allows users to upload a file (e.g. an image, video, mp3, or a PDF), you will need to use a file input box
+            - It creates a box that looks like a text input followed by a browse button. When the user clicks on the browse button, a window opens up that allows them to select a file from their computer to be uploaded to the website.
+            - NOTE : When you are allowing users to upload files, the method attribute on the <form> tag must have a value of post. (You cannot send files using the HTTP get method.)
+
+        f) Submit Button :  type="submit" :
+            - The submit button is used to send a form to the server.
+            - name : It can use a name attribute but it does not need to have one.
+            - value : This attribute is used to control the text that appears on a button.
+
+        g) Image Button : type="image"
+            - If you want to use an image for the submit button, you can give the type attribute a value of image. The src, width, height, and alt attributes work just like they do when used with the <img> tag.
+        
+        g.1) BUTTON & Control : <button> : It was introduced to allow users more control over how their buttons appear, and to allow other elements to appear inside the button. This means that you can combine text and images between the <button> and </button> tag.
+            - type="hidden" : This example below shows a hidden form control. These form controls are not shown on the page (although you can see them if you use the View Source option in the browser). They allow web page authors to add values to forms that users cannot see. 
+            - For example, a web page author might use a hidden field to indicate which page the user was on when they submitted a form.
+            - Example : 
+                <form action="http://www.example.com/add.php"> 
+                    <button> <img src="images/add.gif" alt="add" width="10" height="10" /> Add </button>
+                    <input type="hidden" name="bookmark" value="lyrics" />
+                </form>
+
+        h) <label> :  
+            - When a <label> tag is used with a checkbox or radio button, users can click on either the form control or the label to select. The expanded clickable area makes the form easier to use.
+            - Each form control should have its own <label> tag as this makes the form accessible to vision-impaired users
+            - The <label> tag can be used in two ways. It can:
+                1. Wrap around both the text description and the form input (as shown on the first line of the example below).
+                2. Be kept separate from the form control and use the for attribute to indicate which form control it is a label for (as shown with the radio buttons). 
+            - for : This attribute states which form control the label belongs to. Note how the radio buttons use the id attribute. The value of the id attribute uniquely identifies an element from all other elements on a page.
+                The value of the for attribute matches that of the id attribute on the form control it is labelling. This technique using the for and id attributes can be used on any form control.
+            - Example :
+                <label> Age: <input type="text" name="age" /> </label>
+
+                Gender: 
+                <input id="female" type="radio" name="gender" value="f">    <label for="female"> Female </label>
+                <input id="male" type="radio" name="gender" value="m">      <label for="male"> Male </label>
+
+        Example of whole 8.4: 
+            <form action="http://www.example.com/login.php">
+            a)    <p> Username: 
+                    <input type="text" name="username" size="15" maxlength="30" />    
+                </p>
+            b)    <p> Password: 
+                    <input type="password" name="password" size="15" maxlength="30" />   
+                </p>
+                <textarea name="comments" cols="20" rows="4"> Enter your comments... </textarea>
+
+            c)    <input type="radio" name="genre" value="rock" checked="checked" /> Rock
+                <input type="radio" name="genre" value="pop" /> Pop
+
+            d)    <input type="checkbox" name="service" value="itunes" checked="checked" /> iTunes
+                <input type="checkbox" name="service" value="spotify" /> Spotify
+
+            e)    <p Upload your song in MP3 format: </p>
+                <input type="file" name="user-song" /><br />
+                <input type="submit" value="Upload" />
+
+            f)    <input type="text" name="email" />
+                <input type="submit" name="subscribe" value="Subscribe" />
+
+            g)    <input type="text" name="email" />
+                <input type="image" src="images/subscribe.jpg"  width="100" height="20" />
+
+                
+            </form>
+
+    8.5. Grouping Form Elements : <fieldset> :
+        - You can group related form controls together inside the <fieldset> tag. This is particularly helpful for longer forms.
+        - Most browsers will show the fieldset with a line around the edge to show how they are related. The appearance of these lines can be adjusted using CSS.
+        - <legend>  : tag can come directly after the opening <fieldset> tag and contains a caption which helps identify the purpose of that group of form controls.
+        - Example : 
+        <fieldset>
+            <legend> Contact details </legend>
+            <label>  Email: <br />    <input type="text" name="email" />      </label>      <br />
+            <label>  Mobile: <br />   <input type="text" name="mobile" />     </label>      <br />
+            <label>  Telephone: <br />  <input type="text" name="telephone" />  </label>
+        </fieldset>
+
+
+    8.6. <text area> : used to create a mutli-line text input. It have an opening and a closing tag. 
+            - Any text that appears between <textarea> and closing </textarea> tags will appear in the text box when the page loads.
+            - If the user does not delete any text between these tags, this message will get sent to the server along with whatever the user has typed. (Some sites use JavaScript to clear this information when the user clicks in the text area.)
+            - If you are creating a new form, use CSS to control the width and height of a <textarea>. 
+            - However, looking at older code, you may see the cols (indicates how wide the text area should be or measured in numbers of characters) and rows (indicates how many rows the text area should take up vertically.) attributes used with this element.
+     
+    8.7. HTML5: Form Validation
+        - If the form is not filles correctly, the web page give users messages; this is known as form validation
+        - Traditionally, form validation has been performed using JavaScript. But HTML5 is introducing validation and leaving the work to the browser.
+        - 
+        - Example : 
+            <form action="http://www.example.com/login/" method="post"> 
+                <label for="username">  Username:   </label>
+                <input type="text" name="username" required="required" />   </title>    <br /> 
+                <label for="password">  Password:   </label>
+                <input type="password" name="password" required="required" /> 
+                <input type="submit" value="Submit" />
+            </form>
+
+    8.8. HTML5: Date input : type="date"
+        - To ask for a date, you can use an <input> tag and type attribute with value of date. This will create a date input in browsers that support the new HMTL5 input types.
+        - Example :
+            <form action="http://www.example.com/bookings/" method="post">
+                <label for="username">  Departure date: </label>
+                <input type="date" name="depart" />
+                <input type="submit" value="Submit" />
+            </form>
+    
+    8.9. HTML5: Email & URL Input
+        - type="email" : To for an email address, you can use the email input. Browsers that support HTML5 validation will check that the user has provided information in the correct format of an email address.
+        - type="url" : A URL input can be used when you are asking a user for a web page address. Browsers that support HTML5 validation will check that the user has provided information in the format of a URL.
+        
+        - Example email:
+            <form action="http://www.example.org/subscribe.php"> 
+                <p> Please enter your email address:    </p>
+                <input type="email" name="email" />
+                <input type="submit" value="Submit" />
+            </form>  
+        - Example URL:
+            <form action="http://www.example.org/profile.php"> 
+                <p> Please enter your website address:  </p>
+                <input type="url" name="website" />
+                <input type="submit" value="Submit" />
+            </form>
+    
+    8.10. HTML5: search input
+        - type="search" : To create the HTML5 search box the <input> tag should have a type attribute whose value is search 
+        - On any text input, you can also use an attribute called placeholder whose value is text that will be shown in the text box until the user clicks in that area. 
+   
+        - Example : 
+            <form action="http://www.example.org/search.php">
+                <p>Search:</p>
+                    <input type="search" name="search" />
+                    <input type="submit" value="Search" />
+
+                    <input type="search" name="search" placeholder="Enter keyword" />
+                    <input type="submit" value="Search" />
+                </form>
+--------------------------------------------------------------------------------------------------------------------------------------
+
+40. <div> </div> : 

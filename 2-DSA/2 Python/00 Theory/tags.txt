@@ -1,0 +1,15 @@
+
+1. input() : To take input from user, but it take every data as string, so convert using int(variable_name) to convert into integer; float(), bool(), str()
+    name = input("what is your name")       # we can also include msg within the input
+    print("Hello " + name)                  # will print hello along with name variable
+
+2. format() method : To use a string as template
+        print("{}, A computer science portal for geeks.".format("GeeksforGeeks"))
+ 
+        str = "This article is written in {}"
+        print(str.format("Python"))
+        
+        # formatting a string using a numeric constant
+        print("Hello, I am {} years old !".format(18))
+
+3. 

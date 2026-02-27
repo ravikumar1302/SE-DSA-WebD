@@ -1,0 +1,36 @@
+=====================================================================
+| No. | Feature          | Markdown Syntax Example                                      | Output Description                  |
+=====================================================================
+| 1   | Headers          | # H1                                                        | Header levels H1 to H6              |
+|     |                  | ## H2                                                       |                                     |
+|     |                  | ### H3                                                      |                                     |
+---------------------------------------------------------------------
+| 2   | Bold / Italic    | **Bold**                                                    | Bold text                           |
+|     |                  | *Italic*                                                    | Italic text                         |
+|     |                  | ***Bold & Italic***                                         | Bold and italic text                |
+---------------------------------------------------------------------
+| 3   | Lists            | - Item 1                                                    | Unordered (bullet) list             |
+|     |                  |   - Sub Item                                                |                                     |
+|     |                  | 1. First                                                    | Ordered (numbered) list             |
+|     |                  | 2. Second                                                   |                                     |
+---------------------------------------------------------------------
+| 4   | Links            | [OpenAI](https://www.openai.com)                            | Clickable hyperlink                 |
+---------------------------------------------------------------------
+| 5   | Images           | ![Alt Text](image_url_or_path)                              | Display an image                    |
+---------------------------------------------------------------------
+| 6   | Code             | Inline: `console.log()`                                     | Inline code                         |
+|     |                  | Block:                                                      | Code block with syntax highlighting |
+|     |                  | ```js                                                       |                                     |
+|     |                  | function greet() {                                          |                                     |
+|     |                  |     console.log("Hello");                                   |                                     |
+|     |                  | }                                                           |                                     |
+|     |                  | ```                                                         |                                     |
+---------------------------------------------------------------------
+| 7   | Blockquote       | > This is a quote                                           | Quoted (indented) text              |
+---------------------------------------------------------------------
+| 8   | Horizontal Line  | ---                                                         | Horizontal divider line             |
+|     |                  | ***                                                         |                                     |
+---------------------------------------------------------------------
+| 9   | Task Lists       | - [x] Task done                                              | Task checklist                      |
+|     |                  | - [ ] Task pending                                           |                                     |
+=====================================================================

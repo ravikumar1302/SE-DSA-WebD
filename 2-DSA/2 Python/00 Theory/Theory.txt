@@ -1,0 +1,38 @@
+
+0. Libraries in Python :
+    - NumPy : For numerical (mathematical & statistical) Computation
+    - Pandas : Analyzing tabular data
+    - Matplotlib & Seaborn : Create Data Visualization with these 2 libraries (graphs, maps etc)
+    
+    - Pyhton Comments : 
+                Single line = # text 
+                Multiple line = """ text """
+    - Case-Sensitivity in Python : Sensative (All are in Lowercase except - True, False and None)
+
+1. File extension : .py
+2. Some points to remember : 
+    - Python is case sensetive. So, print and Print are different
+    - No need of semicolon in Python
+    - As curly braces {}, are not used in python, the indentation is necessary, means proper spaces in outer and inner loop
+    - 
+
+
+3. Features : 
+    - There is no need to define the type of variable in Python, just enter the vale, type will be assigned to it
+    - So, no need to define short int, long int etc. Directly write a=243543535... etc, unlike C/C++/Java
+    - Boleans are treated as integer in expression. e.g. c=print(True +True) = 2
+    - Divsion operator (/) always return float value even 4/2 type will also be float
+
+4. Data Types in Python : By default Python have these data types:
+        strings - used to represent text data, the text is given under quote marks. e.g. "ABCD"
+        integer - used to represent integer numbers. e.g. -1, -2, -3
+        float - used to represent real numbers. e.g. 1.2, 42.42
+        boolean - used to represent True or False.
+        complex - used to represent complex numbers. e.g. 1.0 + 2.0j, 1.5 + 2.5j
+        
+5. string
+    - Should be enclosed in single(' ') or double(" ") quotes
+    - You can use single quote inside double quote, but opposite will create an issue
+    - Else you can use escape character(\) like " his son\'s name is " to print his son's name is
+    - For multi line string, use triple quotes ("""  """)
+    - 

@@ -1,0 +1,318 @@
+BASIC HTML THEORY :
+PL-SQL was invented by Oracle (along with JAVA and MY SQL) in 
+
+0. file Extension : 
+1. It stands for Procedural Language extension - SQL
+    - Oracle SQL developer Software can be used for this
+
+2. Basic Syntax : 
+    DECLARE (optional)
+        // variables, cursors, procesures, functions, triggers, assertion, user-defined exceptions etc
+        // variable_name datatype(size);
+        msg varchar2(20) := 'Ram Ram Ji';
+    BEGIN (mandatory)
+        // SQL statements, control structures, Pl/SQL statements etc
+        dbms_output.put_line(msg);
+    EXCEPTION (optional)
+        // Exception handling statements
+        // There are user defined exxceptions also, and pre-defined also (around 30-40 are also there like data type mismatch, divide by 0 etc)
+    END; (mandatory)
+    /   -- This forward slash means, execute the block
+    - Semicolon is optional, depending on the software
+    - Begin section can't be left empty, write NULL; if nothing to write
+
+3. Data Types :
+    a) Scalar : Single values with no internal components such as a NUMBER, DATE or BOOLEAN
+        i) Numeric : for arithmetic operations
+            - PLS_INTEGER, BINARY_INTEGER,BINARY_FLOAT,INT, FLOAT, REAL, SMALLINT etc
+        ii) Character : Alphanumeric values of single or string of characters
+            - CHAR, VARCHAR2, RAAWA, NCHAR, NVARCHAR2, LONG, LONGRAW etc
+        iii) Boolean : Logical values (True/False)
+        iv) Datetime : Dates and Times
+
+    b) Large OBject (LOB) : Pointers to large objects athat are stored separately from other data items, such as text, graphic images, video clips and sound waveforms
+    c) Composite : Data items that have internal components that can be accesses individually, e.g., collections and records
+    d) Reference : Pointers to other data items
+    - PL-SQL don't allow multiple varable declarations in one line, declare each one of them in different line
+
+4. User-Defined Subtypes :
+    - Subtype is a subset of another data type, which is called its base type
+    - PL-SQL predefines several subtypes in package STANDARD
+    - E.g., it predefines subtype CHARACTER & INTEGER as follows : 
+        DECLARE
+            SUBTYPE name IS char(20);
+            SUBTYPE msg IS varchar2(100);
+            salutation name;
+            greetings msg;
+        BEGIN
+            salutation :='Reader';
+            greetings := 'Har har mahadev';
+            dbms_output.put_line('Hello' || salutaion || greetings);    // here || means appending or adding 
+        END;
+        /
+
+5. Declaring variables : variable_name [CONSTANT] datatype [NOT NULL] [:= | DEFAULT initial_value]
+    - Naming Rules : must be less than 31 character; Must begin either with lower or uppercase; and is case-insensitive, means v_name and V_NAME are same
+    - sales number(10,2);   // The 2 here means the no of values after decimals
+    - pi CONSTANT double precision := 3,14;
+    - name varchar2(25);
+    - sales number := 4; OR sales number DEFAULT 4;     // Both are same
+
+    a) Variable Anchor : 
+        - It referes to use of %TYPE keyword to declare a varaible with the data type is associated with a column's data type of a particular column in a table
+        - eg, in Declare section write : variable_name table_name.column_name%TYPE; to copy the type of that column variable in your variable
+
+    b) SELECT-INTO
+        - It is used to assign a value to a variable
+        - The INTO clause moves values from SELECT query's column list into coreesponding PL/SQL variables
+        -  e.g. in BEGIN section write : SELECT column(s) INTO variables FROM table_name [condition];
+    
+    c) Constant variables :
+        - e.g. in Declare section write : variable_name CONSTANT dta_type := value;
+        - or in Declare section write : variable_name CONSTANT dta_type(size);
+            then in BEGIN write : variable_name := value;
+
+6. Local vs Global variables : 
+    DECLARE
+            -- Global
+            a integer := 10;
+            b integer := 20;
+            c integer;
+        BEGIN
+            DECLARE
+                -- Local
+                c integer;
+                c := a+b;
+            BEGIN
+                dbms_output.put_line('Value of : ' c); 
+            END
+        END;
+        /
+
+7. Assigning SQL Query results to PL/SQL variables :
+    - Let say : CREATE TABLE CUSTOMER (ID INT NOT NULL, NAME VARCHAR(20) NOT NULL, AGE INT NOT NULL);
+    - then :    INSERT INTO CUSTOMERS (ID, NAME,AGE) VALUES (1, 'Rahul', 32);
+
+    - then in PL_SQL
+       DECLARE
+            c_id customers.id%type := 1;    // assigning or refrencing the datatype here, not value
+            c_name customers.name%type;
+        BEGIN
+            SELECT name, address, salary, c_name FROM customers WHERE id = c_id;
+            dbms_output.put_line('Customer' ||c_name || 'from' || c_addr);
+        END 
+
+8. PL-SQL Conditions : (It is also called controlled structures) 
+    a) IF-THEN : 
+        IF (a<=20) THEN     // all these conditions are written inside BEGIN
+            c := c+1;       // Write either expressions or SQL statements
+        END IF;
+    b) IF-THEN-ELSE :
+        IF (a<=20) THEN
+            c := c+1;
+        ELSE
+            c := c+2;
+        END IF; 
+    c) IF-THEN-ELSEIF : 
+        IF (a<=20) THEN
+            c := c+1;
+        ELSEIF (a=20) THEN
+            c := c+3;
+        ELSE
+            c := c+2;
+        END IF; 
+    d) CASE : 
+        DECLARE
+            var char(1) := 'A';
+        BEGIN
+            CASE var
+                when 'A' then dbms_output.put_line('Excellent');
+                when 'B' then dbms_output.put_line('Very Good');
+                when 'c' then dbms_output.put_line('Well Done');
+                when 'D' then dbms_output.put_line('You Passed');
+                else dbms_output.put_line('Failed');        // default case
+            END CASE;
+        END
+    e) Searched CASE : there is selector in each case
+        DECLARE
+            var char(1) := 'A';
+        BEGIN
+            CASE var
+                when var = 'A' then dbms_output.put_line('Excellent');
+                when var = 'B' then dbms_output.put_line('Very Good');
+                when var = 'c' then dbms_output.put_line('Well Done');
+                when var = 'D' then dbms_output.put_line('You Passed');
+                else dbms_output.put_line('Failed');        // default case
+            END CASE;
+        END
+    f) nested IF-THEN-ELSE : 
+
+9. Loops : Basic, While and For loop
+    a) Basic LOOP : made usingif-then 
+        DECLARE
+            var number := 10;
+        BEGIN
+            Loop
+                x := x+10;
+                // statements
+                EXIT WHEN (x > 50);     // we can also write :  IF x>50 THEN EXIT;  END IF;   
+            END LOOP;
+        END
+    b) WHILE LOOP : 
+        DECLARE
+            var number := 10;
+        BEGIN
+            WHILE a< 20 LOOP
+                a := a+2;     
+            END LOOP;
+        END
+    c) FOR LOOP :
+        DECLARE
+            var number := 10;
+        BEGIN
+            FOR a in 10 .. 20 LOOP      // FOR a in REVERSE 10 .. 20 LOOP
+                a := a+2;     
+            END LOOP;
+        END
+
+        - User REVERSE keyword if you want value in reverse
+
+    d) Nested loops : 
+
+    - Loop Contol statemens : EXIT, CONTINUE, GOTO
+
+10. PL-SQL Arrays : 
+    - called as VARRAY
+    - In Oracle environment, the starting index for varrays is always 1
+    - varraays are 1-D arrays
+    - created with statement : CREATE TYPE. You must specify max size and type of elements stored in VARRAY
+        CREATE OR REPLACE TYPE name IS VARRAY(3) of VARCHAR2(10);       // here 3 is max no of element in arrat, varchar is type of Arrays
+        - Max size can be changed using ALTER TYPE;
+        - Create or replace, individually or together can be used
+    -  DECLARE
+            TYPE namesarray IS VARRAY(3) of VARCHAR2(10);
+            TYPE grades IS VARRAY(5) of INTEGER;
+            names namesarray;
+            marks grades;
+            total integer;
+        BEGIN
+            names := namesarray('Kavita', 'Pritam', 'Ayan');
+            marks := grades(98, 97, 78, 87, 92);
+            total := names.count;
+            dbms_output.put_line('Total' || total || 'Students');
+            FOR i in 1 .. total LOOP
+                dbms_output.put_line('Student :' || names(i) || 'Marks : ' || marks(i));     
+            END LOOP;
+        END
+
+
+11. PROCEDURES / stored procedure: 
+    - PL/SQL stored procedure is a subprogram that perofrms a particular task to avoid repedtead task to be done manually, these subprograms are combined to form a larger programs
+    - it is a block which performs one pr more specific tasks. Procedure contains header and body.
+    - Header : contains name and parameters or varaibles passed to Procedure
+    - Body : contains a declaration, execution & exception section nsimilar to general PL-SQL block
+    - 3 ways to pass parameters : IN, OUT & INOUT parameters
+    - Procedure may or may not return any value
+    - E.g.,  CREATE TABLE user (id number(10) primary key, name varchar2(100));
+
+            // Procedure code : 
+            CREATE or REPLACE PROCEDURE "insertuser" (id IN NUMBMER, name IN VARCHAR2)
+            IS      // IS or AS : 2 ways
+            BEGIN
+                INSERT INTO user VALUES (id, name);
+            END ;
+            /
+            // To call above Procedure
+            BEGIN   
+                insertuser(101, 'Rahul');
+                dbms_output.put_line('record inserted successfully');
+            END;
+            /
+        - Now you can call the procedure using : EXECUTE insertuser OR using : BEGIN insertuser END; /
+
+12. FUNCTIONS : It must always return a value (main diff b/w function and procedure)
+    - AS keyword is used instead of IS keyword for creating a standalone function
+    -   CREATE or REPLACE FUNCTION adder (n1 IN NUMBMER, n2 IN NUMBER)
+        RETURN number       // RETURN return_type
+        IS      // IS or AS
+        n3 number(8);
+        BEGIN
+            n3 := n1 + n2;
+            RETURN n3;
+        END ;
+
+13. CURSOR :
+    - When an SQL statement is processed, Oracle creates a memory area known as context area.
+    - A Cursor is a pointer to this context area, it contains all info needed for processing statement
+    - A cursor contains info on a Select statement and rows of data accessed by it
+    - 2 type of cursors : 
+        - Implicit : automatically generated by Oracle while an SQL statement is executed like when INSERT, UPDATET, DELETE etc are executed
+                Oracle provide these cursor to check DML operations : %FOUND, %NOTFOUND, %ROWCOUNT & %ISOPEN
+            DECLARE
+            total_rows nmber(2);
+            BEGIN
+                UPDATE customers
+                SET salary = salary + 5000;
+                IF sql%notfound THEN    
+                    dbms_output.put_line('no customer updated');
+                END IF;
+            END
+
+        - Explicit :  are defined by programmers to gain more control over context area
+            - cursor should be defined in Declaration section block.
+            - It is created on a SELECT statement which returns more than one rows
+                - CURSOR cursor_name IS select_statement;
+            - Basic structure : 
+                CURSOR name IS
+                SELECT statement;
+                OPEN cursor_name;
+                FETCH cursor_name INTo variable_list;
+                CLOSE cursor_name;
+            
+            - DECLARE
+            c_id customers.id%type;
+            CURSOR c_customers is
+                SELECT id, name, addresss FROM customers;
+            BEGIN
+                OPEN c_customers
+                LOOP
+                    FETCH c_customers INTO c_id, c_name;
+                    EXIT WHEN c_customers%notfound;
+                    dbms_output.put_line(// print the msg user want);
+                END LOOP;
+                CLOSE c_sutomers;
+            END
+
+14. TRIGGERS :
+    - The PL/SQL triggers are IMPLICITLY executed when INSERT, UPDATE or DELETE statement is performed
+    - Syntax :
+        CREATE [OR REPLACE] TRIGGER trigger_name
+        BEFORE [OR AFTER OR INSTEAD OF] INSERT [OR UPDATE OR DELETE]
+        ON table_name
+        [REFERENCING OLD AS o NEW AS n]
+        [FOR EACH ROW]
+
+        DELARE 
+            declaration section
+        BEGIN
+            sequence of statements
+        END;
+        /
+    
+    - After : Like after transaction we get message and mail from bank
+    - Instead of : if-else case or as the name suggests 
+
+15. Exception handling : 
+        DELARE 
+            v_lname varchar2(20);
+        BEGIN
+            sequence of statements
+        EXCEPTION
+            WHEN too_many_rows then
+            dbms_output.put_line();
+        END;
+        /
+
+        - There were more than one rows, the system shows error, use exception in that case
+
+16.  

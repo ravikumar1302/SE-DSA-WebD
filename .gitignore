@@ -1,0 +1,11 @@
+# Ignore VS Code settings
+.vscode/
+
+# a) Ignore the Rough/Practice area in Web-D
+3-Web-D/7 Rough or Practice area/
+
+# b) Ignore the Extra folder in the root
+Extra/
+
+# Ignore any specific test CPP files if needed
+*.cpp

@@ -1,0 +1,17 @@
+
+Matplotlib & Seaborn : Create Data Visualization with these 2 libraries (graphs, maps etc)
+
+1. Generally, Seaborn is used to butify the results produced by matplotlib
+    - Both are used together also sometime.
+    - Like, attributes of both are used
+
+2. import seaborn as sns
+    sns.set_style("whitegrid")
+
+3. sns.load_dataset(" ")    # seaborn as some sample csv file to work with like iris etc
+
+4. sns.scatterplot(x_axis, y_axis) : to plot scatter plot using seaborn
+    - seaborn scatterplot is more powerful than matplotlib scatterplot in terms of functions and power
+
+5. Seaborn automatically pics the column name as chart x and y axis label, hence saving some line of code as compared to matplotlib
+6. 
