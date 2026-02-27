@@ -6,6 +6,3 @@
 
 # b) Ignore the Extra folder in the root
 Extra/
-
-# Ignore any specific test CPP files if needed
-*.cpp
