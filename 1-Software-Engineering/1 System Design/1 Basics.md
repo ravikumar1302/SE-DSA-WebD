@@ -1,4 +1,4 @@
-# System Design : Basics
+# System Design - Basics : Scaling (Horizontal, Vertical), Event Sourcing, CQRS
 
 <br><img src="../Images/System_Design.png" alt="System Design" width="60%" style="display: block; margin: auto;"><br>
 
@@ -99,3 +99,23 @@
 - Tradeoff:
     - You gain scalability, flexibility, and performance at the cost of higher system complexity and operational overhead
     - CQRS is powerful for large, distributed, high-scale systems but often unnecessary for simple CRUD applications.
+
+## 5. Back of Envelope Calculation
+
+<br><img src="../Images/Back_of_Envelope_Calculation.png" alt="Back_of_Envelope_Calculation" width="60%" style="display: block; margin: auto;"><br>
+
+- It is a rough estimation technique used to validate whether a system can handle expected scale — before going deep into architecture
+- It helps you answer: Will this system realistically work at this scale?
+- The goal is not precision — it’s order-of-magnitude correctness
+- It Involves estimate of key numbers like: Number of users, Requests per second (RPS), Data generated per day, Storage required, Bandwidth needed, Memory and server capacity
+
+- Why It’s Important
+    - Prevents unrealistic designs
+    - Helps choose correct database, cache, or infrastructure
+    - Shows scalability awareness in interviews
+    - Identifies bottlenecks early
+
+- **Example** :
+    - If a system has: 10 million daily active users and Each makes 10 requests/day
+    - That’s: 100M requests/day ≈ ~1,200 requests/second
+    - Now you can estimate : How many servers needed, How much load per server, How much storage per year
