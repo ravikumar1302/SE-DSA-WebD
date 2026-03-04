@@ -1,19 +1,16 @@
 ## Basics of React JS
 
 1. Extension : .jsx
-
     - .js → Standard Js files
     - .jsx → JavaScript XML : Js files that contain JSX syntax (React’s HTML-like syntax). While JSX can live in .js files too, some teams prefer .jsx to make it clear
     - .ts → TypeScript files (if your React project uses TypeScript)
     - .tsx → TypeScript files with JSX inside
 
 2. So, if you’re writing React components in plain JavaScript, you can use either:
-
     - Component.js
     - Component.jsx
 
 3. If using TypeScript with React:
-
     - Component.ts (no JSX inside)
     - Component.tsx (with JSX inside)
 
@@ -29,7 +26,6 @@
     1. When any dynamic value/state is updated, reach updates the same in Light weight Virtual DOM and checks the same with Actual DOM.
     2. If change is found, then only the actual (Browser) DOM is updated
 4. React Projects Use A Build Process
-
     - Raw, unprocessed React code won't execute in the browser, as JSX is not a default JavaScript feature
     - In addition, the code would not be optimized for production (e.g., not minified)
     - React projects require a build process that transforms your code; create-react-app, vite etc. give you such a build process (no custom setup or tweaking needed)
@@ -39,5 +35,9 @@
 
 ---
 
+### Component in React
+
 1. React JS is all abbout components, which are reusable. Each component has it's own logic and control
-2.
+2. Two Rules of component of React React:
+    - Component shoud return JSX
+    - Component name should start with Capital letter (e.g. MyComponent is valid but myComponent is not)
