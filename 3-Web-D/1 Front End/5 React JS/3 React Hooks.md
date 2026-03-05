@@ -23,7 +23,10 @@ React maps Hook calls by execution order internally
 
 # `useState` Hook
 
-`useState` adds local state to functional components.
+`useState` adds local state to functional components
+
+- A state of a component is a variable that holds some information that may change over the lifetime of the component
+- Whenever the value of the state changes, the component re-renders itself with updated values
 
 ### Syntax
 
@@ -32,7 +35,7 @@ const [state, setState] = useState(initialValue);
 ```
 
 - `state` → current state value
-- `setState` → function to update state
+- `setState` → it is a function to update state/ count value
 - `initialValue` → starting value (used only on first render)
 
 ---
