@@ -16,6 +16,7 @@ They enable:
 1. Call Hooks only at the top level (no loops/conditions)
 2. Call Hooks only inside React function components or custom Hooks
 3. Maintain the same call order on every render
+4. All the hooks in react start with word `use` like useState, useContext, useEffect
 
 React maps Hook calls by execution order internally
 
