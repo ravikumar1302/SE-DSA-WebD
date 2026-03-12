@@ -1,6 +1,8 @@
-## React Hooks – Overview
+# React Hooks – Overview
 
-_Hooks_ were introduced in _React 16.8_ to let functional components use state and lifecycle features without classes
+- _Hooks_ were introduced in _React 16.8_ to let functional components use state and lifecycle features without classes
+- It does not work inside classes
+- Hooks are backward-compatible, which means it does not contain any breaking changes
 
 They enable:
 
@@ -9,20 +11,26 @@ They enable:
 - Cleaner composition over inheritance
 - Removal of `this` and class boilerplate
 
----
+## When to use Hooks
+
+1. If you write a function component and then you want to add some state to it,previously you do this by converting it to a class
+2. But, now you can do it by using a Hook inside the existing function component
 
 ## Rules of Hooks
 
-1. Call Hooks only at the top level (no loops/conditions)
-2. Call Hooks only inside React function components or custom Hooks
+1. Call Hooks only at the top level (no loops/conditions/ nested functions)
+2. Call Hooks only inside/from React function components or custom Hooks
 3. Maintain the same call order on every render
-4. All the hooks in react start with word `use` like useState, useContext, useEffect
+4. All the hooks in react start with keyword `use` like useState, useContext, useEffect
 
 React maps Hook calls by execution order internally
 
----
+## Hooks State
 
-# `useState` Hook
+- Hook state is the new way of declaring a state in React app
+- Hook uses useState() functional component for setting and retrieving state
+
+## `useState` Hook
 
 `useState` adds local state to functional components
 
@@ -31,7 +39,7 @@ React maps Hook calls by execution order internally
 
 ### Syntax
 
-```javascript
+```
 const [state, setState] = useState(initialValue);
 ```
 
@@ -43,7 +51,7 @@ const [state, setState] = useState(initialValue);
 
 ## Example
 
-```javascript
+```
 import React, { useState } from "react";
 
 function Counter() {
@@ -74,7 +82,7 @@ function Counter() {
 
 ### 1. Functional Updates (Avoid stale closures)
 
-```javascript
+```
 setCount((prev) => prev + 1);
 ```
 
@@ -86,7 +94,7 @@ Use when new state depends on previous state
 
 Unlike class `setState`, `useState` replaces values:
 
-```javascript
+```
 setUser((prev) => ({ ...prev, name: "John" }));
 ```
 
@@ -96,7 +104,7 @@ You must merge manually for objects
 
 ### 3. Multiple State Variables
 
-```javascript
+```
 const [name, setName] = useState("");
 const [age, setAge] = useState(0);
 ```
@@ -107,7 +115,7 @@ Encourages separation and predictable updates
 
 ### 4. Lazy Initialization
 
-```javascript
+```
 const [state] = useState(() => expensiveComputation());
 ```
 
