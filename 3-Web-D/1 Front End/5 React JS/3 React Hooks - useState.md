@@ -38,10 +38,16 @@ React maps Hook calls by execution order internally
 - Whenever the value of the state changes, the component re-renders itself with updated values
 - OR It is the most important and often used hook. The purpose of this hook is to handle reactive data, any data that changes in the application is called state, when any of the data changes, React re-renders the UI
 
+- It accepts an argument as the initial value of the state. It returns an array with 2 elements. The first element is the current value of the state. The second element is a function to update the state
+
 ### Syntax
 
 ```
 const [state, setState] = useState(initialValue);
+
+or
+
+const [currentStateValue, functionToUpdateState] = useState(initialStateValue);
 ```
 
 - `state` → current state value
