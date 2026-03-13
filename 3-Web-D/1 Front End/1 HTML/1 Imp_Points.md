@@ -2,14 +2,29 @@
 
 1.  HTML is standard language used to structure webpages. It defines how content on a webpage should be structured and displayed
 2.  Key points of HTML5
-    -   Multimedia Support: Embeds audio and video without plugins.
-    -   New Form Controls: Includes input types like date and email.
-    -   Web Storage: Stores data offline for better performance.
-    -   Semantic Elements: Uses tags like `<header> and <footer>` for better structure. (Semantic tags in HTML5 are elements that convey meaning about the content they contain, like header tells it contain some heading)
-    -   Improved Performance: Faster and more efficient, especially on mobile.
+    - Multimedia Support: Embeds audio and video without plugins.
+    - New Form Controls: Includes input types like date and email.
+    - Web Storage: Stores data offline for better performance.
+    - Semantic Elements: Uses tags like `<header> and <footer>` for better structure. (Semantic tags in HTML5 are elements that convey meaning about the content they contain, like header tells it contain some heading)
+    - Improved Performance: Faster and more efficient, especially on mobile.
 3.  HTML is not case-sensitive language. So, body == BODY == Body. But it is recommended to use LOWER-CASE
+    - X-HTML is Case sensetive
 
-    -   X-HTML is Case sensetive
+### Basic template
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Basic Layout of HTML</title>
+    </head>
+    <body></body>
+</html>
+
+```
 
 4.  The index.html page is the most common name used for the default page shown on a website if no other page is specified when a visitor requests the site. In other words, index. html is the name used for the homepage of the website
 5.  Attribute value can be written in single as well as double quotes, i.e., `<html lang = "en"> == <html lang = 'en'>`, but as string is mostly written in double quotes, better to write in double quotes
@@ -26,19 +41,20 @@
 14. Tags are called as elements; `e.g. <p> tag or <p> element`
 
 15. Features of HTML5:
-
-    -   HTML5 introduces several new elements and attributes to improve web development.
-    -   Semantic Elements : New tags like `<article>, <aside>, <nav>, <header>, <footer> and <section>` provide meaning and structure to the content, improving both accessibility and SEO.
-    -   Multimedia Support : Native support for `<audio> and <video>` tags removes the need for third-party plugins like Flash.
-    -   Canvas API : Allows drawing graphics, animations, and games directly in the browser using JavaScript.
-    -   Geolocation API : Provides access to the user's geographical location (with permission), enabling location-based services.
-    -   Web Storage (localStorage and sessionStorage) : Local storage (localStorage) and session storage (sessionStorage) provide client-side data storage, improving performance and enabling offline functionality.
-    -   Web Workers : Allows background processing of JavaScript, improving performance by preventing blocking of the main thread.
-    -   Form Enhancements : New input types (e.g., date, email, number) and form validation make forms easier and more efficient to create.
-    -   Drag and Drop API : Allows users to drag and drop elements within a web page or between applications, enhancing interactivity.
-    -   SVG Integration : Improved support for Scalable Vector Graphics (SVG), allowing for resolution-independent vector graphics to be embedded directly into HTML.
-    -   WebSocket API : Enables real-time, bidirectional communication between the client and server.
+    - HTML5 introduces several new elements and attributes to improve web development.
+    - Semantic Elements : New tags like `<article>, <aside>, <nav>, <header>, <footer> and <section>` provide meaning and structure to the content, improving both accessibility and SEO.
+    - Multimedia Support : Native support for `<audio> and <video>` tags removes the need for third-party plugins like Flash.
+    - Canvas API : Allows drawing graphics, animations, and games directly in the browser using JavaScript.
+    - Geolocation API : Provides access to the user's geographical location (with permission), enabling location-based services.
+    - Web Storage (localStorage and sessionStorage) : Local storage (localStorage) and session storage (sessionStorage) provide client-side data storage, improving performance and enabling offline functionality.
+    - Web Workers : Allows background processing of JavaScript, improving performance by preventing blocking of the main thread.
+    - Form Enhancements : New input types (e.g., date, email, number) and form validation make forms easier and more efficient to create.
+    - Drag and Drop API : Allows users to drag and drop elements within a web page or between applications, enhancing interactivity.
+    - SVG Integration : Improved support for Scalable Vector Graphics (SVG), allowing for resolution-independent vector graphics to be embedded directly into HTML.
+    - WebSocket API : Enables real-time, bidirectional communication between the client and server.
 
 16. A noindex tag is a piece of code that instructs search engines not to include a specific webpage in their search results, making it inaccessible through organic search. It's implemented as an HTML <meta> tag or an HTTP X-Robots-Tag header. Website owners use noindex tags to prevent low-value pages (like internal search results or thank you pages), duplicate content, or sensitive information (like login pages) from appearing in search results, which helps preserve crawl budget and maintain a higher-quality search index
 
-17.
+17. Relative links:
+
+<br><img src="../../Images/Relative_Links.png" alt="Relative_Links" width="40%" style="display: block; margin: auto;"><br>
