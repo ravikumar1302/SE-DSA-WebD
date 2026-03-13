@@ -36,6 +36,7 @@ React maps Hook calls by execution order internally
 
 - A state of a component is a variable that holds some information that may change over the lifetime of the component
 - Whenever the value of the state changes, the component re-renders itself with updated values
+- OR It is the most important and often used hook. The purpose of this hook is to handle reactive data, any data that changes in the application is called state, when any of the data changes, React re-renders the UI
 
 ### Syntax
 
