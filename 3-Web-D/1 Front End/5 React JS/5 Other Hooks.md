@@ -56,6 +56,8 @@ function App() {
 - It does very similar to setState, It's a different way to manage the state using Redux Pattern
 - Instead of updating the state directly, we dispatch actions, that go to a reducer function, and this function figures out, how to compute the next state
 
+<br><img src="../../Images/useReducer_Hook.png" alt="useReducer_Hook" width="40%" style="display: block; margin: auto;"><br>
+
 ```
 function reducer(state, action) {
     switch (action.type) {
