@@ -1,6 +1,7 @@
 ## `useEffect` Hook
 
-`useEffect` lets functional components **perform side effects after rendering**
+- `useEffect` lets functional components **perform side effects after rendering**
+- It allows us to implement all of the lifecycle hooks from within a single function API
 
 A **side effect** is any operation that interacts with something **outside the React component**, such as:
 
@@ -54,6 +55,33 @@ function Counter() {
         </>
     );
 }
+```
+
+## Working example
+
+```
+// 1. This will run when the component mounts AND anytime stateful data changes
+React.useEffect(() => {
+    alert('Hey, Nads here!');
+});
+
+// 2. This will run ONLY when the component is first initialized (mounted)
+React.useEffect(() => {
+    alert('Hey, Nads here!');
+}, []);
+
+// 3. This will run ONLY when specific state (e.g., 'count') changes
+React.useEffect(() => {
+    fetch('nads').then(() => setLoaded(true));
+}, [count]);
+
+// 4. This will run when the component is destroyed (unmounted)
+// or before the component is removed from the UI.
+React.useEffect(() => {
+    alert('Hey, Nads here!');
+
+    return () => alert('Goodbye Component');
+});
 ```
 
 ---
