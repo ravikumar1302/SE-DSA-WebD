@@ -9,10 +9,10 @@ In simple terms:
 
 Normally in React:
 
-- When a **parent component re-renders**,
-- **all child components also re-render** — even if their props are the same.
+- When a **parent component re-renders**
+- **all child components also re-render** — even if their props are the same
 
-`React.memo` avoids this unnecessary re-render.
+`React.memo` avoids this unnecessary re-render
 
 ## 2. Basic Syntax
 
@@ -29,8 +29,8 @@ export default React.memo(MyComponent);
 
 Now:
 
-- If `name` **doesn't change**,
-- `MyComponent` **will not re-render**.
+- If `name` **doesn't change**
+- `MyComponent` **will not re-render**
 
 ## 3. Example Without React.memo
 
@@ -54,7 +54,7 @@ function Child({ name }) {
 
 Every time `count` changes:
 
-👉 `Child` re-renders even though `name` didn't change.
+👉 `Child` re-renders even though `name` didn't change
 
 ## 4. Example With React.memo
 
@@ -68,7 +68,7 @@ const Child = React.memo(function Child({ name }) {
 Now:
 
 - Parent re-renders ✅
-- Child **does NOT re-render** if `name` is unchanged.
+- Child **does NOT re-render** if `name` is unchanged
 
 ## 5. Custom Comparison Function (Advanced)
 
@@ -108,4 +108,4 @@ Use it when:
 - ✅ Rendering is **expensive**
 - ✅ Props **rarely change**
 
-Avoid using it everywhere because it also has **comparison overhead**.
+Avoid using it everywhere because it also has **comparison overhead**
