@@ -35,12 +35,22 @@
 
 ---
 
-### Component in React
+## Component in React
 
 1. React JS is all abbout components, which are reusable. Each component has it's own logic and control
 2. Two Rules of component of React React:
     - Component shoud return JSX
-    - Component name should start with Capital letter (e.g. MyComponent is valid but myComponent is not)
+    - `Component name should follow PascalCase : start with Capital letter (e.g. MyComponent is valid but myComponent is not)`
+
+        **Summary Table (React / JS Standard)**
+        | Entity | Standard Case | Example |
+        | --------------------- | ---------------------- | ----------------------------------- |
+        | React Component | PascalCase | `MyButton`, `UserProfile` |
+        | Function / Event | camelCase | `handleClick`, `fetchData` |
+        | Variable | camelCase | `userName`, `count` |
+        | Constant | UPPER_SNAKE_CASE | `API_URL`, `MAX_USERS` |
+        | Component File Name | PascalCase | `MyButton.jsx` |
+        | Utility / Helper File | camelCase / kebab-case | `formatDate.js` or `format-date.js` |
 
 ## How Component communicates with each other ?
 
