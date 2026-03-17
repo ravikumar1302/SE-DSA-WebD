@@ -28,8 +28,9 @@ Covers core engineering principles required to build scalable and maintainable s
 
 ### Topics Include:
 
-- SDLC Models (Waterfall, Agile, RAD, etc.)
+- SDLC Models - Waterfall, Agile, RAD, etc.
 - Coupling & Cohesion
+- System Design (Basics currently)
 - GRASP Principles
 - Design Concepts
 - Case Studies & Notes
