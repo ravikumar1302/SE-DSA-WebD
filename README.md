@@ -70,10 +70,11 @@ Structured notes and practical implementations covering frontend, backend, datab
 - HTML
 - CSS
 - JavaScript
-- Core Java (Backend Basics)
+- React
+- Node Js + Express Js
+- Core Java
 - Databases
 - Adobe AEM
-- Cloud Computing (Learning Phase)
 
 ### Subsections Include:
 
