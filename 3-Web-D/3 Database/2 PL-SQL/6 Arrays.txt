@@ -1,0 +1,24 @@
+Arrays : 
+
+- called as VARRAY
+- In Oracle environment, the starting index for varrays is always 1
+- varraays are 1-D arrays
+- created with statement : CREATE TYPE. You must specify max size and type of elements stored in VARRAY
+    CREATE OR REPLACE TYPE name IS VARRAY(3) of VARCHAR2(10);       // here 3 is max no of element in arrat, varchar is type of Arrays
+    - Max size can be changed using ALTER TYPE;
+    - Create or replace, individually or together can be used
+-  DECLARE
+        TYPE namesarray IS VARRAY(3) of VARCHAR2(10);
+        TYPE grades IS VARRAY(5) of INTEGER;
+        names namesarray;
+        marks grades;
+        total integer;
+    BEGIN
+        names := namesarray('Kavita', 'Pritam', 'Ayan');
+        marks := grades(98, 97, 78, 87, 92);
+        total := names.count;
+        dbms_output.put_line('Total' || total || 'Students');
+        FOR i in 1 .. total LOOP
+            dbms_output.put_line('Student :' || names(i) || 'Marks : ' || marks(i));     
+        END LOOP;
+    END

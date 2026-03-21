@@ -1,0 +1,24 @@
+BASIC THEORY :
+
+- PL-SQL was invented by Oracle (along with JAVA and MY SQL) in 
+- file Extension : .pls
+- It stands for Procedural Language extension - SQL
+    - Oracle SQL developer Software can be used for this
+
+2. Basic Syntax : 
+
+    DECLARE (optional)
+        // variables, cursors, procesures, functions, triggers, assertion, user-defined exceptions etc
+        // variable_name datatype(size);
+        msg varchar2(20) := 'Ram Ram Ji';
+    BEGIN (mandatory)
+        // SQL statements, control structures, Pl/SQL statements etc
+        dbms_output.put_line(msg);
+    EXCEPTION (optional)
+        // Exception handling statements
+        // There are user defined exxceptions also, and pre-defined also (around 30-40 are also there like data type mismatch, divide by 0 etc)
+    END; (mandatory)
+    /   -- This forward slash means, execute the block
+
+- Semicolon is optional, depending on the software
+- Begin section can't be left empty, write NULL; if nothing to write

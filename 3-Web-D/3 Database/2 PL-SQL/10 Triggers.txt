@@ -1,0 +1,19 @@
+# triggers
+
+- The PL/SQL triggers are IMPLICITLY executed when INSERT, UPDATE or DELETE statement is performed
+- Syntax :
+    CREATE [OR REPLACE] TRIGGER trigger_name
+    BEFORE [OR AFTER OR INSTEAD OF] INSERT [OR UPDATE OR DELETE]
+    ON table_name
+    [REFERENCING OLD AS o NEW AS n]
+    [FOR EACH ROW]
+
+    DELARE 
+        declaration section
+    BEGIN
+        sequence of statements
+    END;
+    /
+
+- After : Like after transaction we get message and mail from bank
+- Instead of : if-else case or as the name suggests 

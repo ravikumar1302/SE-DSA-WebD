@@ -1,0 +1,50 @@
+SQL Joins
+    - A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+    - Syntax : SELECT column_name(s) FROM table1 INNER JOIN table2 ON table1.column_name = table2.column_name;
+    - Here are the different types of the JOINs in SQL:
+        (INNER) JOIN: Returns records that have matching values in both tables
+        LEFT (OUTER) JOIN: Returns all records from the left table(table 1), and the matched records from the right table(table 2)
+        RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+        FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+    - Examples : 
+        SELECT o.OrderID, c.CustomerName FROM Orders AS o INNER JOIN Customers AS c ON o.CustomerID = c.CustomerID;
+        SELECT c.CustomerName, o.OrderID FROM Customers AS c LEFT JOIN Orders AS o ON c.CustomerID = o.CustomerID ORDER BY c.CustomerName;
+        SELECT o.OrderID, e.LastName, e.FirstName FROM Orders AS o RIGHT JOIN Employees AS e ON o.EmployeeID = e.EmployeeID ORDER BY o.OrderID;
+        SELECT c.CustomerName, o.OrderID FROM Customers AS c FULL OUTER JOIN Orders AS o ON c.CustomerID=o.CustomerID ORDER BY c.CustomerName;
+
+    - JOIN Three Tables : The following SQL statement selects all orders with customer and shipper information:
+        SELECT o.OrderID, c.CustomerName, s.ShipperName FROM ( (Orders AS o INNER JOIN Customers AS C ON o.CustomerID = c.CustomerID) 
+                                                                INNER JOIN Shippers AS s ON o.ShipperID = s.ShipperID);
+    
+    - Note: In some databases LEFT JOIN is called LEFT OUTER JOIN.
+    - Tip: FULL OUTER JOIN and FULL JOIN are the same.
+    - Note: FULL OUTER JOIN can potentially return very large result-sets!
+
+    - SQL Self Join : A self join is a regular join, but the table is joined with itself.
+        Self Join Syntax : SELECT column_name(s) FROM table1 T1, table1 T2 WHERE condition;     T1 and T2 are different table aliases for the same table.
+    - The following SQL statement matches customers that are from the same city:    
+        SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City FROM Customers A, Customers B WHERE A.CustomerID <> B.CustomerID AND A.City = B.City ORDER BY A.City;
+
+4.2 SQL UNION operator : The UNION operator is used to combine the result-set of two or more SELECT statements.
+    - Every SELECT statement within UNION must have the same number of columns
+    - The columns must also have similar data types
+    - The columns in every SELECT statement must also be in the same order
+
+    - The UNION operator selects only distinct values by default. To allow duplicate values, use UNION ALL.
+    - UNION Syntax : SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2;
+    - UNION ALL Syntax : SELECT column_name(s) FROM table1 UNION ALL SELECT column_name(s) FROM table2;
+    - Note: The column names in the result-set are usually equal to the column names in the first SELECT statement.
+    
+    - Examples :
+        SELECT City FROM Customers UNION SELECT City FROM Suppliers ORDER BY City; 
+        SELECT City FROM Customers UNION ALL SELECT City FROM Suppliers ORDER BY City;
+
+Examples of Many queries Together :
+    - SELECT e.LastName, COUNT(o.OrderID) AS NumberOfOrders FROM (Orders AS o INNER JOIN Employees AS e ON o.EmployeeID = e.EmployeeID) GROUP BY LastName HAVING COUNT(o.OrderID) > 10;
+    - SELECT e.LastName, COUNT(o.OrderID) AS NumberOfOrders FROM Orders AS o INNER JOIN Employees AS e ON o.EmployeeID = e.EmployeeID WHERE LastName = 'Davolio' OR LastName = 'Fuller' GROUP BY LastName HAVING COUNT(o.OrderID) > 25;
+    - 
+
+-------------------------------------------------------------------------------------------------------------------------------------- 
+    
+MySQL Aggregation
