@@ -1,0 +1,84 @@
+# Conditons and Loops
+
+- PL-SQL Conditions : (It is also called controlled structures) 
+
+    a) IF-THEN : 
+        IF (a<=20) THEN     // all these conditions are written inside BEGIN
+            c := c+1;       // Write either expressions or SQL statements
+        END IF;
+    b) IF-THEN-ELSE :
+        IF (a<=20) THEN
+            c := c+1;
+        ELSE
+            c := c+2;
+        END IF; 
+    c) IF-THEN-ELSEIF : 
+        IF (a<=20) THEN
+            c := c+1;
+        ELSEIF (a=20) THEN
+            c := c+3;
+        ELSE
+            c := c+2;
+        END IF; 
+    d) CASE : 
+        DECLARE
+            var char(1) := 'A';
+        BEGIN
+            CASE var
+                when 'A' then dbms_output.put_line('Excellent');
+                when 'B' then dbms_output.put_line('Very Good');
+                when 'c' then dbms_output.put_line('Well Done');
+                when 'D' then dbms_output.put_line('You Passed');
+                else dbms_output.put_line('Failed');        // default case
+            END CASE;
+        END
+    e) Searched CASE : there is selector in each case
+        DECLARE
+            var char(1) := 'A';
+        BEGIN
+            CASE var
+                when var = 'A' then dbms_output.put_line('Excellent');
+                when var = 'B' then dbms_output.put_line('Very Good');
+                when var = 'c' then dbms_output.put_line('Well Done');
+                when var = 'D' then dbms_output.put_line('You Passed');
+                else dbms_output.put_line('Failed');        // default case
+            END CASE;
+        END
+    f) nested IF-THEN-ELSE : 
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+- Loops : Basic, While and For loop
+
+    a) Basic LOOP : made usingif-then 
+        DECLARE
+            var number := 10;
+        BEGIN
+            Loop
+                x := x+10;
+                // statements
+                EXIT WHEN (x > 50);     // we can also write :  IF x>50 THEN EXIT;  END IF;   
+            END LOOP;
+        END
+    b) WHILE LOOP : 
+        DECLARE
+            var number := 10;
+        BEGIN
+            WHILE a< 20 LOOP
+                a := a+2;     
+            END LOOP;
+        END
+    c) FOR LOOP :
+        DECLARE
+            var number := 10;
+        BEGIN
+            FOR a in 10 .. 20 LOOP      // FOR a in REVERSE 10 .. 20 LOOP
+                a := a+2;     
+            END LOOP;
+        END
+
+        - User REVERSE keyword if you want value in reverse
+
+    d) Nested loops : 
+
+    - Loop Contol statemens : EXIT, CONTINUE, GOTO

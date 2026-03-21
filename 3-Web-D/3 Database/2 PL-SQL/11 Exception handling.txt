@@ -1,0 +1,13 @@
+# Exception Handling
+
+DELARE 
+    v_lname varchar2(20);
+BEGIN
+    sequence of statements
+EXCEPTION
+    WHEN too_many_rows then
+    dbms_output.put_line();
+END;
+/
+
+- There were more than one rows, the system shows error, use exception in that case
