@@ -1,118 +1,74 @@
 # 🚀 Software Engineering, DSA & Web Development
 
-This repository is a structured collection of my learning journey across:
+![Last Commit](https://img.shields.io/github/last-commit/ravikumar1302/SE-DSA-WebD)
+
+### 🛠️ Tech Stack
+
+![C++](https://img.shields.io/badge/C++-444444?style=flat-square&logo=c%2B%2B)
+![Java](https://img.shields.io/badge/Java-444444?style=flat-square&logo=java)
+![Python](https://img.shields.io/badge/Python-444444?style=flat-square&logo=python)
+![HTML](https://img.shields.io/badge/HTML5-444444?style=flat-square&logo=html5)
+![CSS](https://img.shields.io/badge/CSS3-444444?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-444444?style=flat-square&logo=javascript)
+![React](https://img.shields.io/badge/React-444444?style=flat-square&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-444444?style=flat-square&logo=node.js)
+![Express](https://img.shields.io/badge/Express-444444?style=flat-square&logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-444444?style=flat-square&logo=mongodb)
+![SQL](https://img.shields.io/badge/SQL-444444?style=flat-square&logo=mysql)
+![Adobe AEM](https://img.shields.io/badge/Adobe%20AEM-444444?style=flat-square&logo=adobe)
+
+---
+
+A structured repository documenting my learning journey in
 
 - Software Engineering
 - Data Structures & Algorithms
 - Web Development
 
-It is organized in a clean and scalable way to document concepts, notes, and practical implementations as I grow as a developer.
+> 📌 This is an evolving repository — content will continue to grow as I explore more concepts
 
----
+## 📂 Structure
 
-## 📂 Repository Structure
-
-SE-DSA-WebD  
-│  
-├── 1-Software-Engineering  
-├── 2-DSA  
+```
+SE-DSA-WebD
+├── 1-Software-Engineering
+├── 2-DSA
 ├── 3-Web-D
+```
 
-Each folder represents a focused learning domain.
+## 📘 Software Engineering
 
----
+- SDLC Models (Agile, Waterfall, etc.)
+- Design Principles (GRASP, Cohesion, Coupling)
+- System Design (Basics)
+- Notes & Case Studies
 
-## 📘 1️⃣ Software Engineering
+## 💻 DSA
 
-Covers core engineering principles required to build scalable and maintainable systems.
+- Languages: C++, Python, Java
+- Topics: Arrays, Linked Lists, Trees, Graphs, DP, Recursion etc
+- Practice: LeetCode / GFG
 
-### Topics Include:
+## 🌐 Web Development
 
-- SDLC Models - Waterfall, Agile, RAD, etc.
-- Coupling & Cohesion
-- System Design (Basics currently)
-- GRASP Principles
-- Design Concepts
-- Case Studies & Notes
-
-This section focuses on building strong system-level thinking.
-
----
-
-## 💻 2️⃣ Data Structures & Algorithms (DSA)
-
-Contains implementations and problem-solving practice across multiple languages.
-
-### Languages Used:
-
-- C++
-- Python
-- Java
-
-### Topics Covered:
-
-- Arrays, Linked Lists, Stacks, Queues
-- Trees, Graphs
-- Sorting & Searching Algorithms
-- Recursion & Backtracking
-- Dynamic Programming
-- Contest Practice (LeetCode / GFG)
-
-This section reflects consistent problem-solving practice and logical thinking development.
-
----
-
-## 🌐 3️⃣ Web Development
-
-Structured notes and practical implementations covering frontend, backend, databases, CMS, and cloud fundamentals.
-
-### Technologies Covered:
-
-- HTML
-- CSS
-- JavaScript
-- React
-- Node Js + Express Js
-- Core Java
-- Databases
+- Frontend: HTML, CSS, JavaScript, React
+- Backend: Node.js, Express
+- Databases & Core Concepts : SQL, MongoDB
 - Adobe AEM
+- Mini Projects & Practice Area
 
-### Subsections Include:
+## 🎯 Purpose of this Repository
 
-- General Concepts (DNS, Web Basics)
-- Frontend Development
-- Backend Development
-- Database Concepts
-- Adobe AEM Notes & Workflows
-- Mini Projects
-- Practice Area
-
-This section documents my practical journey toward becoming a full-stack developer.
-
----
-
-## 🎯 Purpose of This Repository
-
-- Maintain structured learning
-- Build strong fundamentals
-- Track progress over time
+- Structured learning
+- Strong fundamentals
+- Track progress
+- Maintain well-structured notes for quick access anytime
 - Serve as a long-term technical reference
-- Showcase consistent growth
 
-This is an evolving repository — updated regularly as I learn new concepts.
+## 📈 What's Next
 
----
-
-## 🚀 Continuous Learning
-
-Learning never stops.  
-This repository will expand as if I move deeper into:
-
-- Advanced Backend Systems
-- Cloud Architecture
+- Backend Systems
 - System Design
-- Scalable Applications
+- Cloud & Scalable Applications
 
----
-
-### Happy Coding & Continuous Growth 💡🔥
+### 💡 Learning. Building. Growing.

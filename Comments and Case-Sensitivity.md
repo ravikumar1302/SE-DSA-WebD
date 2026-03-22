@@ -1,17 +1,29 @@
 ## Comments and Case-Sensitivity in Different Tech Stacks
 
-| Category        | Language / Tech  | Comment Syntax                                                       | Case-Sensitivity                                                                                                    |
-| --------------- | ---------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Programming** | C++              | Single: `// text` <br> Multi: `/* text */`                           | Sensitive (mostly lowercase)                                                                                        |
-|                 | Java             | Single: `// text` <br> Multi: `/* text */`                           | Sensitive (keywords lowercase, ClassNames PascalCase)                                                               |
-|                 | Python           | Single: `# text` <br> Multi: `""" text """`                          | Sensitive (except `True`, `False`, `None`)                                                                          |
-| **Front-End**   | HTML             | `<!-- text -->`                                                      | Case In-Sensitive <br> _(XHTML is Case-Sensitive)_                                                                  |
-|                 | Handlebars (hbs) | `{{!-- comment --}}` (won’t render in HTML)                          | Case In-Sensitive (follows HTML)                                                                                    |
-|                 | CSS              | `/* text */`                                                         | Both: Properties insensitive, Values sensitive (e.g., `red` vs `RED`)                                               |
-|                 | SCSS             | Single: `// text` (removed in compiled CSS) <br> Multi: `/* text */` | Same as CSS (Both)                                                                                                  |
-|                 | JavaScript       | Single: `// text` <br> Multi: `/* text */`                           | Sensitive                                                                                                           |
-|                 | React (JSX)      | JS: `//`, `/* */` <br> JSX: `{/* text */}`                           | Sensitive (component names PascalCase (e.g., MyComponent), HTML tags lowercase, variables sensitive (Name != name)) |
-| **Database**    | SQL / PL-SQL     | Single: `-- text` <br> Multi: `/* text */`                           | Case-Insensitive (keywords usually UPPERCASE)                                                                       |
+| Category        | Language / Tech  | Comment Syntax                              | Case-Sensitivity                                                                                   |
+| --------------- | ---------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **Programming** | C++              | Single: `// text` <br> Multi: `/* text */`  | Sensitive (keywords lowercase, variables/functions case-sensitive)                                 |
+|                 | Java             | Single: `// text` <br> Multi: `/* text */`  | Sensitive (keywords lowercase, ClassNames PascalCase)                                              |
+|                 | Python           | Single: `# text` <br> Multi: `""" text """` | Sensitive (`var` ≠ `Var`; special constants like `True`, `False`, `None`)                          |
+| **Front-End**   | HTML             | `<!-- text -->`                             | Case-Insensitive _(XHTML is case-sensitive)_                                                       |
+|                 | Handlebars (hbs) | `{{!-- comment --}}`                        | Case-Insensitive (follows HTML behavior)                                                           |
+|                 | CSS              | `/* text */`                                | Mixed: Properties insensitive, values sometimes sensitive (`red` vs `RED`)                         |
+|                 | SCSS             | `// text` (not in output) <br> `/* text */` | Same as CSS                                                                                        |
+|                 | JavaScript       | Single: `// text` <br> Multi: `/* text */`  | Sensitive                                                                                          |
+|                 | React (JSX)      | JS: `//`, `/* */` <br> JSX: `{/* text */}`  | Sensitive (Components PascalCase, HTML tags lowercase, variables case-sensitive)                   |
+| **Backend**     | Node.js          | Single: `// text` <br> Multi: `/* text */`  | Sensitive (inherits JavaScript; variables, functions, file names case-sensitive)                   |
+|                 | Express.js       | Single: `// text` <br> Multi: `/* text */`  | Sensitive (inherits JavaScript; routes can be case-sensitive depending on config)                  |
+| **Database**    | SQL / PL-SQL     | Single: `-- text` <br> Multi: `/* text */`  | Case-Insensitive (keywords usually uppercase; table/column sensitivity depends on DB system)       |
+|                 | MongoDB          | `// text` (shell) <br> `/* text */`         | Sensitive (collection & field names case-sensitive; queries case-sensitive unless using collation) |
+
+### Quick Notes (to remember easily)
+
+- Most programming languages → ✅ Case-sensitive
+- HTML → ❌ Case-insensitive
+- CSS → ⚠️ Mixed behavior
+- JavaScript ecosystem (Node.js, Express, React) → ✅ Fully case-sensitive
+- SQL → ❌ Mostly case-insensitive (depends on DB)
+- MongoDB → ✅ Case-sensitive by default
 
 ### Exceptions :
 
