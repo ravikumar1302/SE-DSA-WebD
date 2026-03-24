@@ -79,3 +79,23 @@ server.listen(3000, () => {
     - Complex parallelism → Java / Go
 3. Large monolith with strict type guarantees
     - Node + TypeScript helps, but ecosystems like Java/Spring still dominate here
+
+## Modules in NodeJS
+
+Node.js is based on modules, which are reusable pieces of code that can be imported into applications. These include built-in modules (like fs and http) and external packages installed using NPM
+
+Common NodeJS Modules
+
+- HTTP Module: The http module creates web servers and handles requests and responses
+- FS (File System) Module: The fs module reads, writes, and manages files
+- Path Module: The path module handles and transforms file paths across platforms
+- Event Module: The events module enables emitting and listening to events
+- Express Framework: The Express framework simplifies routing, middleware, and handling HTTP request
+
+## Core Components of a Node-First Application
+
+- Backend (NodeJS with Express.js/NestJS/Koa.js): Handles API requests, database operations, and authentication
+- Database (MongoDB, PostgreSQL, MySQL, Redis): Uses MongoDB (NoSQL) or SQL databases like PostgreSQL and MySQL
+- Frontend (React, Vue.js, Angular): React.js, Vue.js, and Angular integrate smoothly with Node-powered backends
+- Authentication & Security: Uses JWT (JSON Web Tokens), OAuth, or session-based authentication
+- Real-Time Capabilities (Socket.io, WebRTC): Socket.io enables WebSocket communication for real-time apps
