@@ -172,3 +172,29 @@ Optimized for deployment on **Vercel**, but works with:
 | **Server & Client Components** | Only client-side by default             | Supports server components for faster and secure UI                          |
 | **Use Case**                   | Single-page apps, UI components         | Full applications with frontend + backend + SEO + performance                |
 | **Complexity**                 | Lightweight, minimal setup              | Slightly more complex, but all-in-one solution                               |
+
+---
+
+## Next.js vs Vite vs CRA — Quick Decision Table (based on real project needs)
+
+| Criteria               | CRA                   | Vite                            | Next.js                                                       |
+| ---------------------- | --------------------- | ------------------------------- | ------------------------------------------------------------- |
+| **Type**               | React starter (old)   | Frontend build tool             | Full-stack React framework                                    |
+| **Recommended for**    | Learning, small SPA   | SPA, dashboards, internal tools | Production apps, SEO-heavy, full-stack                        |
+| **SEO Friendly**       | ❌ No                 | ❌ No                           | ✅ SSR/SSG, social meta support                               |
+| **Rendering**          | CSR only              | CSR only                        | CSR + SSR + SSG + ISR                                         |
+| **Routing**            | Manual (react-router) | Manual (react-router)           | File-based routing, dynamic routes built-in                   |
+| **API / Backend**      | ❌                    | ❌                              | ✅ API routes built-in (Node.js server)                       |
+| **Performance**        | Slower dev            | Very fast dev                   | Optimized prod, code splitting, image optimization            |
+| **Project Complexity** | Low                   | Low                             | Medium–High                                                   |
+| **Deployment**         | Static hosting        | Static hosting                  | Static + Serverless / SSR hosting (Vercel, Netlify, Firebase) |
+| **Team / Scaling**     | Hard to scale         | Medium                          | Easy to scale, structured folders                             |
+| **When NOT to Use**    | Deprecated, slow      | If you need SSR or API          | Simple SPA, tiny prototypes, purely client-side apps          |
+
+---
+
+### ✅ Decision Rules (Shortcut)
+
+1. **Internal tool / SPA / fast dev → Vite**
+2. **Tiny React learning project → CRA**
+3. **Production product / SEO / full-stack → Next.js**
