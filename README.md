@@ -11,11 +11,15 @@
 ![CSS](https://img.shields.io/badge/CSS3-444444?style=flat-square&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-444444?style=flat-square&logo=javascript)
 ![React](https://img.shields.io/badge/React-444444?style=flat-square&logo=react)
+![Next.js](https://img.shields.io/badge/Next.js-444444?style=flat-square&logo=next.js&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-444444?style=flat-square&logo=mysql)
+![Adobe AEM](https://img.shields.io/badge/Adobe%20AEM-444444?style=flat-square&logo=adobe)
+
+<!--
 ![Node.js](https://img.shields.io/badge/Node.js-444444?style=flat-square&logo=node.js)
 ![Express](https://img.shields.io/badge/Express-444444?style=flat-square&logo=express)
 ![MongoDB](https://img.shields.io/badge/MongoDB-444444?style=flat-square&logo=mongodb)
-![SQL](https://img.shields.io/badge/SQL-444444?style=flat-square&logo=mysql)
-![Adobe AEM](https://img.shields.io/badge/Adobe%20AEM-444444?style=flat-square&logo=adobe)
+-->
 
 ---
 
@@ -51,7 +55,7 @@ SE-DSA-WebD
 
 ## 🌐 Web Development
 
-- Frontend: HTML, CSS, JavaScript, React
+- Frontend: HTML, CSS, JavaScript, React, Next JS
 - Backend: Node.js, Express
 - Databases & Core Concepts : SQL, MongoDB
 - Adobe AEM
