@@ -5,7 +5,6 @@
 ```
 my-fullstack-app/
 │
-├── OLD-CRA # delete once website is migrated
 ├── client/ # Frontend (React + Vite)
 │ ├── public/
 │ ├── src/
@@ -69,43 +68,46 @@ my-fullstack-app/
 
 ```
 my-nextjs-app/
-├── public/                  # 🌐 Static files
+├── public/                  # 🌐 Static files served directly (logos, favicon, SEO files)
 │   ├── images/
 │   ├── favicon.ico
 │   └── robots.txt
 │
 ├── src/
-│   ├── actions/             # 🛠 Server actions
-│   ├── app/                 # 🚀 App Router (pages, layouts, API)
-│   ├── assets/              # 📦 Bundled assets (SVGs, fonts)
-│   ├── components/          # 🔧 UI components
-│   ├── constants/           # 📌 Static data/config
-│   ├── context/             # 🌍 Global state
-│   ├── hooks/               # ⚡ Custom React hooks
-│   ├── lib/                 # 🔌 3rd-party integrations/DB
-│   ├── models/              # 🗄 DB schemas
-│   ├── styles/              # 🎨 CSS/Tailwind
-│   ├── types/               # 📝 TS types (optional)
-│   ├── utils/               # 🧰 Helpers (no React)
-│   └── middleware/          # 🛡 Server/edge middleware
+│   ├── actions/             # 🛠 Server actions (forms, mutations, server logic)
+│   ├── app/                 # 🚀 App Router (pages, layouts, routing, API endpoints)
+│   ├── assets/              # 📦 Images, icons, fonts, illustrations, media assets
+│   ├── components/          # 🔧 Reusable UI components (buttons, layouts, forms)
+│   ├── constants/           # 📌 Static configs, enums, navigation data
+│   ├── context/             # 🌍 Global state providers (theme, auth, shared state)
+│   ├── hooks/               # ⚡ Custom React hooks for reusable logic
+│   ├── services/            # 🔌 API calls & external service integrations
+│   ├── config/              # ⚙ Environment settings & application configuration
+│   ├── lib/                 # 🧩 DB connections & third-party initializations
+│   ├── models/              # 🗄 Database schemas / ORM models
+│   ├── styles/              # 🎨 Global styles, Tailwind setup, CSS modules
+│   ├── types/               # 📝 Shared TypeScript types/interfaces (optional)
+│   ├── utils/               # 🧰 Helper functions (formatting, validation, helpers)
+│   └── middleware/          # 🛡 Edge/server middleware (auth, redirects, logging)
 │
-├── tests/                   # 🧪 Unit/Integration/E2E (optional)
-├── stories/                 # 📖 Storybook (optional)
-├── scripts/                 # 🏗 Scripts for DB, codegen (optional)
-├── i18n/                    # 🌐 Localization (optional)
-├── docs/                    # 📚 Project docs (optional)
+├── tests/                   # 🧪 Unit, integration & E2E testing setup (optional)
+├── stories/                 # 📖 Storybook UI documentation & visual testing (optional)
+├── scripts/                 # 🏗 Automation scripts (seed DB, codegen, deployment) (optional)
+├── i18n/                    # 🌐 Localization & translations (optional)
+├── docs/                    # 📚 Architecture notes & project documentation (optional)
+├── agents.md                # 🤖 AI assistant rules & project context (optional, added in root folder)
 │
-├── .env.local               # 🔑 Env variables
-├── .gitignore               # 🚫 Git ignore
-├── jsconfig.json            # 📦 Absolute imports
-├── tsconfig.json            # ⚡ TypeScript config (optional)
+├── .env.local               # 🔑 Environment variables (secrets, API keys)
+├── .gitignore               # 🚫 Ignored files/folders
+├── jsconfig.json            # 📦 Absolute imports (@/components)
+├── tsconfig.json            # ⚡ TypeScript configuration (optional)
 ├── .eslintrc.json           # 🧹 Lint rules
-├── .prettierrc              # 🖌 Prettier rules
-├── next.config.mjs          # ⚙ Next.js config
-├── postcss.config.mjs       # ⚡ Tailwind/PostCSS
+├── .prettierrc              # 🖌 Code formatting rules
+├── next.config.mjs          # ⚙ Next.js configuration
+├── postcss.config.mjs       # ⚡ PostCSS/Tailwind setup
 ├── tailwind.config.js       # 🎨 Tailwind customization
-├── package.json             # 📦 Dependencies & scripts
-└── README.md                # 📖 Docs & setup
+├── package.json             # 📦 Dependencies & npm scripts
+└── README.md                # 📖 Setup guide & project overview
 ```
 
 ### Expanded version
@@ -113,95 +115,108 @@ my-nextjs-app/
 ```
 my-nextjs-app/
 │
-├── public/                  # 🌐 STATIC FILES (Served directly to the browser)
-│   ├── images/              # 🖼 Images like hero banners, logos
-│   ├── favicon.ico          # 🔖 Site favicon
-│   └── robots.txt           # 🤖 SEO crawler instructions
+├── public/                          # 🌐 STATIC FILES served directly to browser
+│   ├── images/                      # 🖼 Hero images, logos, banners, social preview images
+│   ├── favicon.ico                  # 🔖 Browser tab icon
+│   └── robots.txt                   # 🤖 SEO crawler instructions
 │
 ├── src/
-│   ├── actions/             # 🛠 Server Actions (DB mutations, forms)
-│   │   ├── authActions.js
-│   │   └── userActions.js
+│   ├── actions/                     # 🛠 Server Actions (form handling, DB mutations)
+│   │   ├── authActions.js           # Authentication server logic
+│   │   └── userActions.js           # User create/update/delete actions
 │   │
-│   ├── app/                 # 🚀 App Router: pages, layouts, API routes
-│   │   ├── (auth)/          # Route group for auth (e.g., /login)
-│   │   │   └── login/page.jsx
-│   │   ├── api/             # REST endpoints / webhooks
-│   │   │   └── stripe-webhook/route.js
-│   │   ├── layout.jsx       # Global layout (HTML, Providers)
-│   │   └── page.jsx         # Landing/Home page
+│   ├── app/                         # 🚀 App Router: pages, layouts, API routes
+│   │   ├── (auth)/                  # Route group for auth pages (/login, /signup)
+│   │   │   └── login/page.jsx       # Login page route
+│   │   ├── api/                     # Backend endpoints & webhooks
+│   │   │   └── stripe-webhook/route.js # Payment webhook handler
+│   │   ├── layout.jsx               # Root layout (providers, metadata, HTML shell)
+│   │   └── page.jsx                 # Landing/Home page
 │   │
-│   ├── assets/              # 📦 Bundled assets (imported in JS/TS)
-│   │   ├── icons/           # SVG or icon components
-│   │   └── fonts/           # Local custom fonts
+│   ├── assets/                      # 📦 Static UI assets reused across app
+│   │   ├── icons/                   # SVG icons, UI icons, brand icons
+│   │   └── fonts/                   # Local fonts, typography assets
+│   │                                    # Logos, illustrations, tab icons, media files
 │   │
-│   ├── components/          # 🔧 Reusable UI components
-│   │   ├── forms/           # Complex forms (LoginForm.jsx, SignupForm.jsx)
-│   │   ├── layout/          # Structural components (Navbar.jsx, Footer.jsx)
-│   │   └── ui/              # Small dumb components (Button.jsx, Input.jsx)
+│   ├── components/                  # 🔧 Reusable UI components across pages
+│   │   ├── forms/                   # LoginForm, SignupForm, multi-step forms
+│   │   ├── layout/                  # Navbar, Footer, Sidebar, PageLayout
+│   │   └── ui/                      # Button, Input, Modal, Card, Badge
+│   │                                    # Modular design → easier reuse & maintenance
 │   │
-│   ├── constants/           # 📌 Static config or data
-│   │   └── navLinks.js
+│   ├── constants/                   # 📌 Static configuration/data
+│   │   └── navLinks.js              # Navigation menus, static labels, enums
 │   │
-│   ├── context/             # 🌍 Global client state (React Context / Zustand)
-│   │   └── ThemeProvider.jsx
+│   ├── context/                     # 🌍 React Context global state management
+│   │   └── ThemeProvider.jsx        # Theme/auth/global providers
+│   │                                    # Avoids prop drilling between components
 │   │
-│   ├── hooks/               # ⚡ Custom React hooks
-│   │   ├── useDebounce.js
-│   │   └── useMediaQuery.js
+│   ├── hooks/                       # ⚡ Custom reusable React hooks
+│   │   ├── useDebounce.js           # Input debounce logic
+│   │   └── useMediaQuery.js         # Responsive screen detection
+│   │                                    # Separates business logic from UI
 │   │
-│   ├── lib/                 # 🔌 Third-party integrations / DB setups
-│   │   ├── dbConnect.js     # MongoDB connection helper
-│   │   ├── supabase.js
-│   │   └── firebase.js
+│   ├── lib/                         # 🔌 Third-party integrations & setups
+│   │   ├── dbConnect.js             # Database connection helper
+│   │   ├── supabase.js              # Supabase client setup
+│   │   └── firebase.js              # Firebase initialization
 │   │
-│   ├── models/              # 🗄 Database schemas (MongoDB / Prisma)
-│   │   ├── User.js
-│   │   └── Post.js
+│   ├── models/                      # 🗄 Database schemas / ORM models
+│   │   ├── User.js                  # User schema/model
+│   │   └── Post.js                  # Post/content schema
 │   │
-│   ├── styles/              # 🎨 Global CSS / Tailwind directives
-│   │   └── globals.css
+│   ├── styles/                      # 🎨 Styling system for application
+│   │   └── globals.css              # Global styles & Tailwind directives
+│   │                                    # CSS Modules & scoped component styles
 │   │
-│   ├── types/               # 📝 TypeScript interfaces/types (optional, only if using TS)
-│   │   └── index.d.ts
+│   ├── types/                       # 📝 TypeScript interfaces & shared types (optional)
+│   │   └── index.d.ts               # Global type definitions
 │   │
-│   ├── utils/               # 🧰 Pure helper functions (no React code)
-│   │   ├── cn.js
-│   │   └── formatDate.js
+│   ├── utils/                       # 🧰 Helper & utility functions
+│   │   ├── cn.js                    # Classname merge helper
+│   │   └── formatDate.js            # Date formatting utility
+│   │                                    # Validation, formatting, calculations
 │   │
-│   └── middleware/          # 🛡 Edge/server middleware (auth, logging)
-│       └── authMiddleware.js
+│   └── middleware/                  # 🛡 Edge/server middleware
+│       └── authMiddleware.js        # Route protection, logging, redirects
 │
-├── tests/                   # 🧪 Unit, Integration, E2E tests (optional)
-│   ├── unit/
-│   ├── integration/
-│   └── e2e/
+├── tests/                           # 🧪 Testing setup
+│   ├── unit/                        # Unit tests for functions/components
+│   ├── integration/                 # Feature/API integration tests
+│   └── e2e/                         # End-to-end user flow testing
+│                                        # Improves reliability before deployment
 │
-├── stories/                 # 📖 Storybook stories for components  (optional)
+├── stories/                         # 📖 Storybook component documentation
 │   └── components/
-│       └── Button.stories.jsx
+│       └── Button.stories.jsx       # Interactive UI component previews
+│                                        # Visual testing & design collaboration
 │
-├── scripts/                 # 🏗 Scripts for DB seeding, codegen, deployment  (optional)
-│   └── seedDatabase.js
+├── scripts/                         # 🏗 Project automation scripts
+│   └── seedDatabase.js              # DB seeding, migrations, code generation
+│                                        # Dev & deployment automation
 │
-├── i18n/                    # 🌐 Internationalization / localization  (optional)
-│   ├── en.json
-│   └── fr.json
+├── i18n/                            # 🌐 Localization & translations
+│   ├── en.json                      # English translations
+│   └── fr.json                      # French translations
+│                                        # Multi-language application support
 │
-├── docs/                    # 📚 Project docs, architecture notes  (optional)
-│   └── architecture.md
+├── docs/                            # 📚 Project documentation
+│   └── architecture.md              # Architecture decisions & guidelines
 │
-├── .env.local               # 🔑 Environment variables
-├── .gitignore               # 🚫 Ignore files/folders
-├── jsconfig.json            # 📦 Absolute import paths (e.g., @/components/Button)
-├── tsconfig.json            # ⚡ TypeScript config (optional, only if using TS)
-├── .eslintrc.json           # 🧹 Linting rules
-├── .prettierrc              # 🖌 Code formatting rules
-├── next.config.mjs          # ⚙ Next.js configuration (images, rewrites, etc.)
-├── postcss.config.mjs       # ⚡ Tailwind / PostCSS config
-├── tailwind.config.js       # 🎨 Tailwind customization (colors, fonts, breakpoints)
-├── package.json             # 📦 Project dependencies & scripts
-└── README.md                # 📖 Project setup and documentation
+├── agents.md                        # 🤖 AI agent rules & project context (optional, added in root folder)
+│                                        # Instructions for AI coding assistants
+│
+├── .env.local                       # 🔑 Environment variables (secrets)
+├── .gitignore                       # 🚫 Git ignored files/folders
+├── jsconfig.json                    # 📦 Absolute import paths (@/components)
+├── tsconfig.json                    # ⚡ TypeScript configuration (optional)
+├── .eslintrc.json                   # 🧹 Linting rules
+├── .prettierrc                      # 🖌 Code formatting rules
+├── next.config.mjs                  # ⚙ Next.js configuration
+├── postcss.config.mjs               # ⚡ PostCSS/Tailwind setup
+├── tailwind.config.js               # 🎨 Tailwind customization
+├── package.json                     # 📦 Dependencies & scripts
+└── README.md                        # 📖 Project setup & usage guide
 ```
 
 ---
