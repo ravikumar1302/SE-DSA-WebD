@@ -52,7 +52,7 @@
 
 # 🔹 Next.js
 
-**Next.js** is a **full-stack React framework** built by **Vercel**
+**Next.js** is an open-source **full-stack React framework** built by **Vercel**
 
 👉 It extends React to build **production-ready applications**
 
@@ -62,7 +62,7 @@ Modern apps need more than UI:
 
 - Routing
 - SEO
-- Performance
+- Better performance and fast
 - Backend logic
 - Optimization
 

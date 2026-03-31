@@ -13,12 +13,15 @@ npx create-next-app@latest
 | **Tailwind CSS**         | ✅ YES | Fast UI building • Modern standard • Component-friendly |
 | **`src/` Directory**     | ✅ YES | Cleaner structure • Scalable projects • Organized root  |
 | **App Router**           | ✅ YES | Server Components • Better performance • Modern routing |
-| **Import Alias (`@/*`)** | ✅ YES | Clean imports • No long paths • Easier refactoring      |
+| **Import Alias (`@/*`)** | ❌ No  | Clean imports • No long paths • Easier refactoring      |
 | **Turbopack**            | ✅ YES | Faster dev server • Instant refresh • Future default    |
 
-#### Default import alias (@/\*) : ✅ YES
+#### Default import alias (@/\*) : ❌ No
 
 Now use `import Button from "@/components/Button"` instead of `../../../components/Button`
+
+- If you choose No : Would you like to customize the import alias? → No
+    - Next.js automatically uses: `@/*`
 
 ---
 
