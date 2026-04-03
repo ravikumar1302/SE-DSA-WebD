@@ -84,6 +84,11 @@ export default function MyButton({ text, onClick }) {
     <Link href="/about">Go to About</Link>
     ```
 
+3. use client
+
+- Next.js App Router components are Server Components by default
+- So, use `"use client";` in top of code where the page is expected to be client component
+
 ---
 
 ## Data Fetching in Next.js
