@@ -3,6 +3,7 @@
 ## 🔹 React
 
 - It is a **JavaScript library** for building **UI components**. It is used to create Dynamics and interactive user interfaces.
+- React was developed by the Facebook Software Engineer Jordan Walke.
 
 - It is maintained by Facebook (Meta) in 2011 (Typescript was created by Microsoft in 2012 and Angular, Vue by Google in 2010)
 - React is a JS library, but Anguler, Vue are JS framework
