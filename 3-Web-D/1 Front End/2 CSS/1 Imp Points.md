@@ -5,5 +5,5 @@ BASIC Points :
     - But HTML class names are case-sensitive. And CSS class, id , urls, font-families are case sensitive. This has not changed in HTML5.
     - Note : in html quirks mode the css is case insensitive even for ID and class (if you remove doctype declaration)
 
-2. Comments are in format : /*    text   */
+2. Comments are in format : `/*    text   */`
 3. 

@@ -1,6 +1,9 @@
 # Ignore VS Code settings
 .vscode/
 
+# Ignore compiled binaries
+*.exe
+
 # a) Ignore the Rough/Practice area in Web-D
 3-Web-D/7 Rough or Practice area/
 
