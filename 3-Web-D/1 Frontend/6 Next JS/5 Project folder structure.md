@@ -248,12 +248,12 @@ my-nextjs-app/
 
 ## Next JS as Frontend
 
-<br><img src="../../Images/NextJs_as_Frontend.png" alt="NextJs_as_Frontend" width="40%" style="display: block; margin: auto;"><br>
+<br><img src="../../Images/NextJs_as_Frontend.webp" alt="NextJs_as_Frontend" width="40%" style="display: block; margin: auto;"><br>
 
 ## Next JS as Backend
 
-<br><img src="../../Images/NextJs_as_Backend.png" alt="NextJs_as_Backend" width="40%" style="display: block; margin: auto;"><br>
+<br><img src="../../Images/NextJs_as_Backend.webp" alt="NextJs_as_Backend" width="40%" style="display: block; margin: auto;"><br>
 
 ## Next Js Authentication
 
-<br><img src="../../Images/NextJs_Authentication.png" alt="NextJs_Authentication" width="40%" style="display: block; margin: auto;"><br>
+<br><img src="../../Images/NextJs_Authentication.webp" alt="NextJs_Authentication" width="40%" style="display: block; margin: auto;"><br>

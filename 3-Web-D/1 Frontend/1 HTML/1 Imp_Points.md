@@ -57,4 +57,4 @@
 
 17. Relative links:
 
-<br><img src="../../Images/Relative_Links.png" alt="Relative_Links" width="40%" style="display: block; margin: auto;"><br>
+<br><img src="../../Images/Relative_Links.webp" alt="Relative_Links" width="40%" style="display: block; margin: auto;"><br>

@@ -1,8 +1,8 @@
 # AEM Servlet
 
 <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between;">
-    <img src="../Images/AEM_Servlet.png" alt="AEM_Servlet" width="45%">
-    <img src="../Images/Servlet_Life_Cycle.png" alt="Servlet_Life_Cycle" width="40%">
+    <img src="../Images/AEM_Servlet.webp" alt="AEM_Servlet" width="45%">
+    <img src="../Images/Servlet_Life_Cycle.webp" alt="Servlet_Life_Cycle" width="40%">
 </div><br>
 
 1. AEM Servlet :

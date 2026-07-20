@@ -41,7 +41,7 @@
 
 ### JavaScript on Different environmnets
 
-<br><img src="../../Images/JS_diff_environment.png" alt="JS_diff_environment" width="40%" style="display: block; margin: auto;"><br>
+<br><img src="../../Images/JS_diff_environment.webp" alt="JS_diff_environment" width="40%" style="display: block; margin: auto;"><br>
 
 ---
 

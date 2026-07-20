@@ -52,7 +52,7 @@
     - Every component in React has lifecycle methods that we can tap into, to trigger changes at a particular phase of the life cycle.
     - Each component in react goes through three phases: Mounting, Updating & Unmounting
 
-    <br><img src="../../Images/Lifecycle_methods_in_React.png" alt="Lifecycle_methods_in_React" width="40%" style="display: block; margin: auto;"><br>
+    <br><img src="../../Images/Lifecycle_methods_in_React.webp" alt="Lifecycle_methods_in_React" width="40%" style="display: block; margin: auto;"><br>
 
 10. What is the Difference Between Rendering And Mounting? (OYO)
     - Rendering: Process where React calls `render()` and returns React elements (virtual DOM) that describe what should appear in the UI. Happens on initial load and on every state or prop change

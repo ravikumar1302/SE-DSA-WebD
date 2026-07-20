@@ -5,10 +5,10 @@
     - It stores your website’s files on special computers called servers and delivers them to visitors when they type in your domain name.
     - Web hosting allows websites to be online 24/7 by storing files (images, text, code) on servers.
     - When someone enters your domain (like⁣ - ⁣www.geeksforgeeks.org), the server sends the website files to their browser.
-      <br><img src="../Images/web_hosting.png" alt="web_hosting" width="50%">
+      <br><img src="../Images/web_hosting.webp" alt="web_hosting" width="50%">
 
 2. Hosting a Website: Complete Setup and Maintenance Flow
-   <br><img src="../Images/web-hosting-complete-flow.png" alt="web-hosting-complete-flow" width="50%"><br>
+   <br><img src="../Images/web-hosting-complete-flow.webp" alt="web-hosting-complete-flow" width="50%"><br>
 
     ```
     1. Domain Registration : Choose a unique domain name as your website’s address (e.g., www.example.com).

@@ -52,7 +52,7 @@
     - Node.js : JavaScript runtime for building back-end applications.
 
 6. **API (Application Program Interface)** :
-   <br><img src="../Images/API.png" alt="API" width="50%">
+   <br><img src="../Images/API.webp" alt="API" width="50%">
 
     - It is like a middleman between two systems, allowing them to communicate and exchange data.
     - It connects the front end and back end, making apps work smoothly behind the scenes.
@@ -81,7 +81,7 @@
     - Each piece of data is a key-value pair. Text values are inside quotes (" ").
     - Booleans (true/false) and numbers don’t need quotes
     - Arrays and nested objects are also supported
-      <br><img src="../Images/JSON-Data-FLow.png" alt="JSON-Data-FLow" width="50%"><br>
+      <br><img src="../Images/JSON-Data-FLow.webp" alt="JSON-Data-FLow" width="50%"><br>
 
     - As a full stack developer, JSON will be everywhere. Here is how:
 

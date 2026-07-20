@@ -1,6 +1,6 @@
 # Working of Node JS
 
-<br><img src="../../Images/Node_Js_Working.png" alt="Node_Js_Working" width="40%" style="display: block; margin: auto;"><br>
+<br><img src="../../Images/Node_Js_Working.webp" alt="Node_Js_Working" width="40%" style="display: block; margin: auto;"><br>
 
 Think of this diagram as the **runtime model of Node.js**—how it handles many concurrent requests using a **single thread + async I/O + background workers**
 

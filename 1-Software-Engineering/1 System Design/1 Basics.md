@@ -1,6 +1,6 @@
 # System Design - Basics : Scaling (Horizontal, Vertical), Event Sourcing, CQRS
 
-<br><img src="../Images/System_Design.png" alt="System Design" width="60%" style="display: block; margin: auto;"><br>
+<br><img src="../Images/System_Design.webp" alt="System Design" width="60%" style="display: block; margin: auto;"><br>
 
 ## 1. Horizontal Scaling (Scale Out)
 
@@ -74,7 +74,7 @@
 ## 4. CQRS (Command Query Responsibility Segregation)
 
 **CQRS with Event Sourcing**
-<br><img src="../Images/CQRS.png" alt="CQRS" width="60%" style="display: block; margin: auto;"><br>
+<br><img src="../Images/CQRS.webp" alt="CQRS" width="60%" style="display: block; margin: auto;"><br>
 
 - CQRS is a system design pattern that separates write operations (Commands) from read operations (Queries)
 - This is genrally used for Complex system only
@@ -102,7 +102,7 @@
 
 ## 5. Back of Envelope Calculation
 
-<br><img src="../Images/Back_of_Envelope_Calculation.png" alt="Back_of_Envelope_Calculation" width="60%" style="display: block; margin: auto;"><br>
+<br><img src="../Images/Back_of_Envelope_Calculation.webp" alt="Back_of_Envelope_Calculation" width="60%" style="display: block; margin: auto;"><br>
 
 - It is a rough estimation technique used to validate whether a system can handle expected scale — before going deep into architecture
 - It helps you answer: Will this system realistically work at this scale?

@@ -3,7 +3,7 @@
 1. What Are Workflows?
     - Whenever there is requirement to automate repeated tasks (like compressing images) or tasks which need collaboration (like review and approval process), then we choose to implement it with AEM Workflows.
 
-<img src="../Images/AEM_Workflow_Common_Use_Case.png" alt="AEM Workflow Common Use Case" width="40%" style="display: block; margin: auto;"><br>
+<img src="../Images/AEM_Workflow_Common_Use_Case.webp" alt="AEM Workflow Common Use Case" width="40%" style="display: block; margin: auto;"><br>
 
     -   The diagram shows the flow for a review and approval process:
         -   Author User Group: The process starts with an "Author User Group."

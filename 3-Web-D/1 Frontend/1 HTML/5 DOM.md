@@ -6,8 +6,8 @@
 -   HTML DOM is a tree structure, where each HTML tag becomes a node in the hierarchy.
 
       <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between;">
-      <img src="../../Images/DOM-Container.png" alt="DOM-Container" width="47%">
-      <img src="../../Images/DOM-Tree.png" alt="DOM-Tree" width="47%">
+      <img src="../../Images/DOM-Container.webp" alt="DOM-Container" width="47%">
+      <img src="../../Images/DOM-Tree.webp" alt="DOM-Tree" width="47%">
       </div><br>
 
 ### Why is DOM Required?

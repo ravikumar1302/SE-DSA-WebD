@@ -1,6 +1,6 @@
 # React Diff Algorithm
 
-<br><img src="../../Images/React_Diff_Algorithm.png" alt="React Diff Algorithm" width="40%" style="display: block; margin: auto;"><br>
+<br><img src="../../Images/React_Diff_Algorithm.webp" alt="React Diff Algorithm" width="40%" style="display: block; margin: auto;"><br>
 
 ## Virtual DOM :
 

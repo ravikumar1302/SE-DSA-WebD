@@ -2,7 +2,7 @@
 
 DNS is a hierarchical and distributed naming system that translates domain names into IP addresses. When you type a domain name like www.geeksforgeeks.org into your browser, DNS ensures that the request reaches the correct server by resolving the domain to its corresponding IP address. Without DNS, we’d have to remember the numerical IP address of every website we want to visit, which is highly impractical.
 
-<br><img src="../Images/How-DNS-Works.png" alt="How-DNS-Works" width="50%"><br>
+<br><img src="../Images/How-DNS-Works.webp" alt="How-DNS-Works" width="50%"><br>
 
 1. User Input: You enter a website address (for example, www.geeksforgeeks.org) into your web browser.
 2. Local Cache Check: Your browser first checks its local cache to see if it has recently looked up the domain. If it finds the corresponding IP address, it uses that directly without querying external servers.
@@ -20,7 +20,7 @@ This hierarchical approach allows DNS to handle billions of queries every day, e
 
 ### Types of Domains
 
-<img src="../Images/Types-of-DNS.png" alt="Types-of-DNS" width="50%"><br>
+<img src="../Images/Types-of-DNS.webp" alt="Types-of-DNS" width="50%"><br>
 
 1. Generic Domains: Top-level domains like .com, .org, .net and .edu. Widely used & recognized across world
 2. Country Code Domains: Represent specific countries or regions, such as .in for India, .us for the United States etc
@@ -32,7 +32,7 @@ This hierarchical approach allows DNS to handle billions of queries every day, e
 
 ### DNS : Domain Name Server
 
-<img src="../Images/DNS.png" alt="DNS" width="50%"><br>
+<img src="../Images/DNS.webp" alt="DNS" width="50%"><br>
 
 1. The client machine sends a request to the local name server to resolve a domain name.
 2. If the local server doesn't have the record (in cache), it forwards the request to a root name server.

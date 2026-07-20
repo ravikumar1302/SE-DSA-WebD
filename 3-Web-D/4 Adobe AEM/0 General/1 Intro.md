@@ -24,7 +24,7 @@
 ```
 
 4. OSGI Container :
-   <br><img src="../Images/AEM_Architecture.png" alt="AEM Architecture" width="40%" style="display: block; margin: auto;"><br>
+   <br><img src="../Images/AEM_Architecture.webp" alt="AEM Architecture" width="40%" style="display: block; margin: auto;"><br>
 
 ```
 - OSGi is a Java framework for developing and deploying modular software programs and libraries. It allows applications to be broken into reusable, dynamic modules (called bundles), which can be independently started, stopped, updated, or removed at runtime.
@@ -37,7 +37,7 @@
 ```
 
 5. AEM Templates, Components, Authoring :
-   <br><img src="../Images/AEM_Author_and Publish_Flow.png" alt="AEM_Author_and Publish_Flow" width="40%" style="display: block; margin: auto;"><br>
+   <br><img src="../Images/AEM_Author_and Publish_Flow.webp" alt="AEM_Author_and Publish_Flow" width="40%" style="display: block; margin: auto;"><br>
 
     - AEM contains a lot of templates and options to select from like Container, Progress bar, Tabs, Accordian,Text Box, Paragraph, Buttons, Breadcrumb, Carousel etc
     - AEM Author Environment (CURD Page) : Changes can be done till this. After Authoring; Replication happens and Page is went to Publisher
@@ -47,7 +47,7 @@
 
 Flow (Developers - Read opposite) : User URL > CDN > Load balancer > Dispatcher > AEM Pub > AEM Author > CD > Developer
 
-<img src="../Images/AEM_Page_Render_Flow.png" alt="AEM_Page_Render_Flow" width="40%" style="display: block; margin: auto;">
+<img src="../Images/AEM_Page_Render_Flow.webp" alt="AEM_Page_Render_Flow" width="40%" style="display: block; margin: auto;">
 <br>
 
 ```

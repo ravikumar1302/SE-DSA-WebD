@@ -1,6 +1,6 @@
 # API vs GraphQL
 
-<br><img src="../../Images/CF_API_vs_GraphQL.png" alt="Content Fragment API vs GraphQL" width="40%" style="display: block; margin: auto;"><br>
+<br><img src="../../Images/CF_API_vs_GraphQL.webp" alt="Content Fragment API vs GraphQL" width="40%" style="display: block; margin: auto;"><br>
 
 ✅ Preferred Approach
 | Scenario | Recommendation |
