@@ -71,8 +71,9 @@ SE-DSA-WebD
 
 ## 📈 What's Next
 
-- Backend Systems
-- System Design
-- Cloud & Scalable Applications
+- Full-Stack Development (MERN — Node.js, Express, MongoDB)
+- AEM Back-End (Java, Sling, OSGi)
+- TypeScript
+- DevOps basics (CI/CD, Docker etc)
 
 ### 💡 Learning. Building. Growing.
