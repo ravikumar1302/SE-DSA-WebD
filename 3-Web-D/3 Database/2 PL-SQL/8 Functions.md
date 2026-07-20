@@ -1,0 +1,14 @@
+# Functions
+
+- It must always return a value (main diff b/w function and procedure)
+- `AS` keyword is used instead of `IS` keyword for creating a standalone function
+    ```sql
+    CREATE OR REPLACE FUNCTION adder (n1 IN NUMBER, n2 IN NUMBER)
+    RETURN number       -- RETURN return_type
+    IS      -- IS or AS
+    n3 number(8);
+    BEGIN
+        n3 := n1 + n2;
+        RETURN n3;
+    END;
+    ```
