@@ -87,6 +87,29 @@ A **load balancer** sits in front of your servers and distributes incoming reque
 - **Write-through** - writes go to cache *and* DB together (cache always fresh, writes slower).
 - **Write-back** - write to cache now, DB later (fast writes, risk of loss).
 
+**Cache-aside, drawn out:**
+
+```
+Request arrives
+      |
+      v
+Is it in the cache?
+      |
+   yes ──────────────> return it, done (fast path, a cache hit)
+      |
+   no  (a cache miss)
+      v
+Query the real source (database)
+      |
+      v
+Store the result in the cache, with a TTL
+      |
+      v
+Return it
+```
+
+Every later request within the TTL takes the fast path. When the TTL expires, the next request pays the slow path once and refills the cache for everyone behind it.
+
 ⚠️ **Pitfall:** caching data that changes constantly, or forgetting to invalidate - users see stale results and you'll spend hours confused. Cache things that are read-often and change-rarely first.
 
 Tool: **Redis** is the default in-memory cache/store (file 10).
@@ -180,5 +203,18 @@ For a growing app, you typically climb this ladder - don't jump ahead:
 - **Caching** (app + CDN) is the biggest, cheapest performance lever - but invalidation is hard.
 - The **database** is usually the first real bottleneck: **index → cache → replicas → shard (last resort).**
 - **Measure first**, optimize the proven bottleneck and climb the scaling ladder in order.
+
+---
+
+## Where this shows up in the build
+
+| Idea here | Where it becomes real |
+|---|---|
+| Caching a read-often, change-rarely query | [Redis Caching](../9%20Advanced%20Topics/0%20Redis%20Caching.md) |
+| Indexing the real bottleneck | [Indexes and Query Performance](../5%20Postgres%20and%20Prisma/6%20Indexes%20and%20Query%20Performance.md) |
+| Statelessness enabling horizontal scaling | [AuthN vs AuthZ and Session vs Token Auth](../6%20Auth%20Validation%20and%20Security/2%20AuthN%20vs%20AuthZ%20and%20Session%20vs%20Token%20Auth.md) |
+| Async processing, buffering slow work | [Background Jobs and Queues](../9%20Advanced%20Topics/1%20Background%20Jobs%20and%20Queues.md) |
+| Measure first, push work into the database | [Building the Leaderboard](../7%20API%20Polish/2%20Building%20the%20Leaderboard.md) |
+| Multiple cores on one machine | [Node.js Runtime and the Event Loop](../4%20Express%20Fundamentals/8%20Node.js%20Runtime%20and%20the%20Event%20Loop.md) |
 
 ➡️ Next: [`05-databases-and-storage.md`](05-databases-and-storage.md) - the data layer in depth.

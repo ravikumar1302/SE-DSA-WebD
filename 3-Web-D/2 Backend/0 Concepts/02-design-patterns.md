@@ -153,4 +153,16 @@ Knowing what *not* to do is as valuable as knowing what to do:
 - Every pattern traces back to file 01: reduce coupling, raise cohesion, depend on abstractions.
 - Recognize **anti-patterns**; apply patterns only when a real pain calls for them.
 
+---
+
+## Where this shows up in the build
+
+| Pattern here | Where it becomes real |
+|---|---|
+| Middleware pattern | [Middleware](../4%20Express%20Fundamentals/3%20Middleware.md) |
+| Controller, service, repository layering | [Folder Structure: Routes, Controllers, Services](../4%20Express%20Fundamentals/6%20Folder%20Structure%20-%20Routes%20Controllers%20Services.md) |
+| Repository, typed with generics | [Generics](../3%20TypeScript/6%20Generics.md) |
+| DTO, separating stored shape from sent shape | [Utility Types](../3%20TypeScript/8%20Utility%20Types.md), `Omit<User, "password">` |
+| Observer, publish and subscribe | [Message Brokers and Kafka](../10%20Microservices%20and%20Distributed%20Systems/3%20Message%20Brokers%20and%20Kafka.md) |
+
 ➡️ Next: [`03-architecture.md`](03-architecture.md) - zooming out from code structure to *whole-system* shape.

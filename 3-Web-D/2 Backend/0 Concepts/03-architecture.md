@@ -32,6 +32,26 @@ A refinement: put your **business logic in the center**, completely ignorant of 
 
 💡 **Why:** your core logic depends on *nothing external* - not your web framework, not your DB. You can swap Postgres for MongoDB, or Express for something else, by writing a new adapter - the core never changes. It's Dependency Inversion taken to the architectural level. Also called "Clean Architecture" / "Onion Architecture" in close variants.
 
+```
+            ┌──────────────────────────────┐
+            │        Web adapter            │  (Express routes)
+            └──────────────┬───────────────┘
+                           │  port (interface)
+            ┌──────────────▼───────────────┐
+            │                              │
+            │        Core business          │  knows nothing about
+            │        logic, pure            │  Express, Postgres or email
+            │                              │
+            └──────┬────────────────┬──────┘
+                   │ port           │ port
+      ┌────────────▼─────┐   ┌──────▼─────────────┐
+      │ Database adapter │   │  Email adapter      │
+      │ (Prisma)         │   │  (SMTP or an API)   │
+      └──────────────────┘   └────────────────────┘
+```
+
+Swapping Prisma for something else means writing one new adapter. The core never changes, because it only ever knew the port, not the tool behind it.
+
 ⚠️ **Pitfall:** overkill for small apps. The indirection pays off in large, long-lived systems; in a weekend project it's just extra files. Start layered; adopt hexagonal when the core logic is valuable enough to protect.
 
 ---
@@ -162,5 +182,17 @@ Regardless of style, these apply:
 - Microservices trade code simplicity for operational complexity - that trade only pays at large scale/org.
 - **Serverless, event-driven, queues** are tools for specific problems (spiky load, async decoupling), not defaults.
 - The recurring theme: **decouple by clear boundaries, defer the expensive splits until you have real reason.**
+
+---
+
+## Where this shows up in the build
+
+| Idea here | Where it becomes real |
+|---|---|
+| Layered architecture | [Folder Structure: Routes, Controllers, Services](../4%20Express%20Fundamentals/6%20Folder%20Structure%20-%20Routes%20Controllers%20Services.md) |
+| Monolith versus microservices | [Microservices vs Monolith](../10%20Microservices%20and%20Distributed%20Systems/0%20Microservices%20vs%20Monolith.md) |
+| Serverless versus containers versus VPS | [Where Backends Run](../8%20Deploy/0%20Where%20Backends%20Run.md) |
+| Event-driven work, queues | [Background Jobs and Queues](../9%20Advanced%20Topics/1%20Background%20Jobs%20and%20Queues.md) |
+| Orchestration | [Kubernetes](../10%20Microservices%20and%20Distributed%20Systems/1%20Kubernetes.md) |
 
 ➡️ Next: [`04-scalability.md`](04-scalability.md) - what happens when the users actually arrive.

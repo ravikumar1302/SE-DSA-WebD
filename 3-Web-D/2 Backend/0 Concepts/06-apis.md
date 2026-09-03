@@ -174,4 +174,17 @@ The most popular tool for **building, testing and exploring** APIs. You craft re
 - Management adds **auth, rate limiting, gateways, webhooks, monitoring**.
 - **Document** with OpenAPI/Swagger; **test** with Postman & friends - independent of any frontend.
 
+---
+
+## Where this shows up in the build
+
+| Idea here | Where it becomes real |
+|---|---|
+| Methods, status codes, resource naming | [HTTP Anatomy](../4%20Express%20Fundamentals/0%20HTTP%20Anatomy.md) |
+| Consistent response and error shapes | [Consistent Response and Error Envelope](../7%20API%20Polish/0%20Consistent%20Response%20and%20Error%20Envelope.md) |
+| Pagination, filtering, sorting | [Pagination Filtering and Sorting at the API Layer](../7%20API%20Polish/1%20Pagination%20Filtering%20and%20Sorting%20at%20the%20API%20Layer.md) |
+| Validation at the boundary | [Validation with Zod](../6%20Auth%20Validation%20and%20Security/0%20Validation%20with%20Zod.md) |
+| Rate limiting | [Rate Limiting and Security Basics](../6%20Auth%20Validation%20and%20Security/7%20Rate%20Limiting%20and%20Security%20Basics.md) |
+| REST compared to GraphQL and gRPC | [GraphQL](../10%20Microservices%20and%20Distributed%20Systems/2%20GraphQL.md), [gRPC](../10%20Microservices%20and%20Distributed%20Systems/4%20gRPC.md) |
+
 ➡️ Next: [`07-security.md`](07-security.md) - because a working API on the internet is an attacked API.

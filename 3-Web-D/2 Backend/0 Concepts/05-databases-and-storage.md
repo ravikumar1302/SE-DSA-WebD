@@ -105,6 +105,21 @@ Wrap multi-step operations that must be all-or-nothing in a transaction. (Transf
 ### N+1 query problem (a classic beginner trap)
 You fetch a list of 100 users (1 query), then loop and fetch each user's posts (100 more queries) = 101 queries. Fix by fetching related data in one query (a JOIN, or your ORM's "eager loading"/`include`). ⚠️ Watch for this - it's the most common ORM performance bug.
 
+```
+The N+1 shape:                          The fix:
+
+query 1: get 100 users                  query 1: get 100 users
+   loop over each user:                          WITH their posts attached
+     query 2:  posts for user 1
+     query 3:  posts for user 2         total: 1 query
+     ...
+     query 101: posts for user 100
+
+total: 101 queries
+```
+
+The cost grows with the number of rows, which is why it stays invisible on ten test rows and becomes severe on ten thousand real ones.
+
 ---
 
 ## Part D - ORMs (Object-Relational Mappers)
@@ -194,5 +209,19 @@ A shared filesystem (folders/files) accessible by **multiple** servers over the 
 - Use an **ORM** for productivity/safety but **learn SQL underneath**; keep the raw-SQL escape hatch.
 - **Files go in object storage (S3), not the database** - different storage types exist for different jobs.
 - **Back up and migrate** deliberately; test restores.
+
+---
+
+## Where this shows up in the build
+
+| Idea here | Where it becomes real |
+|---|---|
+| Keys, relations, data modeling | [Relational Modeling Basics](../5%20Postgres%20and%20Prisma/0%20Relational%20Modeling%20Basics.md) |
+| ORM in practice | [Prisma CRUD](../5%20Postgres%20and%20Prisma/2%20Prisma%20CRUD.md) |
+| The N+1 query problem | [Relations in Prisma](../5%20Postgres%20and%20Prisma/3%20Relations%20in%20Prisma.md) |
+| Indexes, and their write cost | [Indexes and Query Performance](../5%20Postgres%20and%20Prisma/6%20Indexes%20and%20Query%20Performance.md) |
+| Schema history, migrations | [Migrations](../5%20Postgres%20and%20Prisma/5%20Migrations.md) |
+| The raw SQL escape hatch | [Raw SQL Escape Hatch](../5%20Postgres%20and%20Prisma/7%20Raw%20SQL%20Escape%20Hatch.md) |
+| Files belong in object storage | [File Uploads and Object Storage](../9%20Advanced%20Topics/2%20File%20Uploads%20and%20Object%20Storage.md) |
 
 ➡️ Next: [`06-apis.md`](06-apis.md) - how the outside world talks to your backend.

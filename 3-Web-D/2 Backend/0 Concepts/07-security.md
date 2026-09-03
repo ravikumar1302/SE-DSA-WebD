@@ -170,4 +170,19 @@ Your app needs secrets: DB passwords, API keys, JWT signing keys.
 - **Never commit secrets**; use env vars / secret managers.
 - Practice **least privilege, defense in depth, secure defaults.**
 
+---
+
+## Where this shows up in the build
+
+| Idea here | Where it becomes real |
+|---|---|
+| Authentication versus authorization | [AuthN vs AuthZ and Session vs Token Auth](../6%20Auth%20Validation%20and%20Security/2%20AuthN%20vs%20AuthZ%20and%20Session%20vs%20Token%20Auth.md) |
+| Hashing and salting passwords | [Password Hashing](../6%20Auth%20Validation%20and%20Security/1%20Password%20Hashing.md) |
+| Tokens, signed but not encrypted | [JWT in Practice](../6%20Auth%20Validation%20and%20Security/3%20JWT%20in%20Practice.md) |
+| Broken access control | [Ownership and Authorization Checks](../6%20Auth%20Validation%20and%20Security/5%20Ownership%20and%20Authorization%20Checks.md) |
+| Injection, and how an ORM prevents it | [Raw SQL Escape Hatch](../5%20Postgres%20and%20Prisma/7%20Raw%20SQL%20Escape%20Hatch.md) |
+| Secrets management | [Env Vars and Config](../4%20Express%20Fundamentals/5%20Env%20Vars%20and%20Config.md) |
+| Encryption in transit | [HTTP vs HTTPS](../4%20Express%20Fundamentals/9%20HTTP%20vs%20HTTPS.md) |
+| Cross-origin rules | [CORS](../6%20Auth%20Validation%20and%20Security/6%20CORS.md) |
+
 ➡️ Next: [`08-testing.md`](08-testing.md) - proving your code (and your security) actually works.

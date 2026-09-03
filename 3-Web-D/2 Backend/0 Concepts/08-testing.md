@@ -165,4 +165,14 @@ The payoff compounds when tests run **automatically on every change** in your pi
 - Prioritize **core logic, edge cases, error paths and past bugs.**
 - Run tests **automatically in CI** so they actually protect you.
 
+---
+
+## Where this shows up in the build
+
+| Idea here | Where it becomes real |
+|---|---|
+| Unit, integration, and what to test first | [Testing](../9%20Advanced%20Topics/4%20Testing.md) |
+| Structure that makes code testable at all | [Folder Structure: Routes, Controllers, Services](../4%20Express%20Fundamentals/6%20Folder%20Structure%20-%20Routes%20Controllers%20Services.md) |
+| Testing against a separate database | [Practice: Advanced Topics](../9%20Advanced%20Topics/Practice.md) |
+
 ➡️ Next: [`09-cicd-devops.md`](09-cicd-devops.md) - automating the path from commit to production.

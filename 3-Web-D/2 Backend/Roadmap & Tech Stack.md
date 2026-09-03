@@ -42,11 +42,30 @@ You build the thing you actually want, and it *happens* to teach the whole sylla
 | **3** | Auth + validation + security | Parts 4+5 | ~1.5 wk | Register/login, protected routes, ownership |
 | **4** | API polish | Part 5 | ~1 wk | Paginated, sorted `GET /leaderboard` |
 | **5** | Deploy | Part 7 | ~3 days | Live public API wired to a Next.js frontend |
-| **6** | "Know they exist" | Part 6 | on demand | Redis/jobs/uploads/WebSockets - added only when needed |
+| **6** | Advanced topics | Part 6 | on demand | Redis/jobs/uploads/WebSockets - added only when needed |
+| **7** | Microservices and distributed systems | - | on demand | Understanding of when AlgoRift's architecture would need to split |
 
-**Total to shippable (Phases 0-5): ~6-7 weeks** at a steady student pace. Phase 6 + testing + Docker = depth you bolt on later, on demand.
+**Total to shippable (Phases 0-5): ~6-7 weeks** at a steady student pace. Phases 6-7 = depth you bolt on later, on demand.
 
-**The one rule:** simple/fake version first, real tool second. In-memory CRUD before Prisma. Manual JWT before a library. That's exactly how you avoid the "hands-on but not first-principles" trap you flagged in your own Next.js notes.
+**The one rule:** simple/fake version first, real tool second. In-memory CRUD before Prisma. Manual JWT before a library. That's exactly how you avoid the "hands-on but not first-principles" trap noted in the Next.js notes.
+
+---
+
+## Where the notes live
+
+| Phase | Notes folder | Practice |
+|---|---|---|
+| Theory, read alongside everything | [0 Concepts](0%20Concepts/00-INDEX.md) | - |
+| 0 | [3 TypeScript](3%20TypeScript/0%20Intro.md) | [Practice](3%20TypeScript/Practice.md) |
+| 1 | [4 Express Fundamentals](4%20Express%20Fundamentals/0%20HTTP%20Anatomy.md) | [Practice](4%20Express%20Fundamentals/Practice.md) |
+| 2 | [5 Postgres and Prisma](5%20Postgres%20and%20Prisma/0%20Relational%20Modeling%20Basics.md) | [Practice](5%20Postgres%20and%20Prisma/Practice.md) |
+| 3 | [6 Auth Validation and Security](6%20Auth%20Validation%20and%20Security/0%20Validation%20with%20Zod.md) | [Practice](6%20Auth%20Validation%20and%20Security/Practice.md) |
+| 4 | [7 API Polish](7%20API%20Polish/0%20Consistent%20Response%20and%20Error%20Envelope.md) | [Practice](7%20API%20Polish/Practice.md) |
+| 5 | [8 Deploy](8%20Deploy/0%20Where%20Backends%20Run.md) | [Practice](8%20Deploy/Practice.md) |
+| 6 | [9 Advanced Topics](9%20Advanced%20Topics/0%20Redis%20Caching.md) | [Practice](9%20Advanced%20Topics/Practice.md) |
+| 7 | [10 Microservices and Distributed Systems](10%20Microservices%20and%20Distributed%20Systems/0%20Microservices%20vs%20Monolith.md) | [Practice](10%20Microservices%20and%20Distributed%20Systems/Practice.md) |
+
+Quick reference while coding: [Commands Cheatsheet](Commands%20Cheatsheet.md) and [Troubleshooting Index](Troubleshooting%20Index.md).
 
 ---
 ---
@@ -261,7 +280,7 @@ Your API is live on a public URL, migrations applied and a Next.js frontend talk
 
 ---
 
-## Phase 6 - "Know They Exist"
+## Phase 6 - Advanced Topics
 **On demand · Maps to Part 6 · Goal: recognize when to reach, don't pre-learn**
 
 Add each *only* when the project genuinely demands it:
@@ -273,8 +292,52 @@ Add each *only* when the project genuinely demands it:
 - **Testing** (unit + integration) - bolt on once the app is stable
 - **Docker** - reproducible environments, powerful but later
 
-### Deliberately skipped for now
-Microservices, Kubernetes, GraphQL implementation, message brokers (Kafka), gRPC. All noise until you've shipped a real CRUD-plus-auth backend. Which, after Phase 5, you will have.
+### Do-this checklist
+- Cache the leaderboard query with Redis, with a short time-based expiry
+- Move code execution behind a queue, respond `pending` immediately, update status when the worker finishes
+- Add avatar upload backed by object storage, store only the URL in Postgres
+- Push a live submission status update over a WebSocket instead of polling
+- Write unit tests for the service layer, then one integration test through a real route
+- Write a `Dockerfile` for the app and run it locally with `docker build` / `docker run`
+
+### Traps
+- Reaching for any of these before the plain version has actually caused a real, felt problem
+- Caching data that changes on every request, or caching without any expiry at all
+- Running slow work (code execution) synchronously inside a request instead of queuing it
+- Storing uploaded files as binary blobs in Postgres instead of in object storage
+
+### Done when
+Each item above is added to AlgoRift only once its specific problem shows up in practice, not pre-built speculatively, and you can explain in one sentence what problem it solves.
+
+---
+
+## Phase 7 - Microservices and Distributed Systems
+**On demand · Goal: recognize the shape of systems beyond a single service, know when AlgoRift's architecture would need to change**
+
+AlgoRift as built through Phase 6 is one Express app talking to one Postgres database, a monolith and a perfectly correct choice at this scale. This phase is about recognizing the next tier of architecture, not building it, none of this belongs in AlgoRift until a specific, felt problem calls for it.
+
+### Concepts
+- **Microservices vs monolith:** splitting one app into many independently deployable services, each owning its own data
+- **Kubernetes:** container orchestration, for when a single managed platform (Railway-style) stops being enough
+- **GraphQL:** a single flexible query endpoint instead of many fixed REST routes, an alternative, not a strict upgrade
+- **Message brokers (Kafka):** asynchronous, decoupled communication between many services at scale
+- **gRPC:** a fast, typed, binary protocol for service-to-service calls, not meant for public-facing APIs
+
+### Do-this checklist
+- Map AlgoRift's current architecture (one app, one database) to the term "monolith", and identify what would actually force a split
+- Sketch what AlgoRift would look like split into 3 services: auth, problems, submissions, and what each would own
+- Compare one REST endpoint you already built to the same data modeled as a GraphQL query
+- Trace what a Kafka event ("submission accepted") would need to trigger elsewhere in a larger version of AlgoRift
+- Read one gRPC service definition (a `.proto` file) and compare it to an equivalent REST route plus Zod schema
+
+### Traps
+- Reaching for microservices before a single service is even under real load, most "microservices too early" stories start exactly here
+- Treating GraphQL as strictly better than REST, it trades one set of tradeoffs for another, not a pure upgrade
+- Assuming Kubernetes is required to run containers in production, a managed platform handles this for the vast majority of projects
+- Adding a message broker for a problem a queue (Phase 6) already solves
+
+### Done when
+You can explain, in plain terms, why AlgoRift as built does not need any of these yet, and what specific symptom, not a fixed timeline, would actually justify reaching for each one.
 
 ---
 
@@ -286,4 +349,5 @@ Microservices, Kubernetes, GraphQL implementation, message brokers (Kafka), gRPC
 - Phase 3 - Auth + validation + security
 - Phase 4 - API polish
 - Phase 5 - Deploy
-- Phase 6 - On-demand extras
+- Phase 6 - Advanced topics
+- Phase 7 - Microservices and distributed systems

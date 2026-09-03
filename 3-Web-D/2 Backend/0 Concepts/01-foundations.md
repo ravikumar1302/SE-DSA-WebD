@@ -69,6 +69,26 @@ These are the two most important words for judging structure. Get these and you 
 
 📌 **The golden goal:** **Low coupling, high cohesion.** Modules that are focused internally and independent externally. Repeat this phrase until it's reflex - it's the single best lens for judging code structure.
 
+**A concrete example of both dials, in one snippet:**
+
+```
+Tight coupling, low cohesion            Loose coupling, high cohesion
+--------------------------------        --------------------------------
+UserController                          UserController
+  opens a database connection             calls userService.create(data)
+  writes SQL by hand
+  hashes the password                   UserService
+  formats the email HTML                  validates, calls userRepository
+  sends the email                         calls emailService
+
+Changing the database, the hash         Changing the database touches
+algorithm or the email provider         only the repository. Changing the
+all mean editing this one file.         email provider touches only that
+                                         service. Nothing else moves.
+```
+
+The left version has one file that knows about four unrelated things (low cohesion) and depends directly on all of them (tight coupling). The right version gives each piece one job, connected through function calls it does not need to understand the insides of.
+
 ⚠️ **Pitfall:** A giant `helpers.js` / `utils.py` file is the classic low-cohesion trap. It grows into an unrelated junk drawer that everything depends on (high coupling too). Group by *responsibility*, not by "miscellaneous."
 
 ---
@@ -160,5 +180,16 @@ High-level code should depend on **abstractions**, not concrete details. Details
 - **Abstraction** lets you change *how* without breaking *who uses it*.
 - **DRY/KISS/YAGNI** fight over-engineering; **SOLID** spells out good modularity.
 - Every later concept (patterns, architecture, scaling) is these ideas applied at bigger scales.
+
+---
+
+## Where this shows up in the build
+
+| Idea here | Where it becomes real |
+|---|---|
+| Separation of concerns, high cohesion | [Folder Structure: Routes, Controllers, Services](../4%20Express%20Fundamentals/6%20Folder%20Structure%20-%20Routes%20Controllers%20Services.md) |
+| Low coupling, testable modules | [Testing](../9%20Advanced%20Topics/4%20Testing.md), where services test without Express |
+| Dependency inversion | [Generics](../3%20TypeScript/6%20Generics.md), the `Repository<T>` contract |
+| YAGNI, avoiding over-engineering | [Microservices vs Monolith](../10%20Microservices%20and%20Distributed%20Systems/0%20Microservices%20vs%20Monolith.md) |
 
 ➡️ Next: [`02-design-patterns.md`](02-design-patterns.md) - named, reusable solutions built from exactly these principles.

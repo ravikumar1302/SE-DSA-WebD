@@ -47,4 +47,4 @@ Almost every concept in here is a tool for one of those four. When something fee
 
 ---
 
-*Companion to your [Node + TypeScript backend roadmap](../Roadmap%20&%20Tech%20Stack.md). That's the "how"; this is the "why."*
+*Companion to the [Node + TypeScript backend roadmap](../Roadmap%20&%20Tech%20Stack.md). That's the "how"; this is the "why."*

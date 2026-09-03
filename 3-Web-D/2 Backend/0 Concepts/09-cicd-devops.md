@@ -186,4 +186,16 @@ You don't need enterprise DevOps to get the benefits. A solid starter setup:
 - **IaC** makes infrastructure reproducible and reviewable.
 - **Observability** (logs + metrics + tracing + alerting) is how you survive production. Build it in early.
 
+---
+
+## Where this shows up in the build
+
+| Idea here | Where it becomes real |
+|---|---|
+| Environments, dev versus production config | [Env Vars and Config](../4%20Express%20Fundamentals/5%20Env%20Vars%20and%20Config.md) |
+| Build and start, compiled output | [Preparing for Production](../8%20Deploy/1%20Preparing%20for%20Production.md) |
+| Deploying, and reading production logs | [Deploying to Railway](../8%20Deploy/2%20Deploying%20to%20Railway.md) |
+| Containers | [Docker](../9%20Advanced%20Topics/5%20Docker.md) |
+| Orchestration, when a platform is not enough | [Kubernetes](../10%20Microservices%20and%20Distributed%20Systems/1%20Kubernetes.md) |
+
 ➡️ Next: [`10-tools-and-ecosystem.md`](10-tools-and-ecosystem.md) - the concrete tools and services that implement all of this.

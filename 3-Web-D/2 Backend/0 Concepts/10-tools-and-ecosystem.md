@@ -28,7 +28,7 @@ You push code; the platform builds, deploys, scales and gives you a URL. Minimal
 
 | Tool | Notes |
 |---|---|
-| **Railway** | Push-to-deploy; hosts your app *and* databases together; very beginner-friendly. (Your roadmap's pick.) |
+| **Railway** | Push-to-deploy; hosts your app *and* databases together; very beginner-friendly. (The roadmap's pick.) |
 | **Render** | Similar; web services, databases, cron jobs, static sites. |
 | **Fly.io** | Runs containers close to users globally; a bit more control. |
 | **Heroku** | The original PaaS; still around, popularized the model. |
@@ -195,7 +195,7 @@ Rather than hand-rolling all of auth (file 07), managed identity services handle
 | **Supabase Auth** | Built into Supabase. |
 | **AWS Cognito** | AWS's identity service. |
 
-💡 **Build auth by hand once** (to understand it - as your roadmap advises), then consider a managed service for real products. Auth is security-critical and easy to get subtly wrong; offloading it is often wise.
+💡 **Build auth by hand once** (to understand it - as the roadmap advises), then consider a managed service for real products. Auth is security-critical and easy to get subtly wrong; offloading it is often wise.
 
 ---
 
@@ -246,4 +246,18 @@ A coherent, modern, low-ops toolset to actually build and ship with (aligned to 
 
 ---
 
-*End of handbook. You now have the "why" layer beneath your Node/TS "how" roadmap. Revisit these as you build - concepts land differently once you've hit the problems they solve.*
+---
+
+## Where this shows up in the build
+
+| Category here | Where it becomes real |
+|---|---|
+| Hosting platforms | [Where Backends Run](../8%20Deploy/0%20Where%20Backends%20Run.md), [Deploying to Railway](../8%20Deploy/2%20Deploying%20to%20Railway.md) |
+| Managed databases | [Neon and Prisma Setup](../5%20Postgres%20and%20Prisma/1%20Neon%20and%20Prisma%20Setup.md) |
+| Caching | [Redis Caching](../9%20Advanced%20Topics/0%20Redis%20Caching.md) |
+| Queues | [Background Jobs and Queues](../9%20Advanced%20Topics/1%20Background%20Jobs%20and%20Queues.md) |
+| Object storage | [File Uploads and Object Storage](../9%20Advanced%20Topics/2%20File%20Uploads%20and%20Object%20Storage.md) |
+| API testing tools, everyday commands | [Commands Cheatsheet](../Commands%20Cheatsheet.md) |
+
+
+*End of handbook. You now have the "why" layer beneath the Node/TS "how" roadmap. Revisit these as you build - concepts land differently once you've hit the problems they solve.*
