@@ -17,14 +17,6 @@
 ![SQL](https://img.shields.io/badge/SQL-444444?style=flat-square&logo=mysql)
 ![Adobe AEM](https://img.shields.io/badge/Adobe%20AEM-444444?style=flat-square&logo=adobe)
 
-**Currently learning**
-
-![TypeScript](https://img.shields.io/badge/TypeScript-444444?style=flat-square&logo=typescript)
-![Node.js](https://img.shields.io/badge/Node.js-444444?style=flat-square&logo=node.js)
-![Express](https://img.shields.io/badge/Express-444444?style=flat-square&logo=express)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-444444?style=flat-square&logo=postgresql)
-![Prisma](https://img.shields.io/badge/Prisma-444444?style=flat-square&logo=prisma)
-
 ---
 
 This repository holds notes and practice from an ongoing learning journey, not a showcase of finished projects. Read it as "here is what I am working through", not "here is what I have mastered."
@@ -37,7 +29,7 @@ A structured repository documenting my learning journey in
 
 > 📌 This is an evolving repository, content will continue to grow as I explore more concepts
 
-> 🔨 Currently working through: backend fundamentals, TypeScript and Express (see the [backend roadmap](3-Web-D/2%20Backend/Roadmap%20%26%20Tech%20Stack.md) for exact phase-by-phase progress)
+> 🔨 Currently working through: backend fundamentals
 
 ## 📂 Structure
 
@@ -71,19 +63,7 @@ SE-DSA-WebD
 ## 🌐 Web Development
 
 - **Frontend**: HTML, CSS, JavaScript, React, Next JS
-- **Backend**: a learning track built around one spine project, currently in progress
-
-    | Area                                    | Status                           |
-    | --------------------------------------- | -------------------------------- |
-    | TypeScript for backend work             | learning                         |
-    | HTTP and Express fundamentals           | learning                         |
-    | PostgreSQL with Prisma                  | not started                      |
-    | Auth and security                       | not started                      |
-    | API polish                              | not started                      |
-    | Deploy                                  | not started                      |
-    | Advanced topics and distributed systems | reference only                   |
-
-    Full phase-by-phase detail lives in the [backend roadmap](3-Web-D/2%20Backend/Roadmap%20%26%20Tech%20Stack.md), that file is the source of truth for progress, this table is just a summary.
+- **Backend**: to start
 
 - **Databases & Core Concepts**: SQL, PL/SQL
 - Adobe AEM
@@ -99,6 +79,7 @@ SE-DSA-WebD
 
 ## 📈 What's Next
 
+- Polish Frontend and learn Backend
 - Building the backend spine project end to end, from setup to deployment
 - AEM Back-End (Java, Sling, OSGi)
 - Core Java
