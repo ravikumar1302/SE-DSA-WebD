@@ -24,7 +24,7 @@
 
 3. **JSX in Next.js**
     - Same as React: allows HTML-like syntax inside JS
-    - Can include components, logic, loops, and conditional rendering
+    - Can include components, logic, loops and conditional rendering
 
 ---
 

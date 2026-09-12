@@ -17,7 +17,7 @@
 
 ## 2. SDLC :
 
-- SDLC (Software Development Life Cycle) is a thinking framework to build, run, and evolve software safely and predictably.
+- SDLC (Software Development Life Cycle) is a thinking framework to build, run and evolve software safely and predictably.
 - SDLC exists to reduce risk, not to add process
 - It answers:
     - What should we build?
@@ -104,7 +104,7 @@ c) **Iterative / Incremental — How mature teams think**
     - Build core first
     - Add features in layers
     - Refactor continuously
-        - Refactoring in software engineering is restructuring existing code to improve its internal design, readability and maintainability without changing its external behavior or functionality, making it cleaner, simpler, and easier to extend
+        - Refactoring in software engineering is restructuring existing code to improve its internal design, readability and maintainability without changing its external behavior or functionality, making it cleaner, simpler and easier to extend
 - Real example : Payment system
     - Iteration 1: card payment (happy path)
     - Iteration 2: retries, logging

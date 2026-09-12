@@ -11,7 +11,7 @@
 
 3.  When to use a class component over a functional component? (Google)
     - If the component needs state or lifecycle methods, then use class component; otherwise, use function component
-    - However, from React 16.8, with the addition of Hooks, you could use state, lifecycle methods, and other features that were only available in-class components right in your function component.
+    - However, from React 16.8, with the addition of Hooks, you could use state, lifecycle methods and other features that were only available in-class components right in your function component.
 
 4.  What is the difference between state and props? (Amazon)
     - Both props and state are plain JavaScript objects

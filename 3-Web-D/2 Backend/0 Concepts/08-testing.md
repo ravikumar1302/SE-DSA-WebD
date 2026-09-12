@@ -171,7 +171,7 @@ The payoff compounds when tests run **automatically on every change** in your pi
 
 | Idea here | Where it becomes real |
 |---|---|
-| Unit, integration, and what to test first | [Testing](../9%20Advanced%20Topics/4%20Testing.md) |
+| Unit, integration and what to test first | [Testing](../9%20Advanced%20Topics/4%20Testing.md) |
 | Structure that makes code testable at all | [Folder Structure: Routes, Controllers, Services](../4%20Express%20Fundamentals/6%20Folder%20Structure%20-%20Routes%20Controllers%20Services.md) |
 | Testing against a separate database | [Practice: Advanced Topics](../9%20Advanced%20Topics/Practice.md) |
 

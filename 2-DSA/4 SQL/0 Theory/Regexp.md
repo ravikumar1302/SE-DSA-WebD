@@ -23,7 +23,7 @@ MySQL supports another type of pattern matching operation based on the regular e
 | `[[:<:]]` | matches the beginning of words. |
 | `[[:>:]]` | matches the end of words. |
 | `[:class:]` | matches a character class i.e. `[:alpha:]` to match letters, `[:space:]` to match white space, `[:punct:]` is match punctuations and `[:upper:]` for upper class letters. |
-| `p1\|p2\|p3` | Alternation; matches any of the patterns p1, p2, or p3 |
+| `p1\|p2\|p3` | Alternation; matches any of the patterns p1, p2 or p3 |
 | `{n}` | n instances of preceding element |
 | `{m,n}` | m through n instances of preceding element |
 
@@ -41,7 +41,7 @@ Examples with explanation :
     ```sql
     SELECT title FROM movies_tbl WHERE title REGEXP 'com?';
     ```
-- Matches any of the patterns p1, p2, or p3 (`p1|p2|p3`): Gives all the names containing 'be' or 'ae'. Example – Abel, Baer.
+- Matches any of the patterns p1, p2 or p3 (`p1|p2|p3`): Gives all the names containing 'be' or 'ae'. Example – Abel, Baer.
     ```sql
     SELECT name FROM student_tbl WHERE name REGEXP 'be|ae';
     ```

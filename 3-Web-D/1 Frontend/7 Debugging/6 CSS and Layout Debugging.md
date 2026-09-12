@@ -51,7 +51,7 @@ This turns flex and grid debugging from "adjust a value, refresh, squint" into "
 |---|---|---|
 | Unexpected gap around an element | Margin collapsing, or default browser margin on that element | Box model diagram |
 | Element wider or taller than expected | `box-sizing` default (`content-box`) adding padding/border on top of the set width | Computed tab, check `box-sizing` |
-| A style not applying at all | A more specific selector, later rule, or `!important` elsewhere winning | Computed tab, expand the property |
+| A style not applying at all | A more specific selector, later rule or `!important` elsewhere winning | Computed tab, expand the property |
 | Flex items not aligning as expected | Wrong axis assumed, `justify-content` and `align-items` control different axes | Flex overlay |
 | An element overlapping others unexpectedly | `position: absolute`/`fixed` removed it from normal flow | Box model, check `position` and `z-index` |
 

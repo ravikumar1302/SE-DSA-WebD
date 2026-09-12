@@ -104,7 +104,7 @@ OrderService doesn’t care how data is stored.
         - Decide responsibilities before coding.
     - Develop → Test → Deploy → Monitor
         - Small changes, safe release.
-    - SDLC = thinking before, during, and after code
+    - SDLC = thinking before, during and after code
 
 - Architecture (simple & realistic)
   Controller -> OrderService -> Payment, Inventory, Email

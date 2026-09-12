@@ -49,7 +49,7 @@ An umbrella for non-relational stores, usually **flexible schema** and built for
 
 ---
 
-## Part B - ACID, BASE, and the CAP theorem
+## Part B - ACID, BASE and the CAP theorem
 
 ### ACID - the guarantees of (most) relational transactions
 A **transaction** is a group of operations that must succeed or fail *together*.
@@ -190,7 +190,7 @@ A shared filesystem (folders/files) accessible by **multiple** servers over the 
 
 ---
 
-## Part F - Backups, replication, and safety
+## Part F - Backups, replication and safety
 
 - **Backups** - regular copies to restore from disaster. Untested backups aren't backups - verify you can *restore*.
 - **Point-in-time recovery** - restore to a specific moment (undo an accidental mass-delete).

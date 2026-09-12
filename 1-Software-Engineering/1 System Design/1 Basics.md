@@ -89,15 +89,15 @@
     - It also helps when the domain logic for writes is complex but reads need to be simple and fast.
 
 - Pros:
-    - It allows independent scaling of read and write services, optimizes databases differently for each workload, supports event-driven architectures, and improves maintainability for complex domains
+    - It allows independent scaling of read and write services, optimizes databases differently for each workload, supports event-driven architectures and improves maintainability for complex domains
     - It also works well with event sourcing and provides clearer separation of concerns.
 
 - Cons:
-    - It increases architectural complexity, requires more infrastructure (message brokers, separate databases), and introduces eventual consistency between write and read models
+    - It increases architectural complexity, requires more infrastructure (message brokers, separate databases) and introduces eventual consistency between write and read models
     - Debugging and testing become harder due to asynchronous flows.
 
 - Tradeoff:
-    - You gain scalability, flexibility, and performance at the cost of higher system complexity and operational overhead
+    - You gain scalability, flexibility and performance at the cost of higher system complexity and operational overhead
     - CQRS is powerful for large, distributed, high-scale systems but often unnecessary for simple CRUD applications.
 
 ## 5. Back of Envelope Calculation
@@ -111,7 +111,7 @@
 
 - Why It’s Important
     - Prevents unrealistic designs
-    - Helps choose correct database, cache, or infrastructure
+    - Helps choose correct database, cache or infrastructure
     - Shows scalability awareness in interviews
     - Identifies bottlenecks early
 

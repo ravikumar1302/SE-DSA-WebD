@@ -25,7 +25,7 @@ Testing the service layer directly (a plain function call, no Express involved) 
 
 ## Minimal reproduction, a backend version
 
-A minimal reproduction for a backend bug is often a single `curl` command, or a tiny standalone script calling the suspect service function directly, stripped of the full request/response cycle, auth, and unrelated middleware.
+A minimal reproduction for a backend bug is often a single `curl` command, or a tiny standalone script calling the suspect service function directly, stripped of the full request/response cycle, auth and unrelated middleware.
 
 ```bash
 curl -X POST http://localhost:3000/problems \

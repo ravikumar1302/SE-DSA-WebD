@@ -1,7 +1,7 @@
 # DOM (Document Object Model)
 
 -   The HTML DOM is the foundation of modern web interactivity, enabling over 90% of dynamic behavior seen on websites today.
--   It acts as a structured representation of an HTML document, allowing developers to programmatically access, modify, and control the content and structure of a web page using JavaScript.
+-   It acts as a structured representation of an HTML document, allowing developers to programmatically access, modify and control the content and structure of a web page using JavaScript.
 -   From real-time form validation to interactive UI elements, mastering the HTML DOM is essential for building responsive and user-driven web applications.
 -   HTML DOM is a tree structure, where each HTML tag becomes a node in the hierarchy.
 
@@ -16,7 +16,7 @@
 `)
 2. **User Interaction**: It makes your webpage interactive (e.g., responding to button clicks, form submissions). The DOM allows you to attach event listeners to elements (e.g., `document.querySelector("button").addEventListener("click", function () {alert("Button was clicked!"); });
 `)
-3. **Flexibility**: Developers can add, modify, or remove elements and styles in real-time.
+3. **Flexibility**: Developers can add, modify or remove elements and styles in real-time.
 4. **Cross-Platform Compatibility**: It provides a standard way for scripts to interact with web documents, ensuring browser compatibility.
     - The DOM is a W3C standard, supported by all modern browsers.
     - This means developers can write browser-independent code to access and manipulate content.
@@ -34,14 +34,14 @@
 -   The DOM is seperated into 3 parts:
     1. **Core DOM:** It is standard model for all document types(All DOM implementations must support the interfaces listed as "fundamental" in the code specifications).
     2. **XML DOM:** It is standard model for XML Documents( as the name suggests, all XML elements can be accessed through the XML DOM .)
-    3. **HTML DOM:** It is standard model for HTML documents (The HTML DOM is a standard for how to get, change, add, or delete HTML elements.)
+    3. **HTML DOM:** It is standard model for HTML documents (The HTML DOM is a standard for how to get, change, add or delete HTML elements.)
 
 ### Properties of the DOM
 
 1. **Node-Based:** **Everything** in the DOM is represented as a node (e.g., element nodes, text nodes, attribute nodes).
 2. **Hierarchical:** The DOM has a parent-child relationship, forming a tree structure.
 3. **Live**: Changes made to the DOM using JavaScript are immediately reflected on the web page.
-4. **Platform-Independent:** It works across different platforms, browsers, and programming languages.
+4. **Platform-Independent:** It works across different platforms, browsers and programming languages.
 
 ### Winodws BOM (Browser Object Model )
 
@@ -69,6 +69,6 @@
 -   When working with the DOM (Document Object Model), there are different types of data or building blocks used behind the scenes. Here’s what they mean in everyday terms:
 
     1. Document: Think of it as the entire webpage. It's like the starting point or the big box that holds everything you see on a website.
-    2. Node: Anything on the webpage—like a heading, paragraph, image, or even some hidden parts—is called a node. It’s like a small part or piece of the whole page.
-    3. Element: This is a specific type of node. It represents actual tags you write in HTML, like `<div>, <p>, or <img>`. These are the visible parts of the page.
+    2. Node: Anything on the webpage—like a heading, paragraph, image or even some hidden parts—is called a node. It’s like a small part or piece of the whole page.
+    3. Element: This is a specific type of node. It represents actual tags you write in HTML, like `<div>, <p> or <img>`. These are the visible parts of the page.
     4. NodeList: Imagine you ask the page to give you all the buttons or all the paragraphs—it gives you a list of those items. That list is called a NodeList. It's like a group of nodes stored together.

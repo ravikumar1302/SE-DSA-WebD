@@ -142,11 +142,11 @@
         - It has been removed from HTML5 and new websites should use CSS to control the alignment of images
         - Example : `<p> <img src="images/bird.gif" alt="Bird" width="100" height="100" align="left" /> Hi there </p>`
     - **5.5.** Three Rules for Creating Images :
-        - Right format : Websites mainly uses jpeg, gif, or png format. Wrong format might not look as sharp and can make the web page slower to load
+        - Right format : Websites mainly uses jpeg, gif or png format. Wrong format might not look as sharp and can make the web page slower to load
         - Right size : Save image at the same width and height as it appear on the website. Smaller image will be distorted and stretched and larger image will take longer to display on the page
         - Correct resolution : Most computer screens only show web pages at 72 pixels per inch. Resolution refers to the number of dots per inch. So higher resolution images takes long time to download
         - USE JPEG : Whenever you have many different colors in a picture. A photograph that features snow or an overcast sky might look like it has large areas that are just white or gray, but the picture is usually made up of many different colors that are subtly different
-        - Use GIF or PNG : when saving images with few colors or large areas of the same color. When a picture has an area that is filled with exactly the same color, it is known as flat color. Logos, illustrations, and diagrams etc. are example that often use flat colors.
+        - Use GIF or PNG : when saving images with few colors or large areas of the same color. When a picture has an area that is filled with exactly the same color, it is known as flat color. Logos, illustrations and diagrams etc. are example that often use flat colors.
         - OR Photographs are best saved as JPEGs; illustrations or logos that use flat colors are better saved as GIFs
         - Reduce the image size if you need small image using photo editor. This will create an image that is quicker to download
         - Due to the fact that computer displays are capped at a resolution of 72 ppi, a higher resolution image will not result in better image quality — only in larger file sizes, which will increase the time needed to load them and therefore slow down viewing of your web pages.
@@ -325,7 +325,7 @@
                 </select>
                 </form>
                 ```
-        - e) FILE : `type="file"` : allows users to upload a file (e.g. an image, video, mp3, or a PDF), you will need to use a file input box
+        - e) FILE : `type="file"` : allows users to upload a file (e.g. an image, video, mp3 or a PDF), you will need to use a file input box
             - It creates a box that looks like a text input followed by a browse button. When the user clicks on the browse button, a window opens up that allows them to select a file from their computer to be uploaded to the website.
             - NOTE : When you are allowing users to upload files, the method attribute on the `<form>` tag must have a value of post. (You cannot send files using the HTTP get method.)
         - f) Submit Button : `type="submit"` :
@@ -333,7 +333,7 @@
             - name : It can use a name attribute but it does not need to have one.
             - value : This attribute is used to control the text that appears on a button.
         - g) Image Button : `type="image"`
-            - If you want to use an image for the submit button, you can give the type attribute a value of image. The src, width, height, and alt attributes work just like they do when used with the `<img>` tag.
+            - If you want to use an image for the submit button, you can give the type attribute a value of image. The src, width, height and alt attributes work just like they do when used with the `<img>` tag.
         - g.1) BUTTON & Control : `<button>` : It was introduced to allow users more control over how their buttons appear, and to allow other elements to appear inside the button. This means that you can combine text and images between the `<button>` and `</button>` tag.
             - `type="hidden"` : This example below shows a hidden form control. These form controls are not shown on the page (although you can see them if you use the View Source option in the browser). They allow web page authors to add values to forms that users cannot see.
             - For example, a web page author might use a hidden field to indicate which page the user was on when they submitted a form.

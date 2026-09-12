@@ -36,13 +36,13 @@ function UserList() {
 }
 ```
 
-Calling a state setter directly in the render body (not inside `useEffect`, an event handler, or a condition that stops it) triggers a re-render, which calls the setter again, forever. The browser tab usually freezes or the console fills with "Maximum update depth exceeded."
+Calling a state setter directly in the render body (not inside `useEffect`, an event handler or a condition that stops it) triggers a re-render, which calls the setter again, forever. The browser tab usually freezes or the console fills with "Maximum update depth exceeded."
 
 ```
 Render runs -> calls setState -> triggers a new render -> calls setState -> ...
 ```
 
-Fix: only call setters inside effects (with a correct dependency array so they do not run every render), event handlers, or guarded by a real condition.
+Fix: only call setters inside effects (with a correct dependency array so they do not run every render), event handlers or guarded by a real condition.
 
 ## Missing or wrong `key` props
 
@@ -52,7 +52,7 @@ Fix: only call setters inside effects (with a correct dependency array so they d
 ))}
 ```
 
-Using the array index as a `key` works until the list reorders, items get inserted, or items get removed from the middle. React uses `key` to match old elements to new ones between renders, an index-based key can mismatch an item with the wrong row's leftover internal state (a text input keeping the wrong item's typed value is a classic symptom). Fix: use a real, stable identifier from the data, `item.id`, not the array position.
+Using the array index as a `key` works until the list reorders, items get inserted or items get removed from the middle. React uses `key` to match old elements to new ones between renders, an index-based key can mismatch an item with the wrong row's leftover internal state (a text input keeping the wrong item's typed value is a classic symptom). Fix: use a real, stable identifier from the data, `item.id`, not the array position.
 
 ## State not updating "immediately"
 
@@ -74,7 +74,7 @@ In React 18's Strict Mode (development only), effects intentionally run twice on
 | Symptom | Likely bug | Fix direction |
 |---|---|---|
 | A value inside a callback never updates | Stale closure | Updater function form, or fix the dependency array |
-| Page freezes, "Maximum update depth exceeded" | State set directly during render | Move the setter into an effect, handler, or guard it |
+| Page freezes, "Maximum update depth exceeded" | State set directly during render | Move the setter into an effect, handler or guard it |
 | Wrong row's input keeps old text after reordering | Index used as `key` | Use a stable id from the data |
 | A variable seems "one step behind" right after setting it | State updates are async, not immediate | Read the new value in the next render or a `useEffect`, not the same line |
 | An effect fires twice, only in development | React 18 Strict Mode, intentional | Not a real bug unless it also breaks in production |

@@ -45,7 +45,7 @@ AEM Learning Path with Detailed Topics
 
 | Topic | Subtopics |
 | ----- | --------- |
-| **AEM Architecture** | • Author, Publish, Dispatcher model<br>• AEM as a CMS vs DAM<br>• JCR (Java Content Repository)<br>• AEM runtimes (Classic UI, Touch UI)<br>• Granite, Sling, and OSGi integration |
+| **AEM Architecture** | • Author, Publish, Dispatcher model<br>• AEM as a CMS vs DAM<br>• JCR (Java Content Repository)<br>• AEM runtimes (Classic UI, Touch UI)<br>• Granite, Sling and OSGi integration |
 | **AEM Sling Resolution** | • Sling Resource Resolver<br>• Resource mapping and URL resolution<br>• Request processing with resource types and selectors<br>• `sling:resourceType` concept |
 | **AEM Authoring** | • Page and template creation<br>• Editable templates vs static templates<br>• Dialogs, Design Dialogs, Multifield, Granite UI<br>• Touch UI authoring tools<br>• Content authoring best practices |
 | **AEM Project Structure** | • Maven multi-module setup<br>• Core, UI.apps, UI.content, dispatcher modules<br>• Filter.xml and content packages<br>• AEM archetype project generation |

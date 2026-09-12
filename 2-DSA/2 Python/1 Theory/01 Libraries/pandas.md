@@ -70,7 +70,7 @@ Pandas : Analyzing tabular data. It is used for working with data sets.
     - `fillna()` : to replace the null values
         - `df.fillna(130, inplace = True)` : Replace NULL values with the number 130
         - `df["Calories"].fillna(130, inplace = True)` : Replace Only For Specified Columns
-        - `mean()`, `median()` and `mode()` : Replace Using Mean, Median, or Mode
+        - `mean()`, `median()` and `mode()` : Replace Using Mean, Median or Mode
             ```python
             df = pd.read_csv('data.csv')
             x = df["Calories"].mean()

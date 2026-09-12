@@ -44,7 +44,7 @@
     - HTML5 introduces several new elements and attributes to improve web development.
     - Semantic Elements : New tags like `<article>, <aside>, <nav>, <header>, <footer> and <section>` provide meaning and structure to the content, improving both accessibility and SEO.
     - Multimedia Support : Native support for `<audio> and <video>` tags removes the need for third-party plugins like Flash.
-    - Canvas API : Allows drawing graphics, animations, and games directly in the browser using JavaScript.
+    - Canvas API : Allows drawing graphics, animations and games directly in the browser using JavaScript.
     - Geolocation API : Provides access to the user's geographical location (with permission), enabling location-based services.
     - Web Storage (localStorage and sessionStorage) : Local storage (localStorage) and session storage (sessionStorage) provide client-side data storage, improving performance and enabling offline functionality.
     - Web Workers : Allows background processing of JavaScript, improving performance by preventing blocking of the main thread.

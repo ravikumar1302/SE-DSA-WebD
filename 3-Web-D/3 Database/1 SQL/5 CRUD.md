@@ -11,7 +11,7 @@ CREATE, ALTER, Truncate & DROP table
 - **TRUNCATE TABLE** : It is used to delete the data inside a table, but not the table itself.
     - `TRUNCATE TABLE table_name;`
 
-- **ALTER** : It is used to add, delete, or modify columns in an existing table. It is also used to add and drop various constraints on an existing table.
+- **ALTER** : It is used to add, delete or modify columns in an existing table. It is also used to add and drop various constraints on an existing table.
     - ADD Column : To add a column in a table, use the following syntax: `ALTER TABLE table_name ADD column_name datatype;`
         `ALTER TABLE Customers ADD Email varchar(255);`
     - DROP COLUMN : To delete a column in a table, use the following syntax (notice that some database systems don't allow deleting a column): `ALTER TABLE table_name DROP COLUMN column_name;`

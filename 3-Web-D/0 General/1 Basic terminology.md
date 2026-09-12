@@ -4,8 +4,8 @@
 
     - How Rendering Works :
 
-        - HTML to Visuals: The browser reads the HTML (Hypertext Markup Language) to structure the content of the page. This includes headers, paragraphs, and links.
-        - CSS Styling: The browser then reads CSS (Cascading Style Sheets), which adds color, layout, fonts, and spacing.
+        - HTML to Visuals: The browser reads the HTML (Hypertext Markup Language) to structure the content of the page. This includes headers, paragraphs and links.
+        - CSS Styling: The browser then reads CSS (Cascading Style Sheets), which adds color, layout, fonts and spacing.
         - JavaScript Magic: If the page has interactive elements (like selecting pizza toppings or checking out), JavaScript is loaded. It makes sure these dynamic features work smoothly.
 
     - How the Browser Renders :
@@ -59,15 +59,15 @@
     - Why APIs Matter for Full Stack Developers
 
     ```
-    - Fetch Live Data: Use JavaScript to call APIs and display real-time data (like profiles, products, or orders) on the frontend.
-    - Build Backend APIs: Create APIs that handle logic, access databases, and send responses to the frontend.
-    - Integrate Services: Connect with third-party APIs (e.g., Stripe, Google Maps, Auth0) to add features like payments, maps, or social logins.
+    - Fetch Live Data: Use JavaScript to call APIs and display real-time data (like profiles, products or orders) on the frontend.
+    - Build Backend APIs: Create APIs that handle logic, access databases and send responses to the frontend.
+    - Integrate Services: Connect with third-party APIs (e.g., Stripe, Google Maps, Auth0) to add features like payments, maps or social logins.
     ```
 
 7. **JSON (JavaScript Object Notation)** :
 
     - It is the common format used for sending and receiving data between frontend and backend.
-    - It’s lightweight, human-readable, and easy for both systems to understand—making it the universal language for web data.
+    - It’s lightweight, human-readable and easy for both systems to understand—making it the universal language for web data.
     - Example:
 
     ```

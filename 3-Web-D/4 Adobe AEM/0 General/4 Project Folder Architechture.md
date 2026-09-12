@@ -28,7 +28,7 @@ When you download an AEM project, you’ll typically see folders like `ui.core`,
 ## 3. Key Code Areas
 
 -   **Sling Models** (`ui.core`): Backend Java classes with `@Model`, pulling data from JCR.
--   **Components** (`ui.apps`): HTML (HTL), JS, dialogs, and CSS; core of UI rendering.
+-   **Components** (`ui.apps`): HTML (HTL), JS, dialogs and CSS; core of UI rendering.
 -   **Clientlibs**: JS/CSS folders grouped under `clientlibs-site` or per component. Grouped under /apps/[project]/clientlibs or inside each component’s folder.
 -   **Frontend** (`ui.frontend`): Optional Webpack-based build for assets.
 
@@ -49,7 +49,7 @@ When you download an AEM project, you’ll typically see folders like `ui.core`,
 
 3. **Explore in CRXDE**  
    Visit: `http://localhost:4502/crx/de`  
-   Browse `/apps`, `/content`, and components.
+   Browse `/apps`, `/content` and components.
 
 4. **Sites Console**  
    Preview your site at: `/sites.html/content/[your-project]`
@@ -69,7 +69,7 @@ When you download an AEM project, you’ll typically see folders like `ui.core`,
 -   **Sling Models** – Bridge between Java and content
 -   **HTL (Sightly)** – Adobe's templating language for UI
 -   **Dialogs** – Author-side form fields for components
--   **Component Lifecycle** – Understand how components are authored, rendered, and cached
+-   **Component Lifecycle** – Understand how components are authored, rendered and cached
 
 ---
 

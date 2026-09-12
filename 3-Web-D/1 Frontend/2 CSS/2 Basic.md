@@ -9,11 +9,11 @@
     -   Type of CSS : Inline, internal and external CSS
     -   Selectors
     -   CSS Color & Background
-    -   Fonts, colors, text-align, and font-family
+    -   Fonts, colors, text-align and font-family
     -   Psuedo Class :
         -   Positioning: static, relative, absolute, fixed
         -   Display properties: block, inline-block, flex
-        -   Hover effects, focus styles, and transitions
+        -   Hover effects, focus styles and transitions
     -   Box Model : CSS Border, Border margin and padding concepts
 
 0.  file Extension : file_name.css
@@ -36,7 +36,7 @@
     ```
 
     -   Selector : Selects the element you want to target
-    -   Few basic selector like tags, id's, and classes
+    -   Few basic selector like tags, id's and classes
 
 3.  Three Type : Inline CSS, Internal CSS and External CSS :
 

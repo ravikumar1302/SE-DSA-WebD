@@ -16,7 +16,7 @@
   - CRXDE Lite is accessible in browser: http://localhost:4502/crx/de - (Replace localhost:4502 with your instance host & port)
   - It allows developers to:
     - Browse and edit the JCR repository structure (/apps, /content, etc.)
-    - Create, delete, or modify nodes and properties
+    - Create, delete or modify nodes and properties
     - Upload/download files like .jsp, .xml, .html, .json, etc.
     - Manage permissions on content nodes
     - View and edit component definitions and configurations
@@ -27,7 +27,7 @@
    <br><img src="../Images/AEM_Architecture.webp" alt="AEM Architecture" width="40%" style="display: block; margin: auto;"><br>
 
 ```
-- OSGi is a Java framework for developing and deploying modular software programs and libraries. It allows applications to be broken into reusable, dynamic modules (called bundles), which can be independently started, stopped, updated, or removed at runtime.
+- OSGi is a Java framework for developing and deploying modular software programs and libraries. It allows applications to be broken into reusable, dynamic modules (called bundles), which can be independently started, stopped, updated or removed at runtime.
 
 - AEM Architecture:
    - AEM (Application Layer): The Adobe Experience Manager application itself; implemented as OSGi bundles running within Felix.
@@ -62,11 +62,11 @@ Remember the Newspaper Example for this.
    - Web Server Functionality: The Dispatcher acts as a web server (typically an Apache HTTP Server with the AEM Dispatcher module). Its primary roles are to:
       - Serve static content directly from its cache.
       - Proxy requests for dynamic content to the AEM Publish instances.
-      - Handle URL re-writing, vanity URLs, and other web server-level tasks.
+      - Handle URL re-writing, vanity URLs and other web server-level tasks.
 
    - Application Server Functionality: The AEM Pub (Publish) and AEM Author instances inherently provide the application server functionality.
    - AEM is a Java web application. It uses an embedded servlet engine (e.g., Jetty) or can deploy on external ones (e.g., Tomcat).
-   - AEM instances process dynamic requests, render pages from content, execute Java code, and manage database interactions – essentially, the core application logic.
+   - AEM instances process dynamic requests, render pages from content, execute Java code and manage database interactions – essentially, the core application logic.
 ```
 
 7. AEM SLING End to End Flow
@@ -117,7 +117,7 @@ Remember the Newspaper Example for this.
 ```
 
 9. Maven :
-   Maven is a build and dependency management tool used in AEM to compile code, manage libraries, and deploy packages to AEM instances.
+   Maven is a build and dependency management tool used in AEM to compile code, manage libraries and deploy packages to AEM instances.
 
 ```
    - Project structure: Organizes AEM code (core, UI, content) using AEM Archetype.

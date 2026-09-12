@@ -43,6 +43,6 @@
 
 ### 🔹 What Tailwind Gives You:
 
--   Full control over spacing, colors, and effects
+-   Full control over spacing, colors and effects
 -   Built-in responsiveness via utilities
 -   Custom look without writing external CSS

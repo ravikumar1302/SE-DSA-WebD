@@ -15,7 +15,7 @@
 4. Pros:
 
     - Quick prototyping with ready-to-use components
-    - Good for building dashboards, admin panels, and MVPs
+    - Good for building dashboards, admin panels and MVPs
     - Large community and lots of documentation
 
 5. Cons:

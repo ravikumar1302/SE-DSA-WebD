@@ -326,7 +326,7 @@ AlgoRift as built through Phase 6 is one Express app talking to one Postgres dat
 
 ### Do-this checklist
 - Map AlgoRift's current architecture (one app, one database) to the term "monolith", and identify what would actually force a split
-- Sketch what AlgoRift would look like split into 3 services: auth, problems, submissions, and what each would own
+- Sketch what AlgoRift would look like split into 3 services: auth, problems, submissions and what each would own
 - Compare one REST endpoint you already built to the same data modeled as a GraphQL query
 - Trace what a Kafka event ("submission accepted") would need to trigger elsewhere in a larger version of AlgoRift
 - Read one gRPC service definition (a `.proto` file) and compare it to an equivalent REST route plus Zod schema

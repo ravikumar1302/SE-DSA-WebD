@@ -20,7 +20,7 @@ Main Topics : Closures, Prototype, Event Loop, Async Await
     - JS is a lightweight, interpreted, object-oriented language with first-class functions, and is best known as the scripting language for Web pages, but it's used in many non-browser environments as well
     - It is a prototype-based, multi-paradigm scripting language that is dynamic and supports object-oriented, imperative and functional programming styles
     - JS runs on browsers and servers (NodeJS) or JS run on the client side of the web, which can be used to design / program how the web pages behave on the occurrence of an event. JS is an easy to learn and also powerful scripting language, widely used for controlling web page behavior.
-    - It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+    - It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures and the Document Object Model (DOM).
 
 1. Everything in JS happens inside an Execution Context. It is like a big box that contains 2 things :
     - **Memory or Variable environment** (Stores variable and functions as a key : value pair)

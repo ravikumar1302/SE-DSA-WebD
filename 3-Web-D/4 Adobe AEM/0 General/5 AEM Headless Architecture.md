@@ -25,14 +25,14 @@
     | ---------------------------------------------------- | ---------------------------------------------------------------- |
     | AEM handles both content and frontend (presentation) | AEM delivers content only, using REST/GraphQL APIs |
     | Authors use templates/components to build web pages using WYSIWYG editor | Authors manage structured content (Content Fragments & Models) |
-    | Good for websites where AEM controls the full frontend. | Good for web apps, mobile apps, kiosks, or multichannel delivery. This setup supports modern frontend frameworks and multichannel delivery—web, mobile apps, kiosks, etc |
+    | Good for websites where AEM controls the full frontend. | Good for web apps, mobile apps, kiosks or multichannel delivery. This setup supports modern frontend frameworks and multichannel delivery—web, mobile apps, kiosks, etc |
 
 5.  AEM SPA Editor vs Remote SPA (Single Page Application)
     | **AEM SPA Editor** | **AEM Remote SPA** |
     | ---------------------------------------------- | ------------------------------------------------------------------- |
     | Integrates SPAs (React/Angular) into AEM | SPA hosted externally (e.g., CDN), content pulled from AEM via APIs |
     | Allows in-context editing by authors. Allowing authors to edit SPAs visually. | Maintains content control in AEM, decouples hosting |
-    | Useful when both devs and authors need control. It bridges developer-built frontends with AEM’s authoring tools. | Ideal for performance, scalability, and modern deployment setups |
+    | Useful when both devs and authors need control. It bridges developer-built frontends with AEM’s authoring tools. | Ideal for performance, scalability and modern deployment setups |
 
 6.  Factors to choose AEM Headless Options
 
@@ -44,15 +44,15 @@
     | **Factor**                | **When AEM Headless Is Chosen**                                              | **When AEM Headful Is Chosen**                                                    |
     | ------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
     | **Project Requirements**  | If content is delivered to multiple platforms (web, mobile, IoT, etc.)       | If content is for a traditional website only, managed fully within AEM            |
-    | **Developer Stack**       | If frontend is built with React, Angular, Vue, or other JS frameworks        | If using HTL/Sling/AEM templating & no need for SPA frameworks                    |
-    | **Performance & Caching** | If using CDNs, remote hosting, or need lightweight APIs for fast performance | If full rendering is handled within AEM and performance is tuned internally       |
-    | **Authoring Preference**  | If authors can work with structured content (Content Fragments, models)      | If authors prefer WYSIWYG editing, page composition, and drag-and-drop components |
+    | **Developer Stack**       | If frontend is built with React, Angular, Vue or other JS frameworks        | If using HTL/Sling/AEM templating & no need for SPA frameworks                    |
+    | **Performance & Caching** | If using CDNs, remote hosting or need lightweight APIs for fast performance | If full rendering is handled within AEM and performance is tuned internally       |
+    | **Authoring Preference**  | If authors can work with structured content (Content Fragments, models)      | If authors prefer WYSIWYG editing, page composition and drag-and-drop components |
 
 7.  Differentiation Factors: CMS Types
     <br><img src="../Images/CMS_Types.webp" alt="CMS_Types" width="40%" style="display: block; margin: auto;"><br>
     | **Type** | **Description** |
     | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | **Headful CMS** | - Traditional CMS model where both **content** and **presentation (frontend)** are tightly coupled.<br> - Authors use **page editors**, templates, and components.<br> - Example: Adobe Experience Manager (AEM) in full-site mode, WordPress. |
+    | **Headful CMS** | - Traditional CMS model where both **content** and **presentation (frontend)** are tightly coupled.<br> - Authors use **page editors**, templates and components.<br> - Example: Adobe Experience Manager (AEM) in full-site mode, WordPress. |
     | **Hybrid Headless CMS** | - Combines features of both **headful and headless**.<br> - Backend can deliver content via **APIs** (REST/GraphQL), but still supports visual editing.<br> - Supports SPAs with **in-context editing** (e.g., AEM SPA Editor).<br> - Offers flexibility: deliver content to websites, apps, IoT, etc. |
     | **Pure Headless CMS** | - Backend-only CMS with **no presentation layer**.<br> - Content is managed and delivered solely through APIs.<br> - Fully decoupled; requires frontend devs to build all presentation layers.<br> - Example: Contentful, Strapi, Sanity. |
 

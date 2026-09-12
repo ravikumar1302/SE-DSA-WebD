@@ -2,8 +2,8 @@
 
 ## 1. Basics
 
-- Rate limiting is a system design technique used to control how many requests a user, client, or service can make within a specific time window
-- It protects systems from overload, abuse, and ensures fair usage
+- Rate limiting is a system design technique used to control how many requests a user, client or service can make within a specific time window
+- It protects systems from overload, abuse and ensures fair usage
 - Why It’s Needed
     - 🔒 Prevents abuse (e.g., brute force, spam)
     - ⚡ Protects servers from traffic spikes

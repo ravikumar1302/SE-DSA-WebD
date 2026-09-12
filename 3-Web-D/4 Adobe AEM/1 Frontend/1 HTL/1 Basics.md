@@ -6,7 +6,7 @@
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | **HTML**                | HTL is embedded _within_ HTML. You continue writing normal HTML with small additions like `data-sly-*` attributes. |
 | **CSS**                 | HTL doesn’t interfere with your CSS. Stylesheets are linked and used the same way.                                 |
-| **Templating Concepts** | If you’ve seen any templating (like Handlebars, JSX, or PHP), HTL will feel familiar.                              |
+| **Templating Concepts** | If you’ve seen any templating (like Handlebars, JSX or PHP), HTL will feel familiar.                              |
 
 -   Example Comparison
 
@@ -40,7 +40,7 @@
 
 ## 🧪 HANDS-ON HTL EXAMPLE
 
-🗂 Context : You’re working on an AEM component to display a list of team members, each with a name, role, and image.
+🗂 Context : You’re working on an AEM component to display a list of team members, each with a name, role and image.
 
 💡 Backend Java Model (simplified)
 

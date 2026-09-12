@@ -6,7 +6,7 @@
 
 | Topic             | Subtopics                                                                                                                                                                                  |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| AEM Architecture  | - Author, Publish, Dispatcher model <br> - AEM as a CMS vs DAM <br> - JCR (Java Content Repository) <br> - AEM runtimes (Classic UI, Touch UI) <br> - Granite, Sling, and OSGi integration |
+| AEM Architecture  | - Author, Publish, Dispatcher model <br> - AEM as a CMS vs DAM <br> - JCR (Java Content Repository) <br> - AEM runtimes (Classic UI, Touch UI) <br> - Granite, Sling and OSGi integration |
 | Sling Resolution  | - Sling Resource Resolver <br> - Resource mapping and URL resolution <br> - Request processing with resource types and selectors <br> - sling:resourceType concept                         |
 | AEM Authoring     | - Page and template creation <br> - Editable vs static templates <br> - Dialogs, Design Dialogs, Multifield <br> - Touch UI tools <br> - Content authoring best practices                  |
 | Project Structure | - Maven multi-module setup <br> - Core, UI.apps, UI.content, dispatcher modules <br> - filter.xml and content packages <br> - AEM archetype project generation                             |

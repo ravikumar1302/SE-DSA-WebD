@@ -11,7 +11,7 @@
 
 3. ANY and ALL operator :
     - These operators allow you to perform a comparison between a single column value and a range of other values.
-    - Note : The operator must be a standard comparison operator (`=`, `<>`, `!=`, `>`, `>=`, `<`, or `<=`).
+    - Note : The operator must be a standard comparison operator (`=`, `<>`, `!=`, `>`, `>=`, `<` or `<=`).
     - **ANY Operator**
         - Returns TRUE if ANY of the subquery values meet the condition
         - ANY means that the condition will be true if the operation is true for any of the values in the range.

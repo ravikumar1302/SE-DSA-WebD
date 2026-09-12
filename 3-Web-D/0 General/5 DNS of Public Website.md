@@ -100,7 +100,7 @@ This hierarchical approach allows DNS to handle billions of queries every day, e
     4. CNAME Record (Canonical Name Record)
 
     - Aliases one domain/subdomain to another.
-    - Useful for pointing www, blog, or external services to the main domain.
+    - Useful for pointing www, blog or external services to the main domain.
     - Example: www.example.com → example.com
 
     5. TXT Record (Text Record)
@@ -117,7 +117,7 @@ This hierarchical approach allows DNS to handle billions of queries every day, e
     7. SRV Record (Service Record)
 
     - Defines the location (hostname, port, protocol) of services like SIP, XMPP.
-    - Used for VoIP, chat, or Microsoft services.
+    - Used for VoIP, chat or Microsoft services.
     - Example: \_sip.\_tcp.example.com → sipserver.example.com:5060
 
     8. PTR Record (Pointer Record)

@@ -26,11 +26,11 @@ Operators and Expressions
 
             | Symbol | Represents                                                 | Example                                                             |
             | ------ | ---------------------------------------------------------- | ------------------------------------------------------------------- |
-            | `%`    | Represents zero or more characters                         | `bl%` finds bl, black, blue, and blob                               |
-            | `_`    | Represents a single character                              | `h_t` finds hot, hat, and hit                                       |
+            | `%`    | Represents zero or more characters                         | `bl%` finds bl, black, blue and blob                                |
+            | `_`    | Represents a single character                              | `h_t` finds hot, hat and hit                                       |
             | `[]`   | Represents any single character within the brackets        | `h[oa]t` finds hot and hat, but not hit                             |
             | `^`    | Represents any character not in the brackets               | `h[^oa]t` finds hit, but not hot and hat                            |
-            | `[!]`  | Using the `[!charlist]` wildcard                           | Select all customers with a City NOT starting with "b", "s", or "p" |
+            | `[!]`  | Using the `[!charlist]` wildcard                           | Select all customers with a City NOT starting with "b", "s" or "p" |
             | `-`    | Represents any single character within the specified range | `c[a-b]t` finds cat and cbt                                         |
 
             All the wildcards can also be used in combinations!

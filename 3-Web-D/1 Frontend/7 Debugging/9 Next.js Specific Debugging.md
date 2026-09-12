@@ -14,8 +14,8 @@ Browser renders: <p>Logged in as Ravi</p>   (localStorage read after hydration)
 
 Common causes:
 
-- Reading `localStorage`, `window`, or anything browser-only during the initial render, the server has none of these, so it renders something different than the browser would.
-- Using `Date.now()`, `Math.random()`, or any value that differs between server and client render.
+- Reading `localStorage`, `window` or anything browser-only during the initial render, the server has none of these, so it renders something different than the browser would.
+- Using `Date.now()`, `Math.random()` or any value that differs between server and client render.
 - Browser extensions injecting attributes into the HTML before React hydrates (this one is not your code's fault, and Next.js usually warns about it separately).
 
 📌 Fix direction: anything that depends on the browser (`localStorage`, `window`, current time) belongs inside a `useEffect`, which only runs after hydration, on the client, never during the initial server render.

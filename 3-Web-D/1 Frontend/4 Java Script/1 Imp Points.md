@@ -37,7 +37,7 @@ BASIC Points :
     let lastName = "Lane";
     let fullName = firstName + " " + lastName;
     ```
-    These examples also illustrate a common convention when writing JavaScript: when declaring variables using multiple words, the standard is to capitalize each word after the first word, and otherwise use lower-case letters (e.g. firstName, NOT firstname, first_name, FirstName, or some other variation).
+    These examples also illustrate a common convention when writing JavaScript: when declaring variables using multiple words, the standard is to capitalize each word after the first word, and otherwise use lower-case letters (e.g. firstName, NOT firstname, first_name, FirstName or some other variation).
     This casing convention is called camel case, and while your JavaScript code will work just fine if you don't abide by this convention, it's good to get in the habit of camel casing your variables.
 
 3. Js is used both in frontend and backend

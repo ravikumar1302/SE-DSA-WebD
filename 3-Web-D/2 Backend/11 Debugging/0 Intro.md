@@ -8,21 +8,21 @@ The general debugging process from [the frontend debugging notes](../../1%20Fron
 Frontend debugging                    Backend debugging
 -----------------------------         -----------------------------
 Visual feedback: the page             No visual feedback: a request
-looks wrong, click around             either succeeds, fails, or
+looks wrong, click around             either succeeds, fails or
 to explore                            hangs, nothing to look at
-DevTools attached to the page         A terminal, logs, or an
+DevTools attached to the page         A terminal, logs or an
 automatically                         attached debugger you set up
 The user is the browser tab           The "user" can be your own
-in front of you                       frontend, curl, Postman, or a
+in front of you                       frontend, curl, Postman or a
                                        real client you cannot see
 ```
 
-The biggest shift for someone coming from frontend debugging: there is no page to stare at. A backend bug shows up as a wrong response, a slow response, a crash, or nothing at all, silence, and the only way to see what happened is by reading logs, attaching a debugger, or making requests deliberately to observe behavior.
+The biggest shift for someone coming from frontend debugging: there is no page to stare at. A backend bug shows up as a wrong response, a slow response, a crash or nothing at all, silence, and the only way to see what happened is by reading logs, attaching a debugger or making requests deliberately to observe behavior.
 
 ## The four-step loop, applied to a backend bug
 
 1. **Reproduce**: find the exact request (method, URL, body, headers) that triggers the bug, ideally as a `curl` command or a saved request, so it can be fired the same way every time.
-2. **Isolate**: is it the route, the middleware, the service logic, or the database call. Comment out or bypass pieces the same way frontend debugging comments out components.
+2. **Isolate**: is it the route, the middleware, the service logic or the database call. Comment out or bypass pieces the same way frontend debugging comments out components.
 3. **Hypothesize**: a specific guess, "the token is expired," not "auth is broken."
 4. **Verify**: a breakpoint, a log, or a smaller test request that confirms or rejects the guess.
 

@@ -28,6 +28,6 @@ Summary Table
 | ---------- | ---------------- | ------------------------------------------- |
 | CSS | Styling language | Base language for styling |
 | CSS3 | Version of CSS | Adds modern layout and effects |
-| SCSS | CSS preprocessor | Adds logic, nesting, and reusability to CSS |
+| SCSS | CSS preprocessor | Adds logic, nesting and reusability to CSS |
 
--   If you're working on larger or modular front-end projects, SCSS is very useful. But to work in SCSS, you need a build tool (like Webpack, Gulp, or AEM’s clientlibs processor) to compile it to CSS.
+-   If you're working on larger or modular front-end projects, SCSS is very useful. But to work in SCSS, you need a build tool (like Webpack, Gulp or AEM’s clientlibs processor) to compile it to CSS.

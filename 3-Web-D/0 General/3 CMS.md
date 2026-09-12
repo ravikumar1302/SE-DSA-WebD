@@ -1,6 +1,6 @@
 # Understanding CMS
 
-1.  A CMS (Content Management System) helps companies easily create, edit, manage, and publish content (like websites, blogs, or landing pages) without needing to code every time.
+1.  A CMS (Content Management System) helps companies easily create, edit, manage and publish content (like websites, blogs or landing pages) without needing to code every time.
 
 2.  Other Website making tools
     a) Dukaan.com
@@ -40,5 +40,5 @@
 
 4.  **Payload CMS** :
     -   With Payload, developers have full control over the website’s frontend and can use their preferred technologies for the display of content.
-    -   It’s designed to integrate seamlessly with modern frameworks like Next.js, allowing developers to create fast, scalable, and dynamic websites.
+    -   It’s designed to integrate seamlessly with modern frameworks like Next.js, allowing developers to create fast, scalable and dynamic websites.
     -   Companies using Payload CMS are : Microsoft, Sonos, BlueOrigin, Kayak, Twitch, Vervent
