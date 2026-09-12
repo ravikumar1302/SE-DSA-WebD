@@ -64,6 +64,7 @@ You build the thing you actually want, and it *happens* to teach the whole sylla
 | 5 | [8 Deploy](8%20Deploy/0%20Where%20Backends%20Run.md) | [Practice](8%20Deploy/Practice.md) |
 | 6 | [9 Advanced Topics](9%20Advanced%20Topics/0%20Redis%20Caching.md) | [Practice](9%20Advanced%20Topics/Practice.md) |
 | 7 | [10 Microservices and Distributed Systems](10%20Microservices%20and%20Distributed%20Systems/0%20Microservices%20vs%20Monolith.md) | [Practice](10%20Microservices%20and%20Distributed%20Systems/Practice.md) |
+| Skill, read alongside everything once past Phase 1 | [11 Debugging](11%20Debugging/0%20Intro.md) | [Practice](11%20Debugging/Practice.md) |
 
 Quick reference while coding: [Commands Cheatsheet](Commands%20Cheatsheet.md) and [Troubleshooting Index](Troubleshooting%20Index.md).
 

@@ -216,6 +216,20 @@ Must-know topics:
 
 ---
 
+## 15. Debugging
+
+-   Browser DevTools (Elements, Console, Sources, Network, Performance, Memory)
+-   Breakpoints, conditional breakpoints, watch expressions
+-   Reading errors and stack traces, source maps
+-   React DevTools (Components tab, Profiler)
+-   Common React bugs (stale closures, infinite re-renders, key issues)
+-   Next.js specific issues (hydration errors, server vs client components)
+-   Debugging mindset: reproduce, isolate, hypothesize, verify
+
+Full notes: [7 Debugging](7%20Debugging/0%20Intro.md)
+
+---
+
 # 🏆 Priorities (What to Focus First)
 
 ✅ Must Master (Beginner → Job-ready):
