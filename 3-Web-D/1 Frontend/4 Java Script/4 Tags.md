@@ -1,3 +1,5 @@
+# Tags in JavaScript
+
 1. `alert(" ")` : to print a alert message when the site opens. Generally, avoided these days.
 2. `prompt(" ")` : to take input from user in the alert section
 3. `console.log()` : writes data to the console. (To see console data, right click and select inspect, then click on console option to see the input)
@@ -13,18 +15,19 @@
 
 5. `typeof` : In Js, we have a keyword called typeof that returns the type of the variable. While this seems pretty fool-proof, there are some quirks that we should be aware of. In the Chrome console, let's type out each one of these:
     ```js
-    typeof "";           // "string"
-    typeof 5;            // "number"
-    typeof false;        // "boolean"
-    typeof Symbol();     // "symbol"
-    typeof undefined;    // "undefined"
-    typeof null;         // hmmm, this is not what we expect, it returns "object"!
+    typeof ""; // "string"
+    typeof 5; // "number"
+    typeof false; // "boolean"
+    typeof Symbol(); // "symbol"
+    typeof undefined; // "undefined"
+    typeof null; // This is not what we generally expect, it returns "object"
     ```
 
 ---
 
 6. Converting between types : some ways to explicitly change the type of a value.
     - **Converting to a string** : `toString` : The toString method will convert any value which is not undefined or null into a string.
+
         ```js
         let num = 5;
         let bool = true;
@@ -32,6 +35,7 @@
         num.toString(); // "5";
         bool.toString(); // "true";
         ```
+
     - **Converting to a number** :
         ```js
         parseInt("2"); // 2
@@ -59,14 +63,17 @@
         ```
     - `NaN` : When you try to perform a numeric operation converting to a number with a value that can not be converted, you will get a special value called NaN (short for Not a Number).
     - If you ever need to check if an expression evaluates to NaN you can use the handy `isNaN` function which returns true if the expression can not be converted to a number.
-        ```js
-        let validConversion = Number("2")
-        console.log("Is validConversion NaN?", isNaN(validConversion))     // Is validConversion NaN? false
 
-        let invalidConversion = Number("hello world")
-        console.log("Is invalidConversion NaN?", isNaN(invalidConversion))        // Is invalidConversion NaN? true
+        ```js
+        let validConversion = Number("2");
+        console.log("Is validConversion NaN?", isNaN(validConversion)); // Is validConversion NaN? false
+
+        let invalidConversion = Number("hello world");
+        console.log("Is invalidConversion NaN?", isNaN(invalidConversion)); // Is invalidConversion NaN? true
         ```
+
     - **Converting to a boolean** : `!!` will convert a value to its boolean equivalent.
+
         ```js
         let greeting = "hi";
         let nothing = 0;
@@ -74,10 +81,3 @@
         !!greeting; // true
         !!nothing; // false
         ```
-
----
-
-7. `var` and `const` :
-    - Two other keywords that we can use to declare variables in JavaScript, var and const.
-    - It is much more rarely used in modern JavaScript.
-    - const is an alternative to let but it does not allow you to redeclare, which makes it useful for variables that you do not want changed.

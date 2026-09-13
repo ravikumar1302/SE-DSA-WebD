@@ -1,7 +1,6 @@
 # Practical uses of JS
 
 1. JS can change HTML Content
-
     - `getElementById()` : document.getElementById("demo").innerHTML = "Hello JavaScript";
 
 2. JS can change HTML Attribute Values
@@ -13,11 +12,9 @@
     ```
 
 3. JS can change HTML Styles (CSS)
-
     - document.getElementById("demo").style.fontSize = "35px";
 
-4. JS can hide/Show hiiden HTML elements
-
+4. JS can hide/Show hidden HTML elements
     - Hiding HTML elements can be done by changing the display style: document.getElementById("demo").style.display = "none";
     - Showing hidden HTML elements can also be done by changing the display style: document.getElementById("demo").style.display = "block";
 
@@ -47,7 +44,6 @@
         </script>
     ```
 3. Writing into an alert box, using `window.alert()`
-
     - `window` word is optional
     - In JS, the window object is the global scope object. This means that variables, properties and methods by default belong to the window object. This also means that specifying the window keyword is optional:
 
@@ -59,7 +55,6 @@
     ```
 
 4. Writing into the browser console, using `console.log()`
-
     - For debugging purposes, you can call the console.log() method in the browser to display data
     - `console.log(5 + 6);`
 

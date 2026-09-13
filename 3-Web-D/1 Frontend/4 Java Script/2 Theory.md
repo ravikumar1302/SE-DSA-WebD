@@ -5,6 +5,7 @@ JavaScript was first proposed by => Brendan Eich in 1995
 Main Topics : Closures, Prototype, Event Loop, Async Await
 
 0. file Extension : `file_name.js`
+
 - **0.1 JS is Case-Sensitive.**
     - i.e., X is different from x
     - Hyphens are not allowed in JavaScript variable names (first-name not allowed). They are reserved for subtractions.
@@ -29,6 +30,7 @@ Main Topics : Closures, Prototype, Event Loop, Async Await
 2. Memory portion of Execution Context is created as soon as you start writing variables and functions. While the code portion runs while you run the code
 
     Example :
+
     ```js
     var n = 2;
     function square(num) {
@@ -45,16 +47,15 @@ Main Topics : Closures, Prototype, Event Loop, Async Await
 
     When the 2nd phase, Execution phase starts,
     - For variable : the undefined value gets replaced by the value given by user. In the above code the n : undefined will become n : 2, in the execution phase
-    - For function : whenever a function is invoked, a nested Execution Context Box is created within code section of existing or main or Global Execution Context Box and calculations are done, and when return statement is reached, that nested Execution Context Box ends. After the whole program is done, the main or Global Execution Context Box is also deleted
-        This is why, Functions are also called as "Heart of JS"
+    - For function : whenever a function is invoked, a nested Execution Context Box is created within code section of existing or main or Global Execution Context Box and calculations are done, and when return statement is reached, that nested Execution Context Box ends. After the whole program is done, the main or Global Execution Context Box is also deleted. This is why, Functions are also called as "Heart of JS"
     - JS manages this Global and nested functions Execution Context Box using Call Stack. Call Stack maintains the order of execution contexts, so Firstly global Execution Context is entered and then nested functions Execution Context
     - Call stack has various names : Call Stack, Execution Context Stack, Program Stack, Control Stack, Runtime Stack, Machine Stack.
 
 ---
 
 3. JS is a Synchronous, Single threaded language
-    Synchronous : executes in a specific order, means firstly the first line and then the second and so on
-    Single threaded : executes one command at a time like interpreter
+    - Synchronous : executes in a specific order, means firstly the first line and then the second and so on
+    - Single threaded : executes one command at a time like interpreter
 
 4. React is a JS library
 5. JS Applications
@@ -64,7 +65,7 @@ Main Topics : Closures, Prototype, Event Loop, Async Await
     - Games Development
 
 6. JS is run by JS engine on browsers. Like V8 engine on chrome, Spider monkey on mozilla
-    Also, Nodejs is a JS runtime built on Chrome V8 JS engine for executing JS outside browser
+    - Also, Nodejs is a JavaScript code, that is built runtime on Chrome V8 JS engine for executing JS outside browser
 
 7. `<script>` tag is used inside HTML document to use JS. But it is recommended to make a separate file and then link it using src attribute in script tag.
 
@@ -72,22 +73,28 @@ Main Topics : Closures, Prototype, Event Loop, Async Await
 
 8. Primitive Data Types in JS
 
-    JavaScript has 6 primitive data types, but we'll only talk about 5 of them. Here's what they look like:
+    JavaScript has 6 primitive data types (first 5 are mostly used)
+
     ```js
-    let greeting = "hello";         // string
-    let favoriteNum = 33;           // number
-    let isAwesome = true;           // boolean
-    let foo;                        // undefined
+    let greeting = "hello"; // string
+    let favoriteNum = 33; // number
+    let isAwesome = true; // boolean
+    let foo; // undefined
     let setToUndefined = undefined; // undefined
-    let empty = null;               // null - Null is not the same as undefined. It signifies an intentional absence of data.
+    let empty = null; // null - Null is not the same as undefined. It signifies an intentional absence of data.
     ```
 
-    JavaScript is known as a "weakly" typed language. What this means is that when you create variables and assign them to values, you do not have to specify the type of data you are working with.
-    In statically (or strongly) typed languages, like Java and C++, you do need to specify the type like int, string, char
+    ```
+    6th one which is less used is -> Symbol
+    let id = Symbol("id"); // symbol - creates a unique, immutable identifier
+    ```
+
+9. JavaScript is known as a "weakly" typed language. What this means is that when you create variables and assign them to values, you do not have to specify the type of data you are working with.
+    - In statically (or strongly) typed languages, like Java and C++, you do need to specify the type like int, string, char
 
     ```js
     let c = Math.sqrt(a * a + b * b);
 
-    let noValue;                   // Any variable created without a value is undefined
-    let favoriteFood = undefined;  // You can also explicitly set a variable to undefined
+    let noValue; // Any variable created without a value is undefined
+    let favoriteFood = undefined; // You can also explicitly set a variable to undefined
     ```
