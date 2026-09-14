@@ -1,8 +1,8 @@
 ## Basics of React JS
 
 1. Extension : .jsx
-    - .js → Standard Js files
-    - .jsx → JavaScript XML : Js files that contain JSX syntax (React’s HTML-like syntax). While JSX can live in .js files too, some teams prefer .jsx to make it clear
+    - .js → Standard JS files
+    - .jsx → JavaScript XML : JS files that contain JSX syntax (React’s HTML-like syntax). While JSX can live in .js files too, some teams prefer .jsx to make it clear
     - .ts → TypeScript files (if your React project uses TypeScript)
     - .tsx → TypeScript files with JSX inside
 
@@ -25,7 +25,7 @@
 3. So, with React, webpage is defined using different re-usable components. And react handles the process of creating and updating DOM elements. E.g.
     1. When any dynamic value/state is updated, reach updates the same in Light weight Virtual DOM and checks the same with Actual DOM
     2. If change is found, then only the actual (Browser) DOM is updated
-4. React Projects Use A Build Process
+4. React projects use a build process
     - Raw, unprocessed React code won't execute in the browser, as JSX is not a default JavaScript feature
     - In addition, the code would not be optimized for production (e.g., not minified)
     - React projects require a build process that transforms your code; create-react-app, vite etc. give you such a build process (no custom setup or tweaking needed)
@@ -38,9 +38,9 @@
 ## Component in React
 
 1. React JS is all abbout components, which are reusable. Each component has it's own logic and control
-2. Two Rules of component of React React:
+2. Two Rules of component of React :
     - Component shoud return JSX
-    - `Component name should follow PascalCase : start with Capital letter (e.g. MyComponent is valid but myComponent is not)`
+    - `Component name must follow PascalCase` : start with Capital letter (e.g. MyComponent is valid but myComponent is not)
 
         **Summary Table (React / JS Standard)**
         | Entity | Standard Case | Example |
@@ -54,7 +54,7 @@
 
 ## How Component communicates with each other ?
 
-- From Parent to Child using Props (prpos provide one-way communication)
+- From Parent to Child using Props (props provide one-way communication)
 - From Child to Parent using Callbacks
     - Create a callback method in parent and pass it to the child using props
     - Child can call this method using `this.props.[yourCallbackName]` form child and pass data as argument

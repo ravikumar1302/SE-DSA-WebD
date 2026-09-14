@@ -1,4 +1,4 @@
-# React Hooks – Overview
+# React Hooks - Overview
 
 - _Hooks_ were introduced in _React 16.8_ to let functional components use state and lifecycle features without classes
 - It does not work inside classes
@@ -13,12 +13,12 @@ They enable:
 
 ## When to use Hooks
 
-1. If you write a function component and then you want to add some state to it,previously you do this by converting it to a class
+1. If you write a function component and then you want to add some state to it, previously you do this by converting it to a class
 2. But, now you can do it by using a Hook inside the existing function component
 
 ## Rules of Hooks
 
-1. Call Hooks only at the top level (no loops/conditions/ nested functions)
+1. Call Hooks only at the top level (no loops/ conditions/ nested functions)
 2. Call Hooks only inside/from React function components or custom Hooks
 3. Maintain the same call order on every render
 4. All the hooks in react start with keyword `use` like useState, useContext, useEffect or `Functions starting with use are called Hooks`
