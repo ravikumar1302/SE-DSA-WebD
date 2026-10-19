@@ -1,5 +1,5 @@
 /*
-Count_Ways_To _Reach_N-th_Stairs_Codestudio
+Count_Ways_To_Reach_N-th_Stairs_Codestudio
 
 You have been given a number of stairs. Initially, you are at the 0th stair, and you need to reach the Nth stair. 
 Each time you can either climb one step or two steps. 

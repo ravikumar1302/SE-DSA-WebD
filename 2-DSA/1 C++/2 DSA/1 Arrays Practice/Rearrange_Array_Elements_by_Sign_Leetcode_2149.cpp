@@ -1,5 +1,5 @@
 /*
-Rearrange_Array_Elements_by_Sign_Leetcod_2149
+Rearrange_Array_Elements_by_Sign_Leetcode_2149
 Rearrange array in alternating positive & negative items with O(1) extra space_GFG
 
 You are given a 0-indexed integer array nums of even length consisting of an equal number of positive and negative integers.

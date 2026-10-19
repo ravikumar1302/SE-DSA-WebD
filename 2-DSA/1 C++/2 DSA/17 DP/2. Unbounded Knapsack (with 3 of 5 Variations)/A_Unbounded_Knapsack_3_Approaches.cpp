@@ -1,5 +1,5 @@
 /* 
-	A_Unbounded Knapsack_3_Approaches
+	A_Unbounded_Knapsack_3_Approaches
 	Unbounded Knapsack (Repetition of items allowed) 
 
 Given a knapsack weight W and a set of n items with certain value vali and weight wti, we need to calculate minimum amount that could make up this quantity exactly. 

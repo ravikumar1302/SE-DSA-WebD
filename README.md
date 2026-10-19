@@ -35,17 +35,21 @@ A structured repository documenting my learning journey in
 
 ```
 SE-DSA-WebD
-├── 1-Software-Engineering
+├── 1-Software-Engineering   (SDLC, System Design, CS Fundamentals, Testing, Security)
 ├── 2-DSA
 ├── 3-Web-D
 │   ├── 1 Frontend        (HTML, CSS, JS, React, Next.js)
 │   ├── 2 Backend         (TypeScript, Express, Postgres, Prisma, auth, deploy)
 │   ├── 3 Database        (SQL, PL/SQL)
 │   ├── 4 Adobe AEM
-│   ├── 5 DevOps & Cloud
-│   └── 6 Projects
-└── 4-Other
+│   └── 5 Projects
+├── 4-DevOps-and-Cloud     (Linux, AWS, CI/CD, containers, CDN, observability, backups, IaC)
+├── 5-AI-Engineering
+├── 6-Product-and-Program-Management
+└── 7-Other
 ```
+
+See [folder_structure.md](folder_structure.md) for a more detailed map.
 
 ## 📘 Software Engineering
 

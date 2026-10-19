@@ -1,5 +1,5 @@
 /*
-Search_In_BST_Codeatudio
+Search_In_BST_Codestudio
 
 There is a Binary Search Tree (BST) consisting of ‘N’ nodes. Each node of this BST has some integer data.
 You are given a pointer to the root node of this BST, and an integer ‘X’. Print "True" if there is a node in BST having data equals to ‘X’, otherwise print "False".

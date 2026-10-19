@@ -5,11 +5,11 @@
 *.exe
 
 # a) Ignore the Rough/Practice area in Web-D
-3-Web-D/7 Rough or Practice area/
+3-Web-D/6 Rough or Practice area/
 
 # b) Ignore the Rough/Practice area in Web-D
-3-Web-D/6 Projects/
-"3-Web-D/6 Projects/"
+3-Web-D/5 Projects/
+"3-Web-D/5 Projects/"
 
-# c) Ignore the 4-Other folder in the root
-4-Other/
+# c) Ignore the 7-Other folder in the root
+7-Other/
